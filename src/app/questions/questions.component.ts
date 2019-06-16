@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { QuestionService } from '../question.service';
+import { Router } from '../../../node_modules/@angular/router';
 
 @Component({
   selector: 'app-questions',
@@ -9,16 +10,19 @@ import { QuestionService } from '../question.service';
 export class QuestionsComponent implements OnInit {
 
   nextQuestion: any;
-  complete = false;
 
-  constructor(private questionService: QuestionService) { }
+  constructor(private questionService: QuestionService, private router: Router) { }
 
   ngOnInit() {
     this.nextQuestion = this.questionService.getNextQuestion();
   }
 
   next() {
-    this.complete = this.questionService.isComplete();
+    if (this.questionService.isComplete()) {
+      this.questionService.endSurvey();
+      this.router.navigate(["/complete"]);
+      return;
+    }
     this.nextQuestion = this.questionService.getNextQuestion();
   }
 
