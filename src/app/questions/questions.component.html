@@ -1,0 +1,15 @@
+<div class="question-container">
+
+    <div class="container">
+      <div class="row">
+        <div class="container h3" style="text-align: center;">{{nextQuestion.question}}</div>
+      </div>
+      <br>
+      <div class="row">
+        <div class="col-sm" *ngFor="let item of nextQuestion.alternatives" style="text-align: center;">
+          <button type="button" (click)="next()" class="btn btn-outline-primary btn-lg">{{item}}</button>
+        </div>
+      </div>
+  
+    </div>
+  </div>
