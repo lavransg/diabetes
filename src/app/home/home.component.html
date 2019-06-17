@@ -1,1 +1,8 @@
-<button type="button" routerLink="/questions" class="centered btn btn-outline-primary btn-lg">Start test</button>
+<button type="button" [class.selected]="this.questionService.questions" routerLink="/questions" class="centered btn btn-outline-primary btn-lg">Start test</button>
+
+<form>
+    <div class="custom-file">
+      <input type="file" class="custom-file-input" id="customFile" (change)="fileAdded($event)">
+      <label class="custom-file-label" for="customFile">{{this.filename}}</label>
+    </div>
+</form>

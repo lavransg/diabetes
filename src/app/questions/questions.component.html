@@ -1,4 +1,4 @@
-<div class="question-container">
+<div class="question-container" *ngIf="nextQuestion">
 
     <div class="container">
       <div class="row">
@@ -7,9 +7,9 @@
       <br>
       <div class="row">
         <div class="col-sm" *ngFor="let item of nextQuestion.alternatives" style="text-align: center;">
-          <button type="button" (click)="next()" class="btn btn-outline-primary btn-lg">{{item}}</button>
+          <button type="button" (click)="next(item.id)" class="btn btn-outline-primary btn-lg">{{item.text}}</button>
         </div>
       </div>
   
     </div>
-  </div>
+</div>

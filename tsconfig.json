@@ -1,8 +1,6 @@
 {
   "compileOnSave": false,
   "compilerOptions": {
-    "resolveJsonModule": true,
-    "esModuleInterop": true,
     "baseUrl": "./",
     "outDir": "./dist/out-tsc",
     "sourceMap": true,
@@ -21,5 +19,7 @@
       "es2018",
       "dom"
     ]
-  }
+  },
+  "resolveJsonModule": true,
+  "esModuleInterop": true
 }

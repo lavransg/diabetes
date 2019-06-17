@@ -10,6 +10,7 @@ import { Router } from '../../../node_modules/@angular/router';
 export class QuestionsComponent implements OnInit {
 
   nextQuestion: any;
+  answers: any[] = [];
 
   constructor(private questionService: QuestionService, private router: Router) { }
 
@@ -17,10 +18,12 @@ export class QuestionsComponent implements OnInit {
     this.nextQuestion = this.questionService.getNextQuestion();
   }
 
-  next() {
+  next(alternativeID) {
+    this.answers.push({question: this.nextQuestion.id, answer: alternativeID});
     if (this.questionService.isComplete()) {
       this.questionService.endSurvey();
       this.router.navigate(["/complete"]);
+      console.log(this.answers);
       return;
     }
     this.nextQuestion = this.questionService.getNextQuestion();
