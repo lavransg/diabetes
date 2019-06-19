@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { QuestionService } from '../question.service';
+import { saveAs } from 'file-saver';
+import questions from '../../assets/questions.json';
 
 @Component({
   selector: 'app-home',
@@ -32,6 +34,12 @@ export class HomeComponent implements OnInit {
       this.filename = event.target.files[0].name;
       filereader.readAsText(event.target.files[0]);
     }
+  }
+
+  saveTemplate() {
+    const fileData = JSON.stringify(questions, undefined, 0);
+    const blob = new Blob([fileData], { type: "text/json;charset=utf-8"});
+    saveAs(blob, "questions.json");
   }
 
 }
