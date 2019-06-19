@@ -1,7 +1,9 @@
 import { Component, OnInit } from '@angular/core';
 import { QuestionService } from '../question.service';
+import { ResultsService } from '../results.service';
 import { saveAs } from 'file-saver';
 import questions from '../../assets/questions.json';
+import weights from '../../assets/weights.json';
 
 @Component({
   selector: 'app-home',
@@ -10,18 +12,23 @@ import questions from '../../assets/questions.json';
 })
 export class HomeComponent implements OnInit {
 
-  filename = "Choose a JSON file";
+  questionsFileName = "Choose a questions JSON file";
+  weightsFileName = "Choose a weights JSON file";
   hasQuestions = false;
+  hasWeights = false;
 
-  constructor(private questionService: QuestionService) { }
+  constructor(private questionService: QuestionService, private resultsService: ResultsService) { }
 
   ngOnInit() {
     if (this.questionService.questions[0]) {
       this.hasQuestions = true;
     }
+    if (this.resultsService.weightMatrix[0]) {
+      this.hasWeights = true;
+    }
   }
 
-  fileAdded(event) {
+  questionsFileAdded(event) {
     const filereader = new FileReader();
     if (event.target.files.length > 0) {
       filereader.onload = e => {
@@ -31,15 +38,34 @@ export class HomeComponent implements OnInit {
         this.questionService.questions = obj.questions;
         this.hasQuestions = true;
       };
-      this.filename = event.target.files[0].name;
+      this.questionsFileName = event.target.files[0].name;
       filereader.readAsText(event.target.files[0]);
     }
   }
 
-  saveTemplate() {
+  weightsFileAdded(event) {
+    const filereader = new FileReader();
+    if (event.target.files.length > 0) {
+      filereader.onload = e => {
+        const obj = JSON.parse(filereader.result as string);
+        this.resultsService.weightMatrix = obj.weights;
+        this.hasWeights = true;
+      };
+      this.weightsFileName = event.target.files[0].name;
+      filereader.readAsText(event.target.files[0]);
+    }
+  }
+
+  saveQuestionsTemplate() {
     const fileData = JSON.stringify(questions, undefined, 0);
     const blob = new Blob([fileData], { type: "text/json;charset=utf-8"});
     saveAs(blob, "questions.json");
+  }
+
+  saveWeightsTemplate() {
+    const fileData = JSON.stringify(weights, undefined, 0);
+    const blob = new Blob([fileData], { type: "text/json;charset=utf-8"});
+    saveAs(blob, "weights.json");
   }
 
 }

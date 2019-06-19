@@ -1,11 +1,20 @@
 
 <form>
     <div class="custom-file">
-      <input type="file" class="custom-file-input" id="customFile" (change)="fileAdded($event)">
-      <label class="custom-file-label" for="customFile">{{this.filename}}</label>
+      <input type="file" class="custom-file-input" id="customFile" (change)="questionsFileAdded($event)">
+      <label class="custom-file-label" for="customFile">{{this.questionsFileName}}</label>
     </div>
 </form>
 
+<form>
+  <div class="custom-file">
+    <input type="file" class="custom-file-input" id="customFile2" (change)="weightsFileAdded($event)">
+    <label class="custom-file-label" for="customFile2">{{this.weightsFileName}}</label>
+  </div>
+</form>
+
+
 <button type="button" *ngIf="hasQuestions" routerLink="/questions" class="centered btn btn-outline-primary btn-lg">Start test</button>
-<button type="button"  *ngIf="!hasQuestions" disabled class="centered btn btn-outline-primary btn-lg">Upload questions first</button>
-<button type="button"  class="btn btn-outline-primary" (click)="saveTemplate()">Download template</button>
+<button type="button"  *ngIf="!hasQuestions || !hasWeights" disabled class="centered btn btn-outline-primary btn-lg">Upload files first</button>
+<button type="button"  class="btn btn-outline-primary" (click)="saveQuestionsTemplate()">Download questions template</button>
+<button type="button"  class="btn btn-outline-primary" (click)="saveWeightsTemplate()">Download weights template</button>

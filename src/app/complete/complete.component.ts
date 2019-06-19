@@ -11,9 +11,7 @@ export class CompleteComponent implements OnInit {
   result: number[];
 
   constructor(private resultsService: ResultsService) {
-/*     if (this.resultsService.result) {
-      this.result = this.resultsService.result;
-    } */
+
   }
 
   ngOnInit() {
