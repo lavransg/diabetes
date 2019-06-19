@@ -1,0 +1,141 @@
+{
+    "questions": [
+        {"id": 1, "question": "Har du diabetes type 2?", "alternatives": [
+            {"id": 1, "text": "Ja"}, 
+            {"id": 2, "text": "Nei"}
+        ]},
+        {"id": 2, "question": "Hvor lenge har du hatt diagnosen diabetes type 2?", "alternatives": [
+            {"id": 1, "text": "0-5 år"}, 
+            {"id": 2, "text": "6-10 år"}, 
+            {"id": 3, "text": "11-15 år"}, 
+            {"id": 4, "text": "16-20 år"}, 
+            {"id": 5, "text": "21+ år"}
+        ]},
+        {"id": 3, "question": "Bosted", "alternatives": [
+            {"id": 1, "text": "Kristiansund"}, 
+            {"id": 2, "text": "Averøy"}
+        ]},
+        {"id": 4, "question": "Alder", "alternatives": [
+            {"id": 1, "text": "under 30 år"}, 
+            {"id": 2, "text": "30-34 år"}, 
+            {"id": 3, "text": "35-39 år"}, 
+            {"id": 4, "text": "40-44 år"}, 
+            {"id": 5, "text": "45-49 år"}, 
+            {"id": 6, "text": "50-54 år"}, 
+            {"id": 7, "text": "55-59 år"}, 
+            {"id": 8, "text": "60-64 år"},
+            {"id": 9, "text": "65-69 år"},
+            {"id": 10, "text": "70-74 år"},
+            {"id": 11, "text": "75-79 år"},
+            {"id": 12, "text": "80+ år"}
+        ]},
+        {"id": 5, "question": "Kjønn", "alternatives": [
+            {"id": 1, "text": "Mann"}, 
+            {"id": 2, "text": "kvinne"},
+            {"id": 3, "text": "Annet"}
+        ]},
+        {"id": 6, "question": "Sivilstatus", "alternatives": [
+            {"id": 1, "text": "Gift"}, 
+            {"id": 2, "text": "enslig"},
+            {"id": 3, "text": "Samboer"},
+            {"id": 4, "text": "Annet"}
+        ]},
+        {"id": 7, "question": "Etnisitet", "alternatives": [
+            {"id": 1, "text": "Europa"}, 
+            {"id": 2, "text": "Asia"},
+            {"id": 3, "text": "Afrika"},
+            {"id": 4, "text": "Nord-amerika"},
+            {"id": 5, "text": "Sør-amerika"},
+            {"id": 6, "text": "Oceania"}
+        ]},
+        {"id": 8, "question": "Midjemål", "alternatives": [
+            {"id": 1, "text": "Lav risiko"}, 
+            {"id": 2, "text": "Moderat risiko"},
+            {"id": 3, "text": "Høy risiko"},
+            {"id": 4, "text": "Vet ikke"}
+        ]},
+        {"id": 9, "question": "Røyker du?", "alternatives": [
+            {"id": 1, "text": "Ja"}, 
+            {"id": 2, "text": "Nei"}
+            ]},
+        {"id": 10, "question": "Hvilken utdanning har du?", "alternatives": [
+            {"id": 1, "text": "Grunnskole"}, 
+            {"id": 2, "text": "Videregående skole"},
+            {"id": 3, "text": "Bachelorgrad"},
+            {"id": 4, "text": "Mastergrad"},
+            {"id": 5, "text": "Doktorgrad"}
+        ]},
+        {"id": 11, "question": "Hvilken inntekt har du?", "alternatives": [
+            {"id": 1, "text": "0 - 300.000kr"}, 
+            {"id": 2, "text": "300.000 - 500.000kr"},
+            {"id": 3, "text": "500.000 - 700.000kr"},
+            {"id": 4, "text": "700.000kr +"}
+        ]},
+        {"id": 12, "question": "I hvilken grad er du i daglig fysisk aktivitet? (timer/dag)", "alternatives": [
+            {"id": 1, "text": "0-0.5t"}, 
+            {"id": 2, "text": "0.5-1t"},
+            {"id": 3, "text": "1-1.5t"},
+            {"id": 4, "text": "1.5-2t"},
+            {"id": 5, "text": "2t+"}
+        ]},
+        {"id": 13, "question": "Hvordan trener du for det meste?", "alternatives": [
+            {"id": 1, "text": "gange"}, 
+            {"id": 2, "text": "Løping"},
+            {"id": 3, "text": "Styrke"},
+            {"id": 4, "text": "Trener ikke"}
+        ]},
+        {"id": 14, "question": "Hvor motivert er du?", "alternatives": [
+            {"id": 1, "text": "Ikke motivert"}, 
+            {"id": 2, "text": "Noe motivert"},
+            {"id": 3, "text": "Middels motivert"},
+            {"id": 4, "text": "Ganske motivert"},
+            {"id": 5, "text": "Veldig motivert"}
+        ]},
+        {"id": 15, "question": "I hvilken grad har du psykiske utfordringer?", "alternatives": [
+            {"id": 1, "text": "Ingen utfordringer"}, 
+            {"id": 2, "text": "Noen utfordringer"},
+            {"id": 3, "text": "Mange utfordringer"}
+        ]},
+        {"id": 16, "question": "I hvilken grad har du generell kunskap om teknologi?", "alternatives": [
+            {"id": 1, "text": "Ingen kunnskap"}, 
+            {"id": 2, "text": "Noe kunnskap"},
+            {"id": 3, "text": "Middels kunnskap"},
+            {"id": 4, "text": "Mye kunnskap"}
+        ]},
+        {"id": 17, "question": "Hva er din holdning til teknologi?", "alternatives": [
+            {"id": 1, "text": "Negativ"}, 
+            {"id": 2, "text": "Likegyldig"},
+            {"id": 3, "text": "Positiv"}
+        ]},
+        {"id": 18, "question": "I hvilken grad spiser du sunt?", "alternatives": [
+            {"id": 1, "text": "Spiser lite sunt"}, 
+            {"id": 2, "text": "spiser middels sunt"},
+            {"id": 3, "text": "Spiser veldig sunt"}
+        ]},
+        {"id": 19, "question": "Hvor mange dager i uken spiser du frukt og grønnt?", "alternatives": [
+            {"id": 1, "text": "0"},
+            {"id": 2, "text": "1"}, 
+            {"id": 3, "text": "2"},
+            {"id": 4, "text": "3"},
+            {"id": 5, "text": "4"},
+            {"id": 6, "text": "5"},
+            {"id": 7, "text": "6"},
+            {"id": 8, "text": "7"}
+        ]},
+        {"id": 20, "question": "Hvor mange timer sover du hver natt?", "alternatives": [
+            {"id": 1, "text": "2"}, 
+            {"id": 2, "text": "3"},
+            {"id": 3, "text": "4"},
+            {"id": 4, "text": "5"},
+            {"id": 5, "text": "6"},
+            {"id": 6, "text": "7"},
+            {"id": 7, "text": "8"},
+            {"id": 8, "text": "9"},
+            {"id": 9, "text": "10+"}
+        ]},
+        {"id": 21, "question": "Tar du medikamenter for å sove?", "alternatives": [
+            {"id": 1, "text": "Ja"}, 
+            {"id": 2, "text": "Nei"}
+        ]}
+      ]
+}

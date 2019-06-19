@@ -68,4 +68,16 @@ export class HomeComponent implements OnInit {
     saveAs(blob, "weights.json");
   }
 
+  validateInputFiles() {
+    if ( this.hasQuestions
+      && this.hasWeights
+      && this.resultsService.weightMatrix.length === this.questionService.questions.length
+      && this.resultsService.weightMatrix[0].length === this.resultsService.categories.length
+    ) {
+      return true;
+    } else {
+      return false;
+    }
+  }
+
 }
