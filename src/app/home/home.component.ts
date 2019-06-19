@@ -9,10 +9,14 @@ import { QuestionService } from '../question.service';
 export class HomeComponent implements OnInit {
 
   filename = "Choose a JSON file";
+  hasQuestions = false;
 
   constructor(private questionService: QuestionService) { }
 
   ngOnInit() {
+    if (this.questionService.questions[0]) {
+      this.hasQuestions = true;
+    }
   }
 
   fileAdded(event) {
@@ -23,6 +27,7 @@ export class HomeComponent implements OnInit {
         const obj = JSON.parse(filereader.result as string);
         console.log(obj);
         this.questionService.questions = obj.questions;
+        this.hasQuestions = true;
       };
       this.filename = event.target.files[0].name;
       filereader.readAsText(event.target.files[0]);
