@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { ResultsService } from '../results.service';
 
 @Component({
   selector: 'app-complete',
@@ -7,7 +8,13 @@ import { Component, OnInit } from '@angular/core';
 })
 export class CompleteComponent implements OnInit {
 
-  constructor() { }
+  result: number[];
+
+  constructor(private resultsService: ResultsService) {
+/*     if (this.resultsService.result) {
+      this.result = this.resultsService.result;
+    } */
+  }
 
   ngOnInit() {
   }
