@@ -9,11 +9,13 @@
         <div class="container h3" style="text-align: center;">{{nextQuestion.question}}</div>
       </div>
       <br>
-      <div class="row">
-        <div class="col alternative" *ngFor="let item of nextQuestion.alternatives" style="text-align: center;">
-          <button type="button" (click)="next(nextQuestion.id,item.id)" class="btn alternative-button btn-outline-primary btn-lg">{{item.text}}</button>
+      <div class="row justify-content-center">
+        <div class="col-md-auto alternative" *ngFor="let item of nextQuestion.alternatives">
+          <button type="button" (click)="next(nextQuestion.id,item.id)" class="btn alternative-button btn-outline-primary btn-lg">
+            {{item.text}}
+          </button>
         </div>
       </div>
-  
     </div>
+    
 </div>
