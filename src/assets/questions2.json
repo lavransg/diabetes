@@ -16,18 +16,18 @@
             {"id": 2, "text": "Averøy"}
         ]},
         {"id": 4, "question": "Alder", "alternatives": [
-            {"id": 1, "text": "under 30 år"}, 
-            {"id": 2, "text": "30-34 år"}, 
-            {"id": 3, "text": "35-39 år"}, 
-            {"id": 4, "text": "40-44 år"}, 
-            {"id": 5, "text": "45-49 år"}, 
-            {"id": 6, "text": "50-54 år"}, 
-            {"id": 7, "text": "55-59 år"}, 
-            {"id": 8, "text": "60-64 år"},
-            {"id": 9, "text": "65-69 år"},
-            {"id": 10, "text": "70-74 år"},
-            {"id": 11, "text": "75-79 år"},
-            {"id": 12, "text": "80+ år"}
+            {"id": 1, "text": "under 30"}, 
+            {"id": 2, "text": "30-34"}, 
+            {"id": 3, "text": "35-39"}, 
+            {"id": 4, "text": "40-44"}, 
+            {"id": 5, "text": "45-49"}, 
+            {"id": 6, "text": "50-54"}, 
+            {"id": 7, "text": "55-59"}, 
+            {"id": 8, "text": "60-64"},
+            {"id": 9, "text": "65-69"},
+            {"id": 10, "text": "70-74"},
+            {"id": 11, "text": "75-79"},
+            {"id": 12, "text": "80+"}
         ]},
         {"id": 5, "question": "Kjønn", "alternatives": [
             {"id": 1, "text": "Mann"}, 

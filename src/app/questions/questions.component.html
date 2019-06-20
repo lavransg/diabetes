@@ -10,8 +10,8 @@
       </div>
       <br>
       <div class="row">
-        <div class="col-sm" *ngFor="let item of nextQuestion.alternatives" style="text-align: center;">
-          <button type="button" (click)="next(item.id)" class="btn btn-outline-primary btn-lg">{{item.text}}</button>
+        <div class="col alternative" *ngFor="let item of nextQuestion.alternatives" style="text-align: center;">
+          <button type="button" (click)="next(item.id)" class="btn alternative-button btn-outline-primary btn-md">{{item.text}}</button>
         </div>
       </div>
   

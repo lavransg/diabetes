@@ -1,2 +1,22 @@
-<div class="centered container h3">You have completed the survey. Your results are: <br>{{this.resultsService.result}} </div>
+<div class="centered container h3">
+    
+    <br>
+</div>
 <button type="button" routerLink="/" class="home btn btn-outline-primary btn-lg">Home</button>
+
+<div class="results-container"><div class="container" *ngIf="this.resultsService.result">
+        <div class="row">
+            <div class="container h3" style="text-align: center;">You have completed the survey. Your results are:</div>
+        </div>
+        <br>
+        <div class="row">
+            <div class="col" *ngFor="let item of this.resultsService.categories; index as i;" style="text-align: center;">
+                <button type="button" class="btn alternative-button btn-danger btn-md">
+                    {{item}}
+                    <br><h2>{{this.resultsService.result[i]}}</h2>
+                </button>
+            </div>
+        </div>
+    
+    </div>
+</div>
