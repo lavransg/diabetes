@@ -40,11 +40,11 @@ export class HomeComponent implements OnInit {
     }
   }
 
-  saveQuestionsTemplate() {
+/*   saveQuestionsTemplate() {
     const fileData = JSON.stringify(questions, undefined, 0);
-    const blob = new Blob([fileData], { type: "text/json;charset=utf-8"});
+    const blob = new Blob([fileData], { type: "text/json;charset=utf-8" });
     saveAs(blob, "questions3.json");
-  }
+  } */
 
 
 }
