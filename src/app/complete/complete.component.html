@@ -1,14 +1,15 @@
-<div class="centered container h3">
-    
-    <br>
-</div>
+
 <button type="button" routerLink="/" class="home btn btn-outline-primary btn-lg">Hjem</button>
 
 <div class="results-container"><div class="container" *ngIf="this.resultsService.result">
 
         <div class="row">
-            <div class="col" *ngFor="let item of this.resultsService.categories; index as i;" style="text-align: center;">
-                <button type="button" class="btn result-button btn-success btn-md">
+            <div class="col categories" *ngFor="let item of this.resultsService.categories; index as i;">
+                <button type="button" *ngIf="this.resultsService.highestCategory !== i" class="btn result-button btn-outline-success btn-md">
+                    {{item}}
+                    <br><h2>{{this.resultsService.result[i]}}</h2>
+                </button>
+                <button type="button" *ngIf="this.resultsService.highestCategory === i" class="btn result-button btn-success btn-md">
                     {{item}}
                     <br><h2>{{this.resultsService.result[i]}}</h2>
                 </button>

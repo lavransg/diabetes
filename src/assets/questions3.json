@@ -13,7 +13,7 @@
     "questions": [
         {"id": 1, "question": "Har du diabetes type 2?", "alternatives": [
             {"id": 1, "text": "Ja",     "weights": [0,0,0,0,0,0,0]}, 
-            {"id": 2, "text": "Nei",    "weights": [0,0,0,0,0,0,1000]}
+            {"id": 2, "text": "Nei",    "weights": [0,0,0,0,0,0,10000]}
         ]},
         {"id": 2, "question": "Hvor lenge har du hatt diagnosen diabetes type 2?", "alternatives": [
             {"id": 1, "text": "0-5 år",     "weights": [0,0,0,0,0,0,0]}, 
@@ -47,9 +47,9 @@
             {"id": 3, "text": "Annet",  "weights": [0,0,0,0,0,0,0]}
         ]},
         {"id": 6, "question": "Sivilstatus", "alternatives": [
-            {"id": 1, "text": "Gift",       "weights": [0,0,0,0,0,0,0]}, 
-            {"id": 2, "text": "enslig",     "weights": [0,0,0,0,0,0,0]},
-            {"id": 3, "text": "Samboer",    "weights": [0,0,0,0,0,0,0]},
+            {"id": 1, "text": "Gift",       "weights": [0,0,-30,0,0,0,0]}, 
+            {"id": 2, "text": "enslig",     "weights": [0,0,30,0,0,0,0]},
+            {"id": 3, "text": "Samboer",    "weights": [0,0,-30,0,0,0,0]},
             {"id": 4, "text": "Annet",      "weights": [0,0,0,0,0,0,0]}
         ]},
         {"id": 7, "question": "Etnisitet", "alternatives": [
@@ -67,7 +67,7 @@
             {"id": 4, "text": "Vet ikke",       "weights": [0,0,0,0,0,0,0]}
         ]},
         {"id": 9, "question": "Røyker du?", "alternatives": [
-            {"id": 1, "text": "Ja",     "weights": [30,30,30,30,30,30,0]}, 
+            {"id": 1, "text": "Ja",     "weights": [100,30,30,30,30,30,0]}, 
             {"id": 2, "text": "Nei",    "weights": [0,0,0,0,0,0,0]}
             ]},
         {"id": 10, "question": "Hvilken utdanning har du?", "alternatives": [
