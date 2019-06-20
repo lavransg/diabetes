@@ -10,12 +10,12 @@
       </div>
       <br>
       <div class="row justify-content-center">
-        <div class="col-md-auto alternative" *ngFor="let item of nextQuestion.alternatives">
+        <div class="col-sm-auto alternative" *ngFor="let item of nextQuestion.alternatives">
           <button type="button" (click)="next(nextQuestion.id,item.id)" class="btn alternative-button btn-outline-primary btn-lg">
             {{item.text}}
           </button>
         </div>
       </div>
     </div>
-    
+
 </div>

@@ -67,7 +67,7 @@
             {"id": 4, "text": "Vet ikke",       "weights": [0,0,0,0,0,0,0]}
         ]},
         {"id": 9, "question": "Røyker du?", "alternatives": [
-            {"id": 1, "text": "Ja",     "weights": [0,0,0,0,0,0,0]}, 
+            {"id": 1, "text": "Ja",     "weights": [30,30,30,30,30,30,0]}, 
             {"id": 2, "text": "Nei",    "weights": [0,0,0,0,0,0,0]}
             ]},
         {"id": 10, "question": "Hvilken utdanning har du?", "alternatives": [
@@ -84,63 +84,63 @@
             {"id": 4, "text": "700.000kr +",         "weights": [0,0,0,0,0,0,0]}
         ]},
         {"id": 12, "question": "I hvilken grad er du i daglig fysisk aktivitet? (timer/dag)", "alternatives": [
-            {"id": 1, "text": "0-0.5t", "weights": [0,0,0,0,0,0,0]}, 
+            {"id": 1, "text": "0-0.5t", "weights": [0,0,0,200,0,0,0]}, 
             {"id": 2, "text": "0.5-1t", "weights": [0,0,0,0,0,0,0]},
             {"id": 3, "text": "1-1.5t", "weights": [0,0,0,0,0,0,0]},
             {"id": 4, "text": "1.5-2t", "weights": [0,0,0,0,0,0,0]},
-            {"id": 5, "text": "2t+",    "weights": [0,0,0,0,0,0,0]}
+            {"id": 5, "text": "2t+",    "weights": [0,0,0,-100,0,0,0]}
         ]},
         {"id": 13, "question": "Hvordan trener du for det meste?", "alternatives": [
             {"id": 1, "text": "gange",          "weights": [0,0,0,0,0,0,0]}, 
             {"id": 2, "text": "Løping",         "weights": [0,0,0,0,0,0,0]},
             {"id": 3, "text": "Styrke",         "weights": [0,0,0,0,0,0,0]},
-            {"id": 4, "text": "Trener ikke",    "weights": [0,0,0,0,0,0,0]}
+            {"id": 4, "text": "Trener ikke",    "weights": [0,0,0,200,0,0,0]}
         ]},
         {"id": 14, "question": "Hvor motivert er du?", "alternatives": [
-            {"id": 1, "text": "Ikke motivert",      "weights": [0,0,0,0,0,0,0]}, 
-            {"id": 2, "text": "Noe motivert",       "weights": [0,0,0,0,0,0,0]},
+            {"id": 1, "text": "Ikke motivert",      "weights": [500,0,0,0,0,0,200]}, 
+            {"id": 2, "text": "Noe motivert",       "weights": [200,0,0,0,0,0,100]},
             {"id": 3, "text": "Middels motivert",   "weights": [0,0,0,0,0,0,0]},
-            {"id": 4, "text": "Ganske motivert",    "weights": [0,0,0,0,0,0,0]},
-            {"id": 5, "text": "Veldig motivert",    "weights": [0,0,0,0,0,0,0]}
+            {"id": 4, "text": "Ganske motivert",    "weights": [-50,0,0,0,0,0,0]},
+            {"id": 5, "text": "Veldig motivert",    "weights": [-200,0,0,0,0,0,-100]}
         ]},
         {"id": 15, "question": "I hvilken grad har du psykiske utfordringer?", "alternatives": [
-            {"id": 1, "text": "Ingen utfordringer", "weights": [0,0,0,0,0,0,0]}, 
+            {"id": 1, "text": "Ingen utfordringer", "weights": [0,-50,0,0,0,0,0]}, 
             {"id": 2, "text": "Noen utfordringer",  "weights": [0,0,0,0,0,0,0]},
-            {"id": 3, "text": "Mange utfordringer", "weights": [0,0,0,0,0,0,0]}
+            {"id": 3, "text": "Mange utfordringer", "weights": [0,150,0,0,0,0,0]}
         ]},
         {"id": 16, "question": "I hvilken grad har du generell kunskap om teknologi?", "alternatives": [
-            {"id": 1, "text": "Ingen kunnskap",     "weights": [0,0,0,0,0,0,0]}, 
-            {"id": 2, "text": "Noe kunnskap",       "weights": [0,0,0,0,0,0,0]},
+            {"id": 1, "text": "Ingen kunnskap",     "weights": [0,0,100,0,0,0,0]}, 
+            {"id": 2, "text": "Noe kunnskap",       "weights": [0,0,50,0,0,0,0]},
             {"id": 3, "text": "Middels kunnskap",   "weights": [0,0,0,0,0,0,0]},
-            {"id": 4, "text": "Mye kunnskap",       "weights": [0,0,0,0,0,0,0]}
+            {"id": 4, "text": "Mye kunnskap",       "weights": [0,0,-50,0,0,0,0]}
         ]},
         {"id": 17, "question": "Hva er din holdning til teknologi?", "alternatives": [
-            {"id": 1, "text": "Negativ",    "weights": [0,0,0,0,0,0,0]}, 
+            {"id": 1, "text": "Negativ",    "weights": [0,0,100,0,0,0,100]}, 
             {"id": 2, "text": "Likegyldig", "weights": [0,0,0,0,0,0,0]},
-            {"id": 3, "text": "Positiv",    "weights": [0,0,0,0,0,0,0]}
+            {"id": 3, "text": "Positiv",    "weights": [0,0,-50,0,0,0,0]}
         ]},
         {"id": 18, "question": "I hvilken grad spiser du sunt?", "alternatives": [
-            {"id": 1, "text": "Spiser lite sunt",       "weights": [0,0,0,0,0,0,0]}, 
-            {"id": 2, "text": "spiser middels sunt",    "weights": [0,0,0,0,0,0,0]},
-            {"id": 3, "text": "Spiser veldig sunt",     "weights": [0,0,0,0,0,0,0]}
+            {"id": 1, "text": "Spiser lite sunt",       "weights": [0,0,0,0,0,300,0]}, 
+            {"id": 2, "text": "spiser middels sunt",    "weights": [0,0,0,0,0,50,0]},
+            {"id": 3, "text": "Spiser veldig sunt",     "weights": [0,0,0,0,0,-100,0]}
         ]},
         {"id": 19, "question": "Hvor mange dager i uken spiser du frukt og grønt?", "alternatives": [
-            {"id": 1, "text": "0", "weights": [0,0,0,0,0,0,0]},
-            {"id": 2, "text": "1", "weights": [0,0,0,0,0,0,0]}, 
-            {"id": 3, "text": "2", "weights": [0,0,0,0,0,0,0]},
+            {"id": 1, "text": "0", "weights": [0,0,0,0,0,100,0]},
+            {"id": 2, "text": "1", "weights": [0,0,0,0,0,80,0]}, 
+            {"id": 3, "text": "2", "weights": [0,0,0,0,0,60,0]},
             {"id": 4, "text": "3", "weights": [0,0,0,0,0,0,0]},
             {"id": 5, "text": "4", "weights": [0,0,0,0,0,0,0]},
             {"id": 6, "text": "5", "weights": [0,0,0,0,0,0,0]},
-            {"id": 7, "text": "6", "weights": [0,0,0,0,0,0,0]},
-            {"id": 8, "text": "7", "weights": [0,0,0,0,0,0,0]}
+            {"id": 7, "text": "6", "weights": [0,0,0,0,0,-50,0]},
+            {"id": 8, "text": "7", "weights": [0,0,0,0,0,-100,0]}
         ]},
         {"id": 20, "question": "Hvor mange timer sover du hver natt?", "alternatives": [
-            {"id": 1, "text": "2",      "weights": [0,0,0,0,0,0,0]}, 
-            {"id": 2, "text": "3",      "weights": [0,0,0,0,0,0,0]},
-            {"id": 3, "text": "4",      "weights": [0,0,0,0,0,0,0]},
-            {"id": 4, "text": "5",      "weights": [0,0,0,0,0,0,0]},
-            {"id": 5, "text": "6",      "weights": [0,0,0,0,0,0,0]},
-            {"id": 6, "text": "7",      "weights": [0,0,0,0,0,0,0]},
+            {"id": 1, "text": "2",      "weights": [0,500,0,0,0,0,0]}, 
+            {"id": 2, "text": "3",      "weights": [0,500,0,0,0,0,0]},
+            {"id": 3, "text": "4",      "weights": [0,500,0,0,0,0,0]},
+            {"id": 4, "text": "5",      "weights": [0,400,0,0,0,0,0]},
+            {"id": 5, "text": "6",      "weights": [0,200,0,0,0,0,0]},
+            {"id": 6, "text": "7",      "weights": [0,50,0,0,0,0,0]},
             {"id": 7, "text": "8",      "weights": [0,0,0,0,0,0,0]},
             {"id": 8, "text": "9",      "weights": [0,0,0,0,0,0,0]},
             {"id": 9, "text": "10+",    "weights": [0,0,0,0,0,0,0]}
