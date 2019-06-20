@@ -1,6 +1,5 @@
 import { Injectable } from '@angular/core';
 import { QuestionService } from './question.service';
-import questions from '../assets/questions3.json';
 
 @Injectable({
   providedIn: 'root'
@@ -8,7 +7,7 @@ import questions from '../assets/questions3.json';
 export class ResultsService {
 
   result: number[];
-  categories = questions.categories;
+  categories = this.questionService.categories;
 
   constructor(private questionService: QuestionService) {}
 
@@ -16,7 +15,7 @@ export class ResultsService {
     const result = new Array(this.categories.length).fill(0);
     for (const answer of answers) {
       const quesionID = "questionID";
-      const question = questions.questions.find(element => element.id === answer[quesionID]);
+      const question = this.questionService.questions.find(element => element.id === answer[quesionID]);
       for (const alternative of question.alternatives) {
         for (const [index, weight] of alternative.weights.entries()) {
           if (weight) {

@@ -8,10 +8,8 @@ import { QuestionService } from '../question.service';
 })
 export class HomeComponent implements OnInit {
 
-  questionsFileName = "Choose a questions JSON file";
-  weightsFileName = "Choose a weights JSON file";
+  questionsFileName = "Velg en JSON-fil for spørsmål";
   hasQuestions = false;
-  hasWeights = false;
 
   constructor(private questionService: QuestionService) { }
 

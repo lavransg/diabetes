@@ -7,6 +7,7 @@ import questions from '../assets/questions3.json';
 export class QuestionService {
 
   public questions: any[] = questions.questions;
+  public categories: any[] = questions.categories;
   questionIndex = 0;
 
   constructor() { }

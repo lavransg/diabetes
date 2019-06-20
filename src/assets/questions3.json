@@ -24,7 +24,8 @@
         ]},
         {"id": 3, "question": "Bosted", "alternatives": [
             {"id": 1, "text": "Kristiansund",   "weights": [0,0,0,0,0,0,0]}, 
-            {"id": 2, "text": "Averøy",         "weights": [0,0,0,0,0,0,0]}
+            {"id": 2, "text": "Averøy",         "weights": [0,0,0,0,0,0,0]},
+            {"id": 3, "text": "Annen kommune",   "weights": [0,0,0,0,50,0,0]}
         ]},
         {"id": 4, "question": "Alder", "alternatives": [
             {"id": 1, "text": "under 30",   "weights": [0,0,0,0,0,0,0]}, 
