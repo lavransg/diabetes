@@ -1,12 +1,12 @@
 import { Injectable } from '@angular/core';
-import questions3 from '../assets/questions3.json';
+import questions from '../assets/questions3.json';
 
 @Injectable({
   providedIn: 'root'
 })
 export class QuestionService {
 
-  public questions: any[] = questions3.questions;
+  public questions: any[] = questions.questions;
   questionIndex = 0;
 
   constructor() { }

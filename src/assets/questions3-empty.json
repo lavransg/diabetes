@@ -1,14 +1,12 @@
 {
-    "__comment": 
-    "Hvert svaralternativer har en liste med vekter, én vekt for hver kategori",
     "categories": [
-            "Forbedre motivasjon",
-            "Forbedre mental helse",
-            "Behov for oppfølging",
-            "Forbedre trening",
-            "Mulighet for avstandsoppfølging",
-            "Forbedre ernæring",
-            "Ikke aktuell"
+        "Forbedre motivasjon",
+        "Forbedre mental helse",
+        "Behov for oppfølging",
+        "Forbedre trening",
+        "Mulighet for avstandsoppfølging",
+        "Forbedre ernæring",
+        "Ikke aktuell"
     ],
     "questions": [
         {"id": 1, "question": "Har du diabetes type 2?", "alternatives": [
