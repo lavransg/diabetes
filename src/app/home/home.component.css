@@ -4,3 +4,7 @@
     left: 50%;
     transform: translate(-50%, -50%);
 }
+#settings-icon{
+    width: 30px;
+    height: 30px;
+}

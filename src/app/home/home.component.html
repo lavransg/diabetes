@@ -1,17 +1,55 @@
 
-<form>
-    <div class="custom-file">
-      <input type="file" class="custom-file-input" id="customFile" (change)="questionsFileAdded($event)">
-      <label class="custom-file-label" for="customFile">{{this.questionsFileName}}</label>
-    </div>
-</form>
+<!-- Button trigger modal -->
+<button class="btn btn-white btn-sm" data-toggle="modal" data-target="#exampleModal">
+  <img id="settings-icon" src="../../assets/icons/settings.svg" alt="#">
+</button>
 
-<form>
-  <div class="custom-file">
-    <input type="file" class="custom-file-input" id="customFile2" (change)="weightsFileAdded($event)">
-    <label class="custom-file-label" for="customFile2">{{this.weightsFileName}}</label>
+<!-- Modal -->
+<div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">Upload / download</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <!-- MODAL CONTENT -->
+
+      <div class="modal-body">
+        <form>
+          <div class="custom-file">
+            <input type="file" class="custom-file-input" id="customFile" (change)="questionsFileAdded($event)">
+            <label class="custom-file-label" for="customFile">{{this.questionsFileName}}</label>
+          </div>
+      </form>
+      <br>
+      <form>
+        <div class="custom-file">
+          <input type="file" class="custom-file-input" id="customFile2" (change)="weightsFileAdded($event)">
+          <label class="custom-file-label" for="customFile2">{{this.weightsFileName}}</label>
+        </div>
+      </form>
+      <br>
+      <button type="button"  class="btn btn-outline-primary" (click)="saveQuestionsTemplate()">
+        Download questions template
+      </button>
+      <br><br>
+      <button type="button"  class="btn btn-outline-primary" (click)="saveWeightsTemplate()">
+        Download weights template
+      </button>
+
+
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+      </div>
+    </div>
   </div>
-</form>
+</div>
+
+
+
 
 
 <button type="button" *ngIf="hasQuestions && validateInputFiles()" routerLink="/questions" class="centered btn btn-outline-primary btn-lg">
@@ -23,10 +61,4 @@
 <button type="button"  *ngIf="hasQuestions && hasWeights && !validateInputFiles()" disabled class="centered btn btn-outline-primary btn-lg">
   Files have wrong number of items
   <br> Weights should have {{this.questionService.questions.length}} questions with {{this.resultsService.categories.length}} categories
-</button>
-<button type="button"  class="btn btn-outline-primary" (click)="saveQuestionsTemplate()">
-  Download questions template
-</button>
-<button type="button"  class="btn btn-outline-primary" (click)="saveWeightsTemplate()">
-  Download weights template
 </button>
