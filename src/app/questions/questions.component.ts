@@ -19,8 +19,8 @@ export class QuestionsComponent implements OnInit {
     this.nextQuestion = this.questionService.getNextQuestion();
   }
 
-  next(alternativeID) {
-    this.answers.push(alternativeID);
+  next(questionID, alternativeID) {
+    this.answers.push({questionID, alternativeID});
     if (this.questionService.isComplete()) {
       this.questionService.endSurvey();
       this.resultsService.getResults(this.answers);

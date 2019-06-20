@@ -1,0 +1,141 @@
+{
+    "questions": [
+        {"id": 1, "question": "Har du diabetes type 2?", "alternatives": [
+            {"id": 1, "text": "Ja",     "weights": [0,0,0,0,0,0,0]}, 
+            {"id": 2, "text": "Nei",    "weights": [0,0,0,0,0,0,1000]}
+        ]},
+        {"id": 2, "question": "Hvor lenge har du hatt diagnosen diabetes type 2?", "alternatives": [
+            {"id": 1, "text": "0-5 år",     "weights": [0,0,0,0,0,0,0]}, 
+            {"id": 2, "text": "6-10 år",    "weights": [0,0,0,0,0,0,0]}, 
+            {"id": 3, "text": "11-15 år",   "weights": [0,0,0,0,0,0,0]}, 
+            {"id": 4, "text": "16-20 år",   "weights": [0,0,0,0,0,0,0]}, 
+            {"id": 5, "text": "21+ år",     "weights": [0,0,0,0,0,0,0]}
+        ]},
+        {"id": 3, "question": "Bosted", "alternatives": [
+            {"id": 1, "text": "Kristiansund",   "weights": [0,0,0,0,0,0,0]}, 
+            {"id": 2, "text": "Averøy",         "weights": [0,0,0,0,0,0,0]}
+        ]},
+        {"id": 4, "question": "Alder", "alternatives": [
+            {"id": 1, "text": "under 30",   "weights": [0,0,0,0,0,0,0]}, 
+            {"id": 2, "text": "30-34",      "weights": [0,0,0,0,0,0,0]}, 
+            {"id": 3, "text": "35-39",      "weights": [0,0,0,0,0,0,0]}, 
+            {"id": 4, "text": "40-44",      "weights": [0,0,0,0,0,0,0]}, 
+            {"id": 5, "text": "45-49",      "weights": [0,0,0,0,0,0,0]}, 
+            {"id": 6, "text": "50-54",      "weights": [0,0,0,0,0,0,0]}, 
+            {"id": 7, "text": "55-59",      "weights": [0,0,0,0,0,0,0]}, 
+            {"id": 8, "text": "60-64",      "weights": [0,0,0,0,0,0,0]},
+            {"id": 9, "text": "65-69",      "weights": [0,0,0,0,0,0,0]},
+            {"id": 10, "text": "70-74",     "weights": [0,0,0,0,0,0,0]},
+            {"id": 11, "text": "75-79",     "weights": [0,0,0,0,0,0,0]},
+            {"id": 12, "text": "80+",       "weights": [0,0,0,0,0,0,0]}
+        ]},
+        {"id": 5, "question": "Kjønn", "alternatives": [
+            {"id": 1, "text": "Mann",   "weights": [0,0,0,0,0,0,0]}, 
+            {"id": 2, "text": "kvinne", "weights": [0,0,0,0,0,0,0]},
+            {"id": 3, "text": "Annet",  "weights": [0,0,0,0,0,0,0]}
+        ]},
+        {"id": 6, "question": "Sivilstatus", "alternatives": [
+            {"id": 1, "text": "Gift",       "weights": [0,0,0,0,0,0,0]}, 
+            {"id": 2, "text": "enslig",     "weights": [0,0,0,0,0,0,0]},
+            {"id": 3, "text": "Samboer",    "weights": [0,0,0,0,0,0,0]},
+            {"id": 4, "text": "Annet",      "weights": [0,0,0,0,0,0,0]}
+        ]},
+        {"id": 7, "question": "Etnisitet", "alternatives": [
+            {"id": 1, "text": "Europa",         "weights": [0,0,0,0,0,0,0]}, 
+            {"id": 2, "text": "Asia",           "weights": [0,0,0,0,0,0,0]},
+            {"id": 3, "text": "Afrika",         "weights": [0,0,0,0,0,0,0]},
+            {"id": 4, "text": "Nord-amerika",   "weights": [0,0,0,0,0,0,0]},
+            {"id": 5, "text": "Sør-amerika",    "weights": [0,0,0,0,0,0,0]},
+            {"id": 6, "text": "Oceania",        "weights": [0,0,0,0,0,0,0]}
+        ]},
+        {"id": 8, "question": "Midjemål", "alternatives": [
+            {"id": 1, "text": "Lav risiko",     "weights": [0,0,0,0,0,0,0]}, 
+            {"id": 2, "text": "Moderat risiko", "weights": [0,0,0,0,0,0,0]},
+            {"id": 3, "text": "Høy risiko",     "weights": [0,0,0,0,0,0,0]},
+            {"id": 4, "text": "Vet ikke",       "weights": [0,0,0,0,0,0,0]}
+        ]},
+        {"id": 9, "question": "Røyker du?", "alternatives": [
+            {"id": 1, "text": "Ja",     "weights": [0,0,0,0,0,0,0]}, 
+            {"id": 2, "text": "Nei",    "weights": [0,0,0,0,0,0,0]}
+            ]},
+        {"id": 10, "question": "Hvilken utdanning har du?", "alternatives": [
+            {"id": 1, "text": "Grunnskole",         "weights": [0,0,0,0,0,0,0]}, 
+            {"id": 2, "text": "Videregående skole", "weights": [0,0,0,0,0,0,0]},
+            {"id": 3, "text": "Bachelorgrad",       "weights": [0,0,0,0,0,0,0]},
+            {"id": 4, "text": "Mastergrad",         "weights": [0,0,0,0,0,0,0]},
+            {"id": 5, "text": "Doktorgrad",         "weights": [0,0,0,0,0,0,0]}
+        ]},
+        {"id": 11, "question": "Hvilken inntekt har du?", "alternatives": [
+            {"id": 1, "text": "0 - 300.000kr",       "weights": [0,0,0,0,0,0,0]}, 
+            {"id": 2, "text": "300.000 - 500.000kr", "weights": [0,0,0,0,0,0,0]},
+            {"id": 3, "text": "500.000 - 700.000kr", "weights": [0,0,0,0,0,0,0]},
+            {"id": 4, "text": "700.000kr +",         "weights": [0,0,0,0,0,0,0]}
+        ]},
+        {"id": 12, "question": "I hvilken grad er du i daglig fysisk aktivitet? (timer/dag)", "alternatives": [
+            {"id": 1, "text": "0-0.5t", "weights": [0,0,0,0,0,0,0]}, 
+            {"id": 2, "text": "0.5-1t", "weights": [0,0,0,0,0,0,0]},
+            {"id": 3, "text": "1-1.5t", "weights": [0,0,0,0,0,0,0]},
+            {"id": 4, "text": "1.5-2t", "weights": [0,0,0,0,0,0,0]},
+            {"id": 5, "text": "2t+",    "weights": [0,0,0,0,0,0,0]}
+        ]},
+        {"id": 13, "question": "Hvordan trener du for det meste?", "alternatives": [
+            {"id": 1, "text": "gange",          "weights": [0,0,0,0,0,0,0]}, 
+            {"id": 2, "text": "Løping",         "weights": [0,0,0,0,0,0,0]},
+            {"id": 3, "text": "Styrke",         "weights": [0,0,0,0,0,0,0]},
+            {"id": 4, "text": "Trener ikke",    "weights": [0,0,0,0,0,0,0]}
+        ]},
+        {"id": 14, "question": "Hvor motivert er du?", "alternatives": [
+            {"id": 1, "text": "Ikke motivert",      "weights": [0,0,0,0,0,0,0]}, 
+            {"id": 2, "text": "Noe motivert",       "weights": [0,0,0,0,0,0,0]},
+            {"id": 3, "text": "Middels motivert",   "weights": [0,0,0,0,0,0,0]},
+            {"id": 4, "text": "Ganske motivert",    "weights": [0,0,0,0,0,0,0]},
+            {"id": 5, "text": "Veldig motivert",    "weights": [0,0,0,0,0,0,0]}
+        ]},
+        {"id": 15, "question": "I hvilken grad har du psykiske utfordringer?", "alternatives": [
+            {"id": 1, "text": "Ingen utfordringer", "weights": [0,0,0,0,0,0,0]}, 
+            {"id": 2, "text": "Noen utfordringer",  "weights": [0,0,0,0,0,0,0]},
+            {"id": 3, "text": "Mange utfordringer", "weights": [0,0,0,0,0,0,0]}
+        ]},
+        {"id": 16, "question": "I hvilken grad har du generell kunskap om teknologi?", "alternatives": [
+            {"id": 1, "text": "Ingen kunnskap",     "weights": [0,0,0,0,0,0,0]}, 
+            {"id": 2, "text": "Noe kunnskap",       "weights": [0,0,0,0,0,0,0]},
+            {"id": 3, "text": "Middels kunnskap",   "weights": [0,0,0,0,0,0,0]},
+            {"id": 4, "text": "Mye kunnskap",       "weights": [0,0,0,0,0,0,0]}
+        ]},
+        {"id": 17, "question": "Hva er din holdning til teknologi?", "alternatives": [
+            {"id": 1, "text": "Negativ",    "weights": [0,0,0,0,0,0,0]}, 
+            {"id": 2, "text": "Likegyldig", "weights": [0,0,0,0,0,0,0]},
+            {"id": 3, "text": "Positiv",    "weights": [0,0,0,0,0,0,0]}
+        ]},
+        {"id": 18, "question": "I hvilken grad spiser du sunt?", "alternatives": [
+            {"id": 1, "text": "Spiser lite sunt",       "weights": [0,0,0,0,0,0,0]}, 
+            {"id": 2, "text": "spiser middels sunt",    "weights": [0,0,0,0,0,0,0]},
+            {"id": 3, "text": "Spiser veldig sunt",     "weights": [0,0,0,0,0,0,0]}
+        ]},
+        {"id": 19, "question": "Hvor mange dager i uken spiser du frukt og grønt?", "alternatives": [
+            {"id": 1, "text": "0", "weights": [0,0,0,0,0,0,0]},
+            {"id": 2, "text": "1", "weights": [0,0,0,0,0,0,0]}, 
+            {"id": 3, "text": "2", "weights": [0,0,0,0,0,0,0]},
+            {"id": 4, "text": "3", "weights": [0,0,0,0,0,0,0]},
+            {"id": 5, "text": "4", "weights": [0,0,0,0,0,0,0]},
+            {"id": 6, "text": "5", "weights": [0,0,0,0,0,0,0]},
+            {"id": 7, "text": "6", "weights": [0,0,0,0,0,0,0]},
+            {"id": 8, "text": "7", "weights": [0,0,0,0,0,0,0]}
+        ]},
+        {"id": 20, "question": "Hvor mange timer sover du hver natt?", "alternatives": [
+            {"id": 1, "text": "2",      "weights": [0,0,0,0,0,0,0]}, 
+            {"id": 2, "text": "3",      "weights": [0,0,0,0,0,0,0]},
+            {"id": 3, "text": "4",      "weights": [0,0,0,0,0,0,0]},
+            {"id": 4, "text": "5",      "weights": [0,0,0,0,0,0,0]},
+            {"id": 5, "text": "6",      "weights": [0,0,0,0,0,0,0]},
+            {"id": 6, "text": "7",      "weights": [0,0,0,0,0,0,0]},
+            {"id": 7, "text": "8",      "weights": [0,0,0,0,0,0,0]},
+            {"id": 8, "text": "9",      "weights": [0,0,0,0,0,0,0]},
+            {"id": 9, "text": "10+",    "weights": [0,0,0,0,0,0,0]}
+        ]},
+        {"id": 21, "question": "Tar du medikamenter for å sove?", "alternatives": [
+            {"id": 1, "text": "Ja",  "weights": [0,0,0,0,0,0,0]}, 
+            {"id": 2, "text": "Nei", "weights": [0,0,0,0,0,0,0]}
+        ]}
+      ]
+}

@@ -11,7 +11,7 @@
       <br>
       <div class="row">
         <div class="col alternative" *ngFor="let item of nextQuestion.alternatives" style="text-align: center;">
-          <button type="button" (click)="next(item.id)" class="btn alternative-button btn-outline-primary btn-md">{{item.text}}</button>
+          <button type="button" (click)="next(nextQuestion.id,item.id)" class="btn alternative-button btn-outline-primary btn-md">{{item.text}}</button>
         </div>
       </div>
   

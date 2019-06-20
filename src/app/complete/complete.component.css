@@ -14,3 +14,7 @@
 .results-container{
     margin-top: 300px;
 }
+
+.result-button{
+    height: 100%;
+}
