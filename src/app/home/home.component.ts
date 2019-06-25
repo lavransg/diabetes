@@ -8,7 +8,7 @@ import { QuestionService } from '../question.service';
 })
 export class HomeComponent implements OnInit {
 
-  questionsFileName = "Last opp JSON-fil med spørsmål";
+  questionsFileName = "Last opp JSON-fil med spørsmål og vekter";
   uploaded = false;
   hasQuestions = false;
 

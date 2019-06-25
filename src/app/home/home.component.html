@@ -17,23 +17,25 @@
       <!-- MODAL CONTENT -->
 
       <div class="modal-body">
+        
         <div class="form-group" >
           <div class="custom-file">
             <input type="file" class="custom-file-input" id="customFile" (change)="questionsFileAdded($event)">
             <label class="custom-file-label" for="customFile">{{this.questionsFileName}}</label>
           </div>
         </div>
-      <br>
 
-      <a download="questions.json" target="_blank" href="../../assets/questions3.json">
-        Last ned mal for spørsmål og vekter
-      </a>
-
-
+        <a download="questions.json" target="_blank" href="../../assets/questions3.json">
+          <button type="button" class="home btn btn-block btn-outline-primary btn-md">
+              Last ned JSON-mal for spørsmål og vekter
+          </button>
+        </a>
+      
       </div>
-      <div class="modal-footer">
+
+      <!-- <div class="modal-footer">
         <button type="button" class="btn btn-secondary" data-dismiss="modal">Lukk</button>
-      </div>
+      </div> -->
     </div>
   </div>
 </div>

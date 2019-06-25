@@ -1,9 +1,10 @@
 
-<button type="button" routerLink="/" class="home btn btn-outline-primary btn-lg">
-    Hjem
+<button class="btn btn-white btn-sm" routerLink="/">
+    <img id="home-icon" src="../../assets/icons/home.svg" alt="#">
 </button>
-<button type="button" [disabled]="!this.resultsService.result" (click)="this.resultsService.saveReport()" class="btn btn-outline-primary btn-lg">
-    Lagre resultat
+
+<button class="btn btn-white btn-sm" [disabled]="!this.resultsService.result"  (click)="this.resultsService.saveReport()">
+    <img id="home-icon" src="../../assets/icons/save.svg" alt="#">
 </button>
 
 <div class="results-container"><div class="container" *ngIf="this.resultsService.result">
@@ -20,17 +21,6 @@
                     </div>
                 </div>
 
-                <!--
-                <button type="button" *ngIf="this.resultsService.highestCategory !== i" class="btn result-button btn-outline-success btn-md">
-                    {{item}}
-                    <br><h2>{{this.resultsService.result[i]}}</h2>
-                </button>
-
-                <button type="button" *ngIf="this.resultsService.highestCategory === i" class="btn result-button btn-success btn-md">
-                    {{item}}
-                    <br><h2>{{this.resultsService.result[i]}}</h2>
-                </button>
-                -->
             </div>
         </div>
     

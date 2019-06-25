@@ -33,9 +33,7 @@ export class ResultsService {
   }
 
   generateReport(answers: object[]) {
-    if (!this.result) {
-      return null;
-    }
+    if (!this.result) { return null; }
     let text = "";
 
     for (const [index, category] of this.categories.entries()) {
@@ -66,7 +64,6 @@ export class ResultsService {
     const report = this.report.replace(/\n/g, "\r\n");
     if (this.report) {
       const blob = new Blob([report], {type: "text/plain;charset=utf-8"});
-      console.log(blob);
       FileSaver.saveAs(blob, filename);
     }
   }
