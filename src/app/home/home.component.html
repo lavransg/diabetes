@@ -18,18 +18,41 @@
 
       <div class="modal-body">
         
-        <div class="form-group" >
+        <div class="form-group">
           <div class="custom-file">
             <input type="file" class="custom-file-input" id="customFile" (change)="questionsFileAdded($event)">
             <label class="custom-file-label" for="customFile">{{this.questionsFileName}}</label>
           </div>
         </div>
 
-        <a download="questions.json" target="_blank" href="../../assets/questions3.json">
-          <button type="button" class="home btn btn-block btn-outline-primary btn-md">
-              Last ned JSON-mal for spørsmål og vekter
+        <div class="form-group">
+          <a download="questions.json" target="_blank" href="../../assets/questions3.json">
+            <button type="button" class="home btn btn-block btn-outline-primary">
+                Last ned JSON-mal for spørsmål og vekter
+            </button>
+          </a>
+        </div>
+
+        <div class="form-group">
+          <button class="btn btn-outline-primary btn-block" type="button" data-toggle="collapse" data-target="#collapseExample" aria-expanded="false" aria-controls="collapseExample">
+            Rediger helseverdier
           </button>
-        </a>
+        </div>
+
+        <div class="collapse" id="collapseExample">
+          <div class="card card-body health-test-container">
+            <div class="form-group" id="{{item.id}}" *ngFor="let item of healthTests; index as i;">
+              
+              <h3>{{item.test}}</h3>
+              <div class="custom-control custom-radio" *ngFor="let option of item.weights; index as j;">
+                  <input type="radio" id="{{item.id+option.id}}" name="{{item.id}}" class="custom-control-input">
+                  <label class="custom-control-label" for="{{item.id+option.id}}">fra {{option.from}} til {{option.to}}</label>
+              </div>
+              
+
+            </div>
+          </div>
+        </div>
       
       </div>
 

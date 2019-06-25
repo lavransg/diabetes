@@ -1,0 +1,59 @@
+{
+    "categories": [
+        "Forbedre motivasjon",
+        "Forbedre mental helse",
+        "Behov for oppfølging",
+        "Forbedre trening",
+        "Mulighet for avstandsoppfølging",
+        "Forbedre ernæring",
+        "Ikke aktuell"
+    ],
+    "tests": [
+        {"id": 1, "test": "Kolesterol (mmol/l)", "weights": [
+            {"id": 1, "weight": [0,0,0,0,0,0,0], "from": 0, "to": 5.0},
+            {"id": 2, "weight": [0,0,0,0,0,0,0], "from": 5.0, "to": 6.4},
+            {"id": 3, "weight": [0,0,0,0,0,0,0], "from": 6.4, "to": 7.8},
+            {"id": 4, "weight": [0,0,0,0,0,0,0], "from": 7.8, "to": -1}
+        ]},
+        {"id": 2, "test": "Blodtrykk systolisk", "weights": [
+            {"id": 1, "weight": [0,0,0,0,0,0,0], "from": 0, "to": 120},
+            {"id": 2, "weight": [0,0,0,0,0,0,0], "from": 120, "to": 130},
+            {"id": 3, "weight": [0,0,0,0,0,0,0], "from": 130, "to": 140},
+            {"id": 4, "weight": [0,0,0,0,0,0,0], "from": 140, "to": 150},
+            {"id": 5, "weight": [0,0,0,0,0,0,0], "from": 150, "to": 160},
+            {"id": 6, "weight": [0,0,0,0,0,0,0], "from": 160, "to": 170},
+            {"id": 7, "weight": [0,0,0,0,0,0,0], "from": 170, "to": 180},
+            {"id": 8, "weight": [0,0,0,0,0,0,0], "from": 180, "to": 190},
+            {"id": 9, "weight": [0,0,0,0,0,0,0], "from": 190, "to": -1}
+        ]},
+        {"id": 3, "test": "Blodtrykk diastolisk", "weights": [
+            {"id": 1, "weight": [0,0,0,0,0,0,0], "from": 0, "to": 70},
+            {"id": 2, "weight": [0,0,0,0,0,0,0], "from": 70, "to": 75},
+            {"id": 3, "weight": [0,0,0,0,0,0,0], "from": 75, "to": 80},
+            {"id": 4, "weight": [0,0,0,0,0,0,0], "from": 80, "to": 85},
+            {"id": 5, "weight": [0,0,0,0,0,0,0], "from": 85, "to": 90},
+            {"id": 6, "weight": [0,0,0,0,0,0,0], "from": 90, "to": 95},
+            {"id": 7, "weight": [0,0,0,0,0,0,0], "from": 95, "to": 100},
+            {"id": 8, "weight": [0,0,0,0,0,0,0], "from": 100, "to": 105},
+            {"id": 9, "weight": [0,0,0,0,0,0,0], "from": 105, "to": 110},
+            {"id": 10, "weight": [0,0,0,0,0,0,0], "from": 110, "to": -1}
+            
+        ]},
+        {"id": 4, "test": "test4", "weights": [
+            {"id": 1, "weight": [0,0,0,0,0,0,0], "from": 0, "to": 0},
+            {"id": 2, "weight": [0,0,0,0,0,0,0], "from": 0, "to": 0},
+            {"id": 3, "weight": [0,0,0,0,0,0,0], "from": 0, "to": 0},
+            {"id": 4, "weight": [0,0,0,0,0,0,0], "from": 0, "to": 0},
+            {"id": 5, "weight": [0,0,0,0,0,0,0], "from": 0, "to": 0},
+            {"id": 6, "weight": [0,0,0,0,0,0,0], "from": 0, "to": 0}
+        ]},
+        {"id": 5, "test": "test5", "weights": [
+            {"id": 1, "weight": [0,0,0,0,0,0,0], "from": 0, "to": 0},
+            {"id": 2, "weight": [0,0,0,0,0,0,0], "from": 0, "to": 0},
+            {"id": 3, "weight": [0,0,0,0,0,0,0], "from": 0, "to": 0},
+            {"id": 4, "weight": [0,0,0,0,0,0,0], "from": 0, "to": 0},
+            {"id": 5, "weight": [0,0,0,0,0,0,0], "from": 0, "to": 0},
+            {"id": 6, "weight": [0,0,0,0,0,0,0], "from": 0, "to": 0}
+        ]}
+      ]
+}

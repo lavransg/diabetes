@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { QuestionService } from '../question.service';
+import { HealthTestsService } from '../health-tests.service';
 
 @Component({
   selector: 'app-home',
@@ -11,12 +12,16 @@ export class HomeComponent implements OnInit {
   questionsFileName = "Last opp JSON-fil med spørsmål og vekter";
   uploaded = false;
   hasQuestions = false;
+  healthTests: any;
 
-  constructor(private questionService: QuestionService) { }
+  constructor(private questionService: QuestionService, private healthTestsService: HealthTestsService) { }
 
   ngOnInit() {
     if (this.questionService.questions[0]) {
       this.hasQuestions = true;
+    }
+    if (this.healthTestsService.HealthTests) {
+      this.healthTests = this.healthTestsService.HealthTests;
     }
   }
 
