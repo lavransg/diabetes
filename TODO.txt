@@ -2,3 +2,11 @@
 
 
 x) Modify JSON.stringify to output a more readable template for questions
+
+) Generate rapport:
+
+x- save as text file
+x- file name should contain timestamp
+x- should contain final classification
+x- should contain all answers ( or useful answers should be selectable when making question template )
+- privacy concerns

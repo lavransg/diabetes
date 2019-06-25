@@ -1,5 +1,10 @@
 
-<button type="button" routerLink="/" class="home btn btn-outline-primary btn-lg">Hjem</button>
+<button type="button" routerLink="/" class="home btn btn-outline-primary btn-lg">
+    Hjem
+</button>
+<button type="button" [disabled]="!this.resultsService.result" (click)="this.resultsService.saveReport()" class="btn btn-outline-primary btn-lg">
+    Lagre resultat
+</button>
 
 <div class="results-container"><div class="container" *ngIf="this.resultsService.result">
 
