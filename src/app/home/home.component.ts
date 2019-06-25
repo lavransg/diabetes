@@ -8,7 +8,8 @@ import { QuestionService } from '../question.service';
 })
 export class HomeComponent implements OnInit {
 
-  questionsFileName = "Velg en JSON-fil for spørsmål";
+  questionsFileName = "Last opp JSON-fil med spørsmål";
+  uploaded = false;
   hasQuestions = false;
 
   constructor(private questionService: QuestionService) { }
@@ -27,6 +28,7 @@ export class HomeComponent implements OnInit {
         console.log(obj);
         this.questionService.questions = obj.questions;
         this.hasQuestions = true;
+        this.uploaded = true;
       };
       this.questionsFileName = event.target.files[0].name;
       filereader.readAsText(event.target.files[0]);

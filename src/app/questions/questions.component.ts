@@ -17,6 +17,7 @@ export class QuestionsComponent implements OnInit {
 
   ngOnInit() {
     this.nextQuestion = this.questionService.getNextQuestion();
+    this.resultsService.generateReport();
   }
 
   next(questionID, alternativeID) {
@@ -25,6 +26,7 @@ export class QuestionsComponent implements OnInit {
       this.questionService.endSurvey();
       this.resultsService.getResults(this.answers);
       this.router.navigate(["/complete"]);
+      this.resultsService.generateReport();
       return;
     }
     this.nextQuestion = this.questionService.getNextQuestion();

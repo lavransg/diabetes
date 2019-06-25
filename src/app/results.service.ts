@@ -30,4 +30,22 @@ export class ResultsService {
     this.highestCategory = result.indexOf(Math.max.apply(null, result));
   }
 
+  generateReport() {
+    if (!this.result) {
+      return null;
+    }
+    let text = "";
+    const filename = "";
+    const dateTime = new Date().toUTCString().slice(6, -4);
+    console.log(dateTime);
+
+    for (const [index, category] of this.categories.entries()) {
+      text += category + " " + this.result[index] + " \n";
+    }
+
+
+    console.log(text);
+
+  }
+
 }

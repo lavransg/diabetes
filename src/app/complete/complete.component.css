@@ -10,8 +10,22 @@
 
 .categories{
     margin-bottom: 20px;
+    height: auto;
 }
 
 .result-button{
     height: 100%;
+}
+
+.bar-container{
+    height: 200px;
+    width: auto;
+    margin-bottom: 5px;
+}
+
+.bar{
+    margin-top: auto;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
 }
