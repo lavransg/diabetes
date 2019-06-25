@@ -1,12 +1,11 @@
 .question-container{
     margin-top: 40vh;
-    /* max-width: 100%; */
 }
 .row{
     margin-right: 0;
     margin-left: 0;
 }
-#home-icon{
+.nav-icon{
     width: 30px;
     height: 30px;
 }

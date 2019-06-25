@@ -14,9 +14,7 @@ export class CompleteComponent implements OnInit, AfterViewInit {
 
   }
 
-  ngOnInit() {
-
-  }
+  ngOnInit() {}
 
   ngAfterViewInit() {
     if (this.resultsService.result) {
@@ -36,13 +34,8 @@ export class CompleteComponent implements OnInit, AfterViewInit {
     for (const value of result) {
       relativeResult.push(Math.round((value  / highestValue) * 100) / 100);
     }
-
     const bars = document.getElementsByClassName("bar");
-    console.log("bars:", bars);
-
     Array.from(bars).forEach((x: HTMLElement, index) => x.style.height = `${(relativeResult[index] * 300)}px`);
-
-    console.log(relativeResult);
   }
 
 }

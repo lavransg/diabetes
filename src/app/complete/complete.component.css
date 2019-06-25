@@ -1,22 +1,6 @@
-.home {
-    position: absolute;
-    top: 10%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-}
 .results-container{
-    margin-top: 200px;
+    margin-top: calc(50vh - 215px);
 }
-
-.categories{
-    margin-bottom: 20px;
-    height: auto;
-}
-
-.result-button{
-    height: 100%;
-}
-
 .bar-container{
     height: 430px;
     width: auto;
@@ -26,7 +10,6 @@
     justify-content: flex-end;
 
 }
-
 .bar{
     border-radius: 4px;
     width: 100%;
@@ -42,13 +25,7 @@
     justify-content: flex-end;
 
 }
-
-#home-icon{
-    width: 30px;
-    height: 30px;
-}
-
-#save-icon{
+.nav-icon{
     width: 30px;
     height: 30px;
 }

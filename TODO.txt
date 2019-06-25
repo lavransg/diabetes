@@ -3,7 +3,7 @@
 
 x) Modify JSON.stringify to output a more readable template for questions
 
-) Generate rapport:
+) Generate report:
 
 x- save as text file
 x- file name should contain timestamp

@@ -24,8 +24,8 @@ export class QuestionsComponent implements OnInit {
     if (this.questionService.isComplete()) {
       this.questionService.endSurvey();
       this.resultsService.getResults(this.answers);
-      this.router.navigate(["/complete"]);
       this.resultsService.generateReport(this.answers);
+      this.router.navigate(["/complete"]);
       return;
     }
     this.nextQuestion = this.questionService.getNextQuestion();
