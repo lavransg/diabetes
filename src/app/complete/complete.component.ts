@@ -24,7 +24,7 @@ export class CompleteComponent implements OnInit, AfterViewInit {
     }
   }
 
-  // this function is used for making multipliers for a bar graphs height.
+  // this function is used for making ratios for a bar graphs height.
   // the tallest bar has value 1, while all other bars are the fraction of points that category has compared to the max
   calculateRelativeResult() {
     const result = this.resultsService.result;
