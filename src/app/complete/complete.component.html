@@ -8,9 +8,19 @@
 
 <div class="results-container"><div class="container" *ngIf="this.resultsService.result">
 
-        <div class="row">
-            <div class="col categories" *ngFor="let item of this.resultsService.categories; index as i;">
+        <div class="row align-items-end">
+            <div class="col categories align-self-end" *ngFor="let item of this.resultsService.categories; index as i;">
 
+                <div class="bar-container">
+                    <div class="bar" *ngIf="this.resultsService.highestCategory !== i"></div>
+                    <div class="bar" *ngIf="this.resultsService.highestCategory === i" style="background-color: #28a745;"></div>
+                    <div class="category-text">
+                        {{item}}
+                        <br><h2>{{this.resultsService.result[i]}}</h2>
+                    </div>
+                </div>
+
+                <!--
                 <button type="button" *ngIf="this.resultsService.highestCategory !== i" class="btn result-button btn-outline-success btn-md">
                     {{item}}
                     <br><h2>{{this.resultsService.result[i]}}</h2>
@@ -20,7 +30,7 @@
                     {{item}}
                     <br><h2>{{this.resultsService.result[i]}}</h2>
                 </button>
-
+                -->
             </div>
         </div>
     

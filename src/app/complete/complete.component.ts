@@ -40,7 +40,7 @@ export class CompleteComponent implements OnInit, AfterViewInit {
     const bars = document.getElementsByClassName("bar");
     console.log("bars:", bars);
 
-    Array.from(bars).forEach((x: HTMLElement, index) => x.style.height = `${100 + (relativeResult[index] * 250)}px`);
+    Array.from(bars).forEach((x: HTMLElement, index) => x.style.height = `${(relativeResult[index] * 300)}px`);
 
     console.log(relativeResult);
   }
