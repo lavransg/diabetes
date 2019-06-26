@@ -10,6 +10,7 @@ export class CompleteComponent implements OnInit, AfterViewInit {
 
   saveReportFile = false;
   saveTestFile = false;
+  inputID = "Identifikator";
 
   constructor(private resultsService: ResultsService) {
 
@@ -25,17 +26,18 @@ export class CompleteComponent implements OnInit, AfterViewInit {
 
   saveFiles() {
     if (this.saveReportFile) {
-      this.resultsService.saveReport();
+      this.resultsService.saveReport(this.inputID);
     }
     if (this.saveTestFile) {
-      this.resultsService.saveTest();
+      this.resultsService.saveTest(this.inputID);
     }
   }
 
 
 
-  // this function is used for making ratios for a bar graphs height.
+  // this function is used for making ratios for a bar graphs heights.
   // the tallest bar has value 1, while all other bars are the fraction of points that category has compared to the max
+  // these values are used to calculate height in pixels
   calculateRelativeResult() {
     const result = this.resultsService.result;
     const healthResult = this.resultsService.healthResult;

@@ -19,6 +19,13 @@
         </div>
         <div class="modal-body">
 
+            <form class="form-inline">
+                <div class="form-group">
+                    <label for="inputID">ID</label>
+                    <input type="text" [placeholder]="inputID" (input)="inputID = $event.target.value" id="inputID" class="form-control mx-sm-3" aria-describedby="inputID">
+                </div>
+            </form>
+
             <div class="custom-control custom-checkbox my-1 mr-sm-2">
                 <input type="checkbox" class="custom-control-input" id="customControlInline" [checked]="saveReportFile" (change)="saveReportFile = !saveReportFile">
                 <label class="custom-control-label" for="customControlInline">Lagre rapport</label>

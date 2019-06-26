@@ -88,22 +88,22 @@ export class ResultsService {
 
   }
 
-  saveReport() {
+  saveReport(id) {
     let filename = "";
-    filename += new Date().toUTCString().slice(6, -4);
-    filename += ".txt";
-    const report = this.report.replace(/\n/g, "\r\n");
+    filename += new Date().toUTCString().slice(6, -13);
+    filename += "-" + id + ".json";
     if (this.report) {
+      const report = this.report.replace(/\n/g, "\r\n");
       const blob = new Blob([report], {type: "text/plain;charset=utf-8"});
       FileSaver.saveAs(blob, filename);
     }
   }
 
-  saveTest() {
+  saveTest(id) {
     if (this.completedAnswers) {
       let filename = "";
-      filename += new Date().toUTCString().slice(6, -4);
-      filename += ".json";
+      filename += new Date().toUTCString().slice(6, -13);
+      filename += "-" + id + ".json";
       const json = JSON.stringify(this.completedAnswers);
       const blob = new Blob([json], {type: "application/json"});
       FileSaver.saveAs(blob, filename);
