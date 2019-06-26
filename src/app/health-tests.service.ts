@@ -1,12 +1,12 @@
 import { Injectable } from '@angular/core';
-import healthTests from '../assets/healthTests.json';
+import data from '../assets/questions3.json';
 
 @Injectable({
   providedIn: 'root'
 })
 export class HealthTestsService {
 
-  public healthTests: any[] = healthTests.tests;
+  public healthTests: any[] = data.tests;
 
   constructor() {
     console.log(this.healthTests);
