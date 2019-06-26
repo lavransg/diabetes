@@ -11,7 +11,9 @@ import { ResultsService } from '../results.service';
 export class HomeComponent implements OnInit {
 
   questionsFileName = "Last opp JSON-fil med spørsmål og vekter";
-  uploaded = false;
+  completedTestFileName = "Last opp JSON-fil med fullført test";
+  questionsUploaded = false;
+  completedTestUploaded = false;
   hasQuestions = false;
   healthTests: any;
   selectedAlternatives: any[] = [];
@@ -40,7 +42,22 @@ export class HomeComponent implements OnInit {
         console.log(obj);
         this.questionService.questions = obj.questions;
         this.hasQuestions = true;
-        this.uploaded = true;
+        this.questionsUploaded = true;
+      };
+      this.questionsFileName = event.target.files[0].name;
+      filereader.readAsText(event.target.files[0]);
+    }
+  }
+
+  completedTestFileAdded(event) {
+    const filereader = new FileReader();
+    if (event.target.files.length > 0) {
+      filereader.onload = e => {
+        const obj = JSON.parse(filereader.result as string);
+        console.log(obj);
+        this.resultsService.result = obj.results;
+        this.hasQuestions = true;
+        this.completedTestUploaded = true;
       };
       this.questionsFileName = event.target.files[0].name;
       filereader.readAsText(event.target.files[0]);

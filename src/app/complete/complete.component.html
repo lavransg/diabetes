@@ -6,9 +6,9 @@
 <button class="btn btn-white btn-sm" [disabled]="!this.resultsService.result"  (click)="this.resultsService.saveReport()">
     <img class="nav-icon" src="../../assets/icons/save.svg" alt="#">
 </button>
-
+<div class="results-container text-center" *ngIf="!this.resultsService.result"><h3>Ingen resultater, fullfør en test først</h3></div>
 <div class="results-container"><div class="container" *ngIf="this.resultsService.result">
-
+        
         <div class="row align-items-end">
             <div class="col align-self-end" *ngFor="let item of this.resultsService.categories; index as i;">
 

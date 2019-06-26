@@ -86,10 +86,48 @@
 
 
 
+<div class="centered">
+  <button type="button" *ngIf="hasQuestions" routerLink="/questions" class="btn btn-outline-primary btn-lg">
+    Start test
+  </button>
+  <br><br>
+  <button type="button" class="btn btn-outline-primary btn-lg" data-toggle="modal" data-target="#exampleModalCenter">
+    Last opp fullført test
+  </button>
+</div>
 
-<button type="button" *ngIf="hasQuestions" routerLink="/questions" class="centered btn btn-outline-primary btn-lg">
-  Start test
-</button>
+<!-- Modal -->
+<div class="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalCenterTitle">Last opp fullført test</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+
+        <div class="form-group">
+          <div class="custom-file">
+            <input type="file" class="custom-file-input" id="completedTestFile" (change)="questionsFileAdded($event)">
+            <label class="custom-file-label" for="completedTestFile">{{this.completedTestFileName}}</label>
+          </div>
+        </div>
+
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-primary">Lagre endringer</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
+
+
+
 <button type="button"  *ngIf="!hasQuestions" disabled class="centered btn btn-outline-primary btn-lg">
   Det er ingen tilgjengelige spørsmål
 </button>
