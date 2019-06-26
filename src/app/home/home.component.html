@@ -110,14 +110,22 @@
 
         <div class="form-group">
           <div class="custom-file">
-            <input type="file" class="custom-file-input" id="completedTestFile" (change)="questionsFileAdded($event)">
+            <input type="file" class="custom-file-input" id="completedTestFile" (change)="completedTestFileAdded($event)">
             <label class="custom-file-label" for="completedTestFile">{{this.completedTestFileName}}</label>
           </div>
         </div>
 
       </div>
       <div class="modal-footer">
-        <button type="button" class="btn btn-primary">Lagre endringer</button>
+        <button 
+          type="button" 
+          class="btn btn-primary" 
+          routerLink="/complete" 
+          data-dismiss="modal" 
+          aria-label="Close"
+          >
+          Lagre endringer
+        </button>
       </div>
     </div>
   </div>
