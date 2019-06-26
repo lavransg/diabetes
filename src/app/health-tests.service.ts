@@ -6,9 +6,9 @@ import healthTests from '../assets/healthTests.json';
 })
 export class HealthTestsService {
 
-  public HealthTests: any[] = healthTests.tests;
+  public healthTests: any[] = healthTests.tests;
 
   constructor() {
-    console.log(this.HealthTests);
+    console.log(this.healthTests);
   }
 }

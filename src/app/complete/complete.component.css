@@ -11,10 +11,16 @@
 
 }
 .bar{
-    border-radius: 4px;
+    border-radius: 0, 0, 4px, 4px;
     width: 100%;
     max-width: 150px;
     background-color: #007bff;
+}
+.bar-health{
+    border-radius: 4px 4px 0 0;
+    width: 100%;
+    max-width: 150px;
+    background-color: #3d9bff;
 }
 .category-text{
     height: 130px;

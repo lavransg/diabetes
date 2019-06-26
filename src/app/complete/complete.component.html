@@ -13,6 +13,8 @@
             <div class="col align-self-end" *ngFor="let item of this.resultsService.categories; index as i;">
 
                 <div class="bar-container">
+                    <div class="bar-health" *ngIf="this.resultsService.highestCategory !== i"></div>
+                    <div class="bar-health" *ngIf="this.resultsService.highestCategory === i" style="background-color: #51b969;"></div>
                     <div class="bar" *ngIf="this.resultsService.highestCategory !== i"></div>
                     <div class="bar" *ngIf="this.resultsService.highestCategory === i" style="background-color: #28a745;"></div>
                     <div class="category-text">

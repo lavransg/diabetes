@@ -12,6 +12,6 @@ a:hover{
     text-decoration: none;
 }
 .health-test-container{
-    max-height: 600px;
+    max-height: calc(100vh - 400px);
     overflow-y: scroll;
 }
