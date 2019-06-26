@@ -56,13 +56,16 @@ export class HomeComponent implements OnInit {
         const obj = JSON.parse(filereader.result as string);
         console.log(obj);
         this.resultsService.completedAnswers = obj;
-        this.resultsService.getResults(obj);
         this.hasQuestions = true;
         this.completedTestUploaded = true;
       };
       this.completedTestFileName = event.target.files[0].name;
       filereader.readAsText(event.target.files[0]);
     }
+  }
+
+  showUploadedTest() {
+    this.resultsService.getResults(this.resultsService.completedAnswers);
   }
 
   radioSelected(testID, alternativeID) {

@@ -90,6 +90,9 @@
   <button type="button" *ngIf="hasQuestions" routerLink="/questions" class="btn btn-outline-primary btn-lg">
     Start test
   </button>
+  <button type="button" *ngIf="completedTestUploaded" (click)="showUploadedTest()" routerLink="/complete" class="btn btn-outline-primary btn-lg">
+    Vis opplastet test
+  </button>
   <br><br>
   <button type="button" class="btn btn-outline-primary btn-lg" data-toggle="modal" data-target="#exampleModalCenter">
     Last opp fullført test
@@ -115,17 +118,6 @@
           </div>
         </div>
 
-      </div>
-      <div class="modal-footer">
-        <button 
-          type="button" 
-          class="btn btn-primary" 
-          routerLink="/complete" 
-          data-dismiss="modal" 
-          aria-label="Close"
-          >
-          Lagre endringer
-        </button>
       </div>
     </div>
   </div>

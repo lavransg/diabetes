@@ -2,6 +2,8 @@
 
 
 x) Modify JSON.stringify to output a more readable template for questions
+) reset uploaded / selected weights when going home from completed-page
+) feedback for correctly uploaded files
 
 ) Generate report:
 
