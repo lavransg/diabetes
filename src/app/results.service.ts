@@ -8,9 +8,10 @@ import * as FileSaver from 'file-saver';
 })
 export class ResultsService {
 
-  result: number[];
-  healthResult: number[];
-  totalResult: number[] = [];
+  completedAnswers: any[]; // question id's + selected alternative id's
+  result: number[]; // final calculated weights from questions
+  healthResult: number[]; // final calculated weights from tests
+  totalResult: number[] = []; // final calculated weights from questions and tests
   highestCategory: number;
   categories = this.questionService.categories;
   report: string;
@@ -96,6 +97,18 @@ export class ResultsService {
       const blob = new Blob([report], {type: "text/plain;charset=utf-8"});
       FileSaver.saveAs(blob, filename);
     }
+  }
+
+  saveTest() {
+    if (this.completedAnswers) {
+      let filename = "";
+      filename += new Date().toUTCString().slice(6, -4);
+      filename += ".json";
+      const json = JSON.stringify(this.completedAnswers);
+      const blob = new Blob([json], {type: "application/json"});
+      FileSaver.saveAs(blob, filename);
+    }
+
   }
 
 }

@@ -23,6 +23,7 @@ export class QuestionsComponent implements OnInit {
     this.answers.push({questionID, alternativeID});
     if (this.questionService.isComplete()) {
       this.questionService.endSurvey();
+      this.resultsService.completedAnswers = this.answers;
       this.resultsService.getResults(this.answers);
       this.resultsService.generateReport(this.answers);
       this.router.navigate(["/complete"]);

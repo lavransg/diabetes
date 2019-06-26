@@ -8,7 +8,8 @@ import { ResultsService } from '../results.service';
 })
 export class CompleteComponent implements OnInit, AfterViewInit {
 
-  relativeResult: number[];
+  saveReportFile = false;
+  saveTestFile = false;
 
   constructor(private resultsService: ResultsService) {
 
@@ -19,6 +20,15 @@ export class CompleteComponent implements OnInit, AfterViewInit {
   ngAfterViewInit() {
     if (this.resultsService.result) {
       this.calculateRelativeResult();
+    }
+  }
+
+  saveFiles() {
+    if (this.saveReportFile) {
+      this.resultsService.saveReport();
+    }
+    if (this.saveTestFile) {
+      this.resultsService.saveTest();
     }
   }
 
