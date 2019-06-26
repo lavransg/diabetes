@@ -58,7 +58,7 @@ export class CompleteComponent implements OnInit, AfterViewInit {
       }
       const barsHealth = document.getElementsByClassName("bar-health");
       Array.from(barsHealth).forEach((x: HTMLElement, index) => x.style.height = `${(relativeHealthResult[index] * 300)}px`);
-      Array.from(bars).forEach((x: HTMLElement, index) => x.style.borderRadius = `0 0 4px 4px`);
+      Array.from(bars).forEach((x: HTMLElement, index) => x.style.borderRadius = "0 0 4px 4px");
     }
 
   }

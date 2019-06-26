@@ -11,6 +11,7 @@
 
 }
 .bar{
+    border-radius: 4px 4px 4px 4px;
     width: 100%;
     max-width: 150px;
     background-color: #007bff;
