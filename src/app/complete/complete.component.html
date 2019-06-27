@@ -1,13 +1,16 @@
-
 <button class="btn btn-white btn-sm" routerLink="/">
     <img class="nav-icon" src="../../assets/icons/home.svg" alt="#">
+</button>
+
+<button class="btn btn-white btn-sm" [disabled]="!this.resultsService.result" data-toggle="modal" data-target="#healthValues">
+  <img class="nav-icon" src="../../assets/icons/settings.svg" alt="#">
 </button>
 
 <button class="btn btn-white btn-sm" [disabled]="!this.resultsService.result" data-toggle="modal" data-target="#exampleModalCenter">
     <img class="nav-icon" src="../../assets/icons/save.svg" alt="#">
 </button>
 
-<!-- Modal -->
+<!-- Save file Modal -->
 <div class="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
     <div class="modal-dialog modal-dialog-centered" role="document">
         <div class="modal-content">
@@ -34,7 +37,6 @@
                 <input type="checkbox" class="custom-control-input" id="customControlInline2" [checked]="saveTestFile" (change)="saveTestFile = !saveTestFile">
                 <label class="custom-control-label" for="customControlInline2">Lagre test-fil</label>
             </div>
-
     
         </div>
         <div class="modal-footer">
@@ -42,7 +44,73 @@
         </div>
         </div>
     </div>
-</div>
+</div> <!-- End of save file Modal -->
+
+<!-- Edit health-values modal -->
+<div class="modal fade" id="healthValues" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+
+        <div class="modal-header">
+          <h5 class="modal-title" id="exampleModalLabel">Administrer spørsmål</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+  
+        <div class="modal-body">
+        
+          <div class="form-group">
+            <button 
+              class="btn btn-outline-primary btn-block" 
+              type="button" 
+              data-toggle="collapse" 
+              data-target="#collapseExample" 
+              aria-expanded="false" 
+              aria-controls="collapseExample"
+              >
+              Rediger helseverdier
+            </button>
+          </div>
+  
+          <div class="collapse" id="collapseExample">
+  
+            <div class="card card-body health-test-container">
+              <div class="form-group" id="{{item.id}}" *ngFor="let item of this.healthTestsService.healthTests; index as i;">
+                
+                <h4>{{item.test}}</h4>
+                <div class="custom-control custom-radio" *ngFor="let option of item.weights; index as j;">
+                    <input (click)="radioSelected(item.id,option.id)" type="radio" id="{{''+item.id+option.id}}" name="{{item.id}}" class="custom-control-input">
+                    <label class="custom-control-label" for="{{''+item.id+option.id}}">{{option.text}}</label>
+                </div>
+                
+              </div>
+            </div>
+  
+            <br>
+            <div class="form-group">
+              <button 
+                class="btn btn-success btn-block" 
+                type="button" 
+                data-toggle="collapse" 
+                data-target="#collapseExample" 
+                aria-expanded="false" 
+                aria-controls="collapseExample"
+                (click)="saveHealthWeights()"
+                >
+                Lagre
+              </button>
+            </div>
+  
+          </div>
+        
+        </div>
+  
+      </div>
+    </div>
+  </div> <!-- End of edit health-values modal -->
+
 
 <div class="results-container text-center" *ngIf="!this.resultsService.result"><h3>Ingen resultater, fullfør en test først</h3></div>
 <div class="results-container"><div class="container" *ngIf="this.resultsService.result">

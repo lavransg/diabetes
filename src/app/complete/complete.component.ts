@@ -1,6 +1,7 @@
 import { Component, OnInit, AfterViewInit } from '@angular/core';
 import { ResultsService } from '../results.service';
 import { QuestionService } from '../question.service';
+import { HealthTestsService } from '../health-tests.service';
 
 @Component({
   selector: 'app-complete',
@@ -12,8 +13,10 @@ export class CompleteComponent implements OnInit, AfterViewInit {
   saveReportFile = false;
   saveTestFile = false;
   inputID = "Identifikator";
+  healthWeightsAdded: boolean;
+  selectedAlternatives: any[] = [];
 
-  constructor(private questionService: QuestionService, private resultsService: ResultsService) {
+  constructor(private healthTestsService: HealthTestsService, private resultsService: ResultsService) {
 
   }
 
@@ -32,6 +35,19 @@ export class CompleteComponent implements OnInit, AfterViewInit {
     if (this.saveTestFile) {
       this.resultsService.saveTest(this.inputID);
     }
+  }
+
+  radioSelected(testID, alternativeID) {
+    const filtered = this.selectedAlternatives.filter(element => element.testID !== testID); // removes element with same testID
+    filtered.push({testID, alternativeID});
+    this.selectedAlternatives = filtered;
+  }
+
+  saveHealthWeights() {
+    if (!this.healthWeightsAdded) {
+      this.resultsService.getHealthResults(this.selectedAlternatives);
+    }
+    this.healthWeightsAdded = true;
   }
 
 

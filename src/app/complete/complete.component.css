@@ -35,3 +35,7 @@
     width: 30px;
     height: 30px;
 }
+.health-test-container{
+    max-height: calc(100vh - 400px);
+    overflow-y: scroll;
+}
