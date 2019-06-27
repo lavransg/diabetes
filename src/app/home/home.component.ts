@@ -34,6 +34,10 @@ export class HomeComponent implements OnInit {
     }
   }
 
+  ngAfterViewInit() {
+    this.resultsService.clearResults();
+  }
+
   questionsFileAdded(event) {
     const filereader = new FileReader();
     if (event.target.files.length > 0) {

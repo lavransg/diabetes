@@ -91,7 +91,7 @@ export class ResultsService {
   saveReport(id) {
     let filename = "";
     filename += new Date().toUTCString().slice(6, -13);
-    filename += "-" + id + ".json";
+    filename += "-" + id + ".txt";
     if (this.report) {
       const report = this.report.replace(/\n/g, "\r\n");
       const blob = new Blob([report], {type: "text/plain;charset=utf-8"});
@@ -109,6 +109,16 @@ export class ResultsService {
       FileSaver.saveAs(blob, filename);
     }
 
+  }
+
+  clearResults(){
+    this.completedAnswers = undefined;
+    this.result = undefined;
+    this.healthResult = undefined;
+    this.totalResult = undefined;
+    this.highestCategory = undefined;
+    this.report = undefined;
+    this.questionService.endSurvey();
   }
 
 }

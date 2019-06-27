@@ -1,5 +1,6 @@
 import { Component, OnInit, AfterViewInit } from '@angular/core';
 import { ResultsService } from '../results.service';
+import { QuestionService } from '../question.service';
 
 @Component({
   selector: 'app-complete',
@@ -12,7 +13,7 @@ export class CompleteComponent implements OnInit, AfterViewInit {
   saveTestFile = false;
   inputID = "Identifikator";
 
-  constructor(private resultsService: ResultsService) {
+  constructor(private questionService: QuestionService, private resultsService: ResultsService) {
 
   }
 
