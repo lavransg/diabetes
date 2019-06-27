@@ -8,16 +8,17 @@ import * as FileSaver from 'file-saver';
 })
 export class ResultsService {
 
-  completedAnswers: any[]; // question id's + selected alternative id's
+  completedAnswers: any[]; // question id's + selected alternative id's for survey questions
+  completedHealthAnswers: any[]; // question id's + selected alternative id's for health variables
   result: number[]; // final calculated weights from questions
   healthResult: number[]; // final calculated weights from tests
   totalResult: number[] = []; // final calculated weights from questions and tests
   highestCategory: number;
   categories = this.questionService.categories;
-  report: string;
 
   constructor(private questionService: QuestionService, private healthTestsService: HealthTestsService) {}
 
+  // calculates the result weights of the survey answers
   getResults(answers: object[]) {
     const result = new Array(this.categories.length).fill(0);
     for (const answer of answers) {
@@ -36,6 +37,7 @@ export class ResultsService {
     this.calculateTotalResult();
   }
 
+  // calculates the result weights of the health-values
   getHealthResults(answers: object[]) {
     const result = new Array(this.categories.length).fill(0);
     for (const answer of answers) {
@@ -54,6 +56,7 @@ export class ResultsService {
 
   }
 
+  // calculates the result weights of both survey answers and the health-values
   calculateTotalResult() {
     for (const [index, value] of this.result.entries()) {
       if (this.healthResult) {
@@ -63,16 +66,19 @@ export class ResultsService {
     this.highestCategory = this.totalResult.indexOf(Math.max.apply(null, this.totalResult));
   }
 
-  generateReport(answers: object[]) {
+  // produces a text string with each survey question + selected answer
+  // used when saving a report text file on the users machine
+  generateReport() {
     if (!this.result) { return null; }
     let text = "";
 
     for (const [index, category] of this.categories.entries()) {
-      text += category + " " + this.result[index] + " \n";
+      text += category + ": " + this.result[index] + " \n";
     }
     text += "\n";
 
-    for (const answer of answers) {
+    // finding survey question text and selected answer text
+    for (const answer of this.completedAnswers) {
       const quesionID = "questionID";
       const alternativeID = "alternativeID";
       const question = this.questionService.questions.find(element => element.id === answer[quesionID]);
@@ -82,23 +88,27 @@ export class ResultsService {
         }
       }
     }
-
-    this.report = text;
     console.log(text);
+    return text;
 
   }
 
+  // saves a text file with all results + answers to the users machine.
   saveReport(id) {
-    let filename = "";
-    filename += new Date().toUTCString().slice(6, -13);
-    filename += "-" + id + ".txt";
-    if (this.report) {
-      const report = this.report.replace(/\n/g, "\r\n");
-      const blob = new Blob([report], {type: "text/plain;charset=utf-8"});
+    let report = this.generateReport();
+    console.log("_______________savereport1")
+    console.log(report)
+    let filename = new Date().toUTCString().slice(6, -13) + "-" + id + ".txt";
+    if (report) {
+      report.replace(/\n/g, "\r\n");
+      console.log("_______________savereport2")
+      console.log(report)
+      const blob = new Blob([report], {type: "text/plain", endings:'native'});
       FileSaver.saveAs(blob, filename);
     }
   }
 
+  // saves a JSON-file with question and answer id-pairs so that a survey can be re-run from this local file
   saveTest(id) {
     if (this.completedAnswers) {
       let filename = "";
@@ -117,7 +127,6 @@ export class ResultsService {
     this.healthResult = undefined;
     this.totalResult = [];
     this.highestCategory = undefined;
-    this.report = undefined;
     this.questionService.endSurvey();
   }
 
