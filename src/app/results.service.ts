@@ -54,6 +54,7 @@ export class ResultsService {
       }
     }
     this.healthResult = result;
+    this.calculateTotalResult();
 
   }
 
@@ -113,13 +114,10 @@ export class ResultsService {
   // saves a text file with all results + answers to the users machine.
   saveReport(id) {
     let report = this.generateReport();
-    console.log("_______________savereport1")
     console.log(report)
     let filename = new Date().toUTCString().slice(6, -13) + "-" + id + ".txt";
     if (report) {
       report.replace(/\n/g, "\r\n");
-      console.log("_______________savereport2")
-      console.log(report)
       const blob = new Blob([report], {type: "text/plain", endings:'native'});
       FileSaver.saveAs(blob, filename);
     }
