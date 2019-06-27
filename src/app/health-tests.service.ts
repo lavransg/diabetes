@@ -1,5 +1,5 @@
 import { Injectable } from '@angular/core';
-import data from '../assets/questions3.json';
+import data from '../assets/questions4.json';
 
 @Injectable({
   providedIn: 'root'

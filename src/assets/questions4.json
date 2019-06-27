@@ -9,246 +9,323 @@
         {"id": 1, "type": "alternatives", "group": "Diagnose", 
             "question": "Hvor lenge har du hatt diabetes?",
             "alternatives": [
-                {"id": 1, "text": "0-4 år",    "weights": [0,0,0,0,0,0,0]}, 
-                {"id": 2, "text": "5-9 år",    "weights": [0,0,0,0,0,0,0]},
-                {"id": 3, "text": "10-14 år",  "weights": [0,0,0,0,0,0,0]},
-                {"id": 4, "text": "15-19 år",  "weights": [0,0,0,0,0,0,0]},
-                {"id": 5, "text": "20+ år",    "weights": [0,0,0,0,0,0,0]}
+                {"id": 1, "text": "0-4 år",    "weights": [0,0,0,0]}, 
+                {"id": 2, "text": "5-9 år",    "weights": [0,0,0,0]},
+                {"id": 3, "text": "10-14 år",  "weights": [0,0,0,0]},
+                {"id": 4, "text": "15-19 år",  "weights": [0,0,0,0]},
+                {"id": 5, "text": "20+ år",    "weights": [0,0,0,0]}
             ]
         },
         {"id": 2, "type": "alternatives", "group": "Diagnose", 
             "question": "Hvilken type diabetes har du?",
             "alternatives": [
-                {"id": 1, "text": "Type 1",    "weights": [0,0,0,1000,0,0,0]}, 
-                {"id": 2, "text": "Type 2",    "weights": [0,0,0,0,0,0,0]},
-                {"id": 3, "text": "vet ikke",  "weights": [0,0,0,0,0,0,0]}
+                {"id": 1, "text": "Type 1",    "weights": [0,0,0,1000]}, 
+                {"id": 2, "text": "Type 2",    "weights": [0,0,0,0]},
+                {"id": 3, "text": "vet ikke",  "weights": [0,0,0,0]}
             ]
         },
         {"id": 3, "type": "input", "group": "Diagnose", 
             "question": "Hvor høy er du?",
             "alternatives": [
-                {"id": 1, "text": "Vet ikke",   "weights": [0,0,0,0,0,0,0]}
+                {"id": 1, "text": "Vet ikke",   "weights": [0,0,0,0]}
             ]
         },
         {"id": 4, "type": "input", "group": "Diagnose", 
             "question": "Hvor mye veier du?",
             "alternatives": [
-                {"id": 1, "text": "Vet ikke",   "weights": [0,0,0,0,0,0,0]}
+                {"id": 1, "text": "Vet ikke",   "weights": [0,0,0,0]}
             ]
         },
         {"id": 5, "type": "input", "group": "Diagnose", 
             "question": "Hva var din siste HbA1c-verdi (langtidsblodsukker)?",
             "alternatives": [
-                {"id": 1, "text": "Vet ikke",   "weights": [0,0,0,0,0,0,0]}
+                {"id": 1, "text": "Vet ikke",   "weights": [0,0,0,0]}
             ]
         },
         {"id": 6, "type": "alternatives", "group": "Behandling", 
             "question": "Bruker du insulin",
             "alternatives": [
-                {"id": 1, "text": "Ja",         "weights": [0,0,0,0,0,0,0]}, 
-                {"id": 2, "text": "Nei",        "weights": [0,0,0,0,0,0,0]},
-                {"id": 3, "text": "Vet ikke",   "weights": [0,0,0,0,0,0,0]}
+                {"id": 1, "text": "Ja",         "weights": [0,0,0,0]}, 
+                {"id": 2, "text": "Nei",        "weights": [0,0,0,0]},
+                {"id": 3, "text": "Vet ikke",   "weights": [0,0,0,0]}
             ]
         },
         {"id": 7, "type": "alternatives", "group": "Behandling", 
             "question": "Bruker du tabletter mot diabetes",
             "alternatives": [
-                {"id": 1, "text": "Ja",         "weights": [0,0,0,0,0,0,0]}, 
-                {"id": 2, "text": "Nei",        "weights": [0,0,0,0,0,0,0]},
-                {"id": 3, "text": "Vet ikke",   "weights": [0,0,0,0,0,0,0]}
+                {"id": 1, "text": "Ja",         "weights": [0,0,0,0]}, 
+                {"id": 2, "text": "Nei",        "weights": [0,0,0,0]},
+                {"id": 3, "text": "Vet ikke",   "weights": [0,0,0,0]}
             ]
         },
         {"id": 8, "type": "alternatives", "group": "Behandling", 
             "question": "Bruker du kolesterolsenkende tabletter?",
             "alternatives": [
-                {"id": 1, "text": "Ja",         "weights": [0,0,0,0,0,0,0]}, 
-                {"id": 2, "text": "Nei",        "weights": [0,0,0,0,0,0,0]},
-                {"id": 3, "text": "Vet ikke",   "weights": [0,0,0,0,0,0,0]}
+                {"id": 1, "text": "Ja",         "weights": [0,0,0,0]}, 
+                {"id": 2, "text": "Nei",        "weights": [0,0,0,0]},
+                {"id": 3, "text": "Vet ikke",   "weights": [0,0,0,0]}
             ]
         },
         {"id": 9, "type": "alternatives", "group": "Behandling", 
             "question": "Bruker du tabletter mot høyt blodtrykk?",
             "alternatives": [
-                {"id": 1, "text": "Ja",         "weights": [0,0,0,0,0,0,0]}, 
-                {"id": 2, "text": "Nei",        "weights": [0,0,0,0,0,0,0]},
-                {"id": 3, "text": "Vet ikke",   "weights": [0,0,0,0,0,0,0]}
+                {"id": 1, "text": "Ja",         "weights": [0,0,0,0]}, 
+                {"id": 2, "text": "Nei",        "weights": [0,0,0,0]},
+                {"id": 3, "text": "Vet ikke",   "weights": [0,0,0,0]}
             ]
         },
         {"id": 10, "type": "alternatives", "group": "Behandling", 
             "question": "Bruker du blodfortynnende tabletter?",
             "alternatives": [
-                {"id": 1, "text": "Ja",         "weights": [0,0,0,0,0,0,0]}, 
-                {"id": 2, "text": "Nei",        "weights": [0,0,0,0,0,0,0]},
-                {"id": 3, "text": "Vet ikke",   "weights": [0,0,0,0,0,0,0]}
+                {"id": 1, "text": "Ja",         "weights": [0,0,0,0]}, 
+                {"id": 2, "text": "Nei",        "weights": [0,0,0,0]},
+                {"id": 3, "text": "Vet ikke",   "weights": [0,0,0,0]}
             ]
         },
         {"id": 11, "type": "alternatives", "group": "Egenaktivitet og røykevaner", 
             "question": "Måler du noen gang selv hvor mye sukker (glukose) du har i blodet (blodsukker)? (Svar ”ja” også om noen hjelper deg eller gjør det for deg)",
             "alternatives": [
-                {"id": 1, "text": "Nei",    "weights": [0,0,0,0,0,0,0]},
-                {"id": 2, "text": "Sjeldnere enn en gang i uken",    "weights": [0,0,0,0,0,0,0]},
-                {"id": 3, "text": "1-2 ganger i uken",    "weights": [0,0,0,0,0,0,0]},
-                {"id": 4, "text": "3-4 ganger i uken",    "weights": [0,0,0,0,0,0,0]},
-                {"id": 5, "text": "5-6 ganger i uken",    "weights": [0,0,0,0,0,0,0]},
-                {"id": 6, "text": "7+ ganger i uken",    "weights": [0,0,0,0,0,0,0]}
+                {"id": 1, "text": "Nei",    "weights": [0,0,0,0]},
+                {"id": 2, "text": "Sjeldnere enn en gang i uken",    "weights": [0,0,0,0]},
+                {"id": 3, "text": "1-2 ganger i uken",    "weights": [0,0,0,0]},
+                {"id": 4, "text": "3-4 ganger i uken",    "weights": [0,0,0,0]},
+                {"id": 5, "text": "5-6 ganger i uken",    "weights": [0,0,0,0]},
+                {"id": 6, "text": "7+ ganger i uken",    "weights": [0,0,0,0]}
             ]
         },
         {"id": 12, "type": "alternatives", "group": "Egenaktivitet og røykevaner", 
             "question": "Har du i løpet av det siste året hatt så lavt blodsukker (alvorlig ”føling”) at du måtte ha hjelp av andre for å komme over det?",
             "alternatives": [
-                {"id": 1, "text": "Ja",         "weights": [0,0,0,0,0,0,0]}, 
-                {"id": 2, "text": "Nei",        "weights": [0,0,0,0,0,0,0]},
-                {"id": 3, "text": "Vet ikke",   "weights": [0,0,0,0,0,0,0]}
+                {"id": 1, "text": "Ja",         "weights": [0,0,0,0]}, 
+                {"id": 2, "text": "Nei",        "weights": [0,0,0,0]},
+                {"id": 3, "text": "Vet ikke",   "weights": [0,0,0,0]}
             ]
         },
         {"id": 13, "type": "alternatives", "group": "Egenaktivitet og røykevaner", 
             "question": "Har du noen gang deltatt på lengre kurs (Startkurs) om diabetes (minst 1-2 dager)?(Arrangeres vanligvis av sykehus eller Lærings- og mestringssenter)",
             "alternatives": [
-                {"id": 1, "text": "Ja",         "weights": [0,0,0,0,0,0,0]}, 
-                {"id": 2, "text": "Nei",        "weights": [0,0,0,0,0,0,0]},
-                {"id": 3, "text": "Vet ikke",   "weights": [0,0,0,0,0,0,0]}
+                {"id": 1, "text": "Ja",         "weights": [0,0,0,0]}, 
+                {"id": 2, "text": "Nei",        "weights": [0,0,0,0]},
+                {"id": 3, "text": "Vet ikke",   "weights": [0,0,0,0]}
             ]
         },
         {"id": 14, "type": "alternatives", "group": "Egenaktivitet og røykevaner", 
             "question": "Røyker du daglig nå?",
             "alternatives": [
-                {"id": 1, "text": "Ja",     "weights": [0,0,0,0,0,0,0]}, 
-                {"id": 2, "text": "Nei",    "weights": [0,0,0,0,0,0,0]}
+                {"id": 1, "text": "Ja",     "weights": [0,0,0,0]}, 
+                {"id": 2, "text": "Nei",    "weights": [0,0,0,0]}
             ]
         },
         {"id": 15, "type": "alternatives", "group": "Egenaktivitet og røykevaner", 
             "question": "Er det mer enn tre måneder siden du sluttet å røyke?",
             "alternatives": [
-                {"id": 1, "text": "Ja",                     "weights": [0,0,0,0,0,0,0]}, 
-                {"id": 2, "text": "Nei",                    "weights": [0,0,0,0,0,0,0]},
-                {"id": 3, "text": "Har aldri røykt daglig", "weights": [0,0,0,0,0,0,0]}
+                {"id": 1, "text": "Ja",                     "weights": [0,0,0,0]}, 
+                {"id": 2, "text": "Nei",                    "weights": [0,0,0,0]},
+                {"id": 3, "text": "Har aldri røykt daglig", "weights": [0,0,0,0]}
             ]
         },
         {"id": 16, "type": "alternatives", "group": "Egenaktivitet og røykevaner", 
             "question": "Hvor ofte mosjonerer du vanligvis hver uke? Med mosjon menes at du på fritid eller i arbeid går, sykler, svømmer eller er fysisk aktiv på annen måte i til sammen minst 30 minutter, slik at du blir litt andpusten eller varm.",
             "alternatives": [
-                {"id": 1, "text": "Mindre enn en gang hver uke",    "weights": [0,0,0,0,0,0,0]}, 
-                {"id": 2, "text": "1-2 ganger i uken",    "weights": [0,0,0,0,0,0,0]},
-                {"id": 3, "text": "3-4 ganger i uken",    "weights": [0,0,0,0,0,0,0]},
-                {"id": 4, "text": "5-6 ganger i uken",    "weights": [0,0,0,0,0,0,0]},
-                {"id": 5, "text": "7+ ganger i uken",     "weights": [0,0,0,0,0,0,0]}
+                {"id": 1, "text": "Mindre enn en gang hver uke",    "weights": [0,0,0,0]}, 
+                {"id": 2, "text": "1-2 ganger i uken",    "weights": [0,0,0,0]},
+                {"id": 3, "text": "3-4 ganger i uken",    "weights": [0,0,0,0]},
+                {"id": 4, "text": "5-6 ganger i uken",    "weights": [0,0,0,0]},
+                {"id": 5, "text": "7+ ganger i uken",     "weights": [0,0,0,0]}
             ]
         },
         {"id": 17, "type": "alternatives", "group": "Syn", 
             "question": "Har du vært til øyeundersøkelse (av netthinnen/øyebunnen) på øyeavdeling eller hos øyelege for din diabetes?",
             "alternatives": [
-                {"id": 1, "text": "Ja",         "weights": [0,0,0,0,0,0,0]}, 
-                {"id": 2, "text": "Nei",        "weights": [0,0,0,0,0,0,0]},
-                {"id": 3, "text": "Vet ikke",   "weights": [0,0,0,0,0,0,0]}
+                {"id": 1, "text": "Ja",         "weights": [0,0,0,0]}, 
+                {"id": 2, "text": "Nei",        "weights": [0,0,0,0]},
+                {"id": 3, "text": "Vet ikke",   "weights": [0,0,0,0]}
             ]
         },
         {"id": 18, "type": "alternatives", "group": "Syn", 
             "question": "Har du fått laserbehandling av øynene pga. din diabetes?",
             "alternatives": [
-                {"id": 1, "text": "Ja",         "weights": [0,0,0,0,0,0,0]}, 
-                {"id": 2, "text": "Nei",        "weights": [0,0,0,0,0,0,0]},
-                {"id": 3, "text": "Vet ikke",   "weights": [0,0,0,0,0,0,0]}
+                {"id": 1, "text": "Ja",         "weights": [0,0,0,0]}, 
+                {"id": 2, "text": "Nei",        "weights": [0,0,0,0]},
+                {"id": 3, "text": "Vet ikke",   "weights": [0,0,0,0]}
             ]
         },
         {"id": 19, "type": "alternatives", "group": "Fotproblemer", 
             "question": "Er du operert eller blokket pga. trange blodårer i beina?",
             "alternatives": [
-                {"id": 1, "text": "Ja",         "weights": [0,0,0,0,0,0,0]}, 
-                {"id": 2, "text": "Nei",        "weights": [0,0,0,0,0,0,0]},
-                {"id": 3, "text": "Vet ikke",   "weights": [0,0,0,0,0,0,0]}
+                {"id": 1, "text": "Ja",         "weights": [0,0,0,0]}, 
+                {"id": 2, "text": "Nei",        "weights": [0,0,0,0]},
+                {"id": 3, "text": "Vet ikke",   "weights": [0,0,0,0]}
             ]
         },
         {"id": 20, "type": "alternatives", "group": "Fotproblemer", 
             "question": "Har du fått amputert deler av ett eller begge bein pga. dårlig blodsirkulasjon?",
             "alternatives": [
-                {"id": 1, "text": "Ja",         "weights": [0,0,0,0,0,0,0]}, 
-                {"id": 2, "text": "Nei",        "weights": [0,0,0,0,0,0,0]},
-                {"id": 3, "text": "Vet ikke",   "weights": [0,0,0,0,0,0,0]}
+                {"id": 1, "text": "Ja",         "weights": [0,0,0,0]}, 
+                {"id": 2, "text": "Nei",        "weights": [0,0,0,0]},
+                {"id": 3, "text": "Vet ikke",   "weights": [0,0,0,0]}
             ]
         },
         {"id": 21, "type": "alternatives", "group": "Fotproblemer", 
             "question": "Har du noen gang hatt sår på føttene (nedenfor ankelen) som har brukt over 3 uker på å gro?",
             "alternatives": [
-                {"id": 1, "text": "Nei",                "weights": [0,0,0,0,0,0,0]}, 
-                {"id": 2, "text": "Ja, en gang",        "weights": [0,0,0,0,0,0,0]},
-                {"id": 3, "text": "ja, flere ganger",   "weights": [0,0,0,0,0,0,0]},
-                {"id": 4, "text": "Vet ikke",           "weights": [0,0,0,0,0,0,0]}
+                {"id": 1, "text": "Nei",                "weights": [0,0,0,0]}, 
+                {"id": 2, "text": "Ja, en gang",        "weights": [0,0,0,0]},
+                {"id": 3, "text": "ja, flere ganger",   "weights": [0,0,0,0]},
+                {"id": 4, "text": "Vet ikke",           "weights": [0,0,0,0]}
             ]
         },
         {"id": 22, "type": "alternatives", "group": "Fotproblemer", 
             "question": "Har du noen gang fått undersøkt føttene dine ved diabeteskontroll på fastlegekontor/sykehuspoliklinikk?",
             "alternatives": [
-                {"id": 1, "text": "Ja",         "weights": [0,0,0,0,0,0,0]}, 
-                {"id": 2, "text": "Nei",        "weights": [0,0,0,0,0,0,0]},
-                {"id": 3, "text": "Vet ikke",   "weights": [0,0,0,0,0,0,0]}
+                {"id": 1, "text": "Ja",         "weights": [0,0,0,0]}, 
+                {"id": 2, "text": "Nei",        "weights": [0,0,0,0]},
+                {"id": 3, "text": "Vet ikke",   "weights": [0,0,0,0]}
             ]
         },
         {"id": 23, "type": "alternatives", "group": "Andre syndromer og arvelige forhold", 
-            "question": ". Har eller har du hatt angina (hjertekrampe), hjerteinfarkt eller er du blitt operert for trange blodårer i hjertet (stentet/blokket/bypass)?",
+            "question": "Har eller har du hatt angina (hjertekrampe), hjerteinfarkt eller er du blitt operert for trange blodårer i hjertet (stentet/blokket/bypass)?",
             "alternatives": [
-                {"id": 1, "text": "Ja",         "weights": [0,0,0,0,0,0,0]}, 
-                {"id": 2, "text": "Nei",        "weights": [0,0,0,0,0,0,0]},
-                {"id": 3, "text": "Vet ikke",   "weights": [0,0,0,0,0,0,0]}
+                {"id": 1, "text": "Ja",         "weights": [0,0,0,0]}, 
+                {"id": 2, "text": "Nei",        "weights": [0,0,0,0]},
+                {"id": 3, "text": "Vet ikke",   "weights": [0,0,0,0]}
             ]
         },
         {"id": 24, "type": "alternatives", "group": "", 
-            "question": ". Har eller har dine foreldre hatt hjertesykdom (angina, hjerteinfarkt, operert for trange blodårer i hjertet)?",
+            "question": "Har eller har dine foreldre hatt hjertesykdom (angina, hjerteinfarkt, operert for trange blodårer i hjertet)?",
             "alternatives": [
-                {"id": 1, "text": "Ja",         "weights": [0,0,0,0,0,0,0]}, 
-                {"id": 2, "text": "Nei",        "weights": [0,0,0,0,0,0,0]},
-                {"id": 3, "text": "Vet ikke",   "weights": [0,0,0,0,0,0,0]}
+                {"id": 1, "text": "Ja",         "weights": [0,0,0,0]}, 
+                {"id": 2, "text": "Nei",        "weights": [0,0,0,0]},
+                {"id": 3, "text": "Vet ikke",   "weights": [0,0,0,0]}
             ]
         },
         {"id": 25, "type": "alternatives", "group": "", 
             "question": "Hvis dine foreldre har hatt hjertesykdom: Fikk noen av dem dette i ”ung” alder, dvs. at din far fikk hjertesykdom før 55 års alder, eller at din mor fikk det før hun var 65 år?",
             "alternatives": [
-                {"id": 1, "text": "Ja",         "weights": [0,0,0,0,0,0,0]}, 
-                {"id": 2, "text": "Nei",        "weights": [0,0,0,0,0,0,0]},
-                {"id": 3, "text": "Vet ikke",   "weights": [0,0,0,0,0,0,0]}
+                {"id": 1, "text": "Ja",         "weights": [0,0,0,0]}, 
+                {"id": 2, "text": "Nei",        "weights": [0,0,0,0]},
+                {"id": 3, "text": "Vet ikke",   "weights": [0,0,0,0]}
             ]
         },
         {"id": 26, "type": "alternatives", "group": "", 
             "question": "Har du hatt hjerneslag? (Kryss av for nei hvis symptomene varte i mindre enn ett døgn)",
             "alternatives": [
-                {"id": 1, "text": "Ja",         "weights": [0,0,0,0,0,0,0]}, 
-                {"id": 2, "text": "Nei",        "weights": [0,0,0,0,0,0,0]},
-                {"id": 3, "text": "Vet ikke",   "weights": [0,0,0,0,0,0,0]}
+                {"id": 1, "text": "Ja",         "weights": [0,0,0,0]}, 
+                {"id": 2, "text": "Nei",        "weights": [0,0,0,0]},
+                {"id": 3, "text": "Vet ikke",   "weights": [0,0,0,0]}
             ]
         },
         {"id": 27, "type": "alternatives", "group": "", 
             "question": "Har andre i din nærmeste familie diabetes, dvs. dine foreldre, dine egne barn eller dine søsken?",
             "alternatives": [
-                {"id": 1, "text": "Ja",         "weights": [0,0,0,0,0,0,0]}, 
-                {"id": 2, "text": "Nei",        "weights": [0,0,0,0,0,0,0]},
-                {"id": 3, "text": "Vet ikke",   "weights": [0,0,0,0,0,0,0]}
+                {"id": 1, "text": "Ja",         "weights": [0,0,0,0]}, 
+                {"id": 2, "text": "Nei",        "weights": [0,0,0,0]},
+                {"id": 3, "text": "Vet ikke",   "weights": [0,0,0,0]}
             ]
         },
         {"id": 28, "type": "alternatives", "group": "", 
             "question": "Diabetes kan arte seg forskjellig i ulike befolkningsgrupper avhengig av etnisk opprinnelse. Vi ber deg derfor angi din etnisitet. (Annet angis dersom de andre gruppene ikke passer, eller dersom dine foreldre ikke tilhører samme gruppe, for eksempel om du har europeisk mor og asiatisk far ",
             "alternatives": [
-                {"id": 1, "text": "Norsk/europeer/amerikaner",  "weights": [0,0,0,0,0,0,0]}, 
-                {"id": 2, "text": "Afrikaner",                  "weights": [0,0,0,0,0,0,0]},
-                {"id": 3, "text": "Asiat",                      "weights": [0,0,0,0,0,0,0]}, 
-                {"id": 4, "text": "Annet",                      "weights": [0,0,0,0,0,0,0]}
+                {"id": 1, "text": "Norsk/europeer/amerikaner",  "weights": [0,0,0,0]}, 
+                {"id": 2, "text": "Afrikaner",                  "weights": [0,0,0,0]},
+                {"id": 3, "text": "Asiat",                      "weights": [0,0,0,0]}, 
+                {"id": 4, "text": "Annet",                      "weights": [0,0,0,0]}
             ]
         }
       ],
       "tests": [
-        {"id": 1, "test": "test1", "weights": [
-            {"id": 1, "weight": [0,0,0,0,0,0,0], "text": "valg"},
-            {"id": 2, "weight": [0,0,0,0,0,0,0], "text": "valg"},
-            {"id": 3, "weight": [0,0,0,0,0,0,0], "text": "valg"},
-            {"id": 4, "weight": [0,0,0,0,0,0,0], "text": "valg"},
-            {"id": 5, "weight": [0,0,0,0,0,0,0], "text": "valg"},
-            {"id": 6, "weight": [0,0,0,0,0,0,0], "text": "valg"}
+        {"id": 1, "test": "Bare kost/mosjon", "weights": [
+            {"id": 1, "weight": [0,0,0,0], "text": "Ja"},
+            {"id": 2, "weight": [0,0,0,0], "text": "Nei"}
         ]},
-        {"id": 2, "test": "test2", "weights": [
-            {"id": 1, "weight": [0,0,0,0,0,0,0], "text": "valg"},
-            {"id": 2, "weight": [0,0,0,0,0,0,0], "text": "valg"},
-            {"id": 3, "weight": [0,0,0,0,0,0,0], "text": "valg"},
-            {"id": 4, "weight": [0,0,0,0,0,0,0], "text": "valg"},
-            {"id": 5, "weight": [0,0,0,0,0,0,0], "text": "valg"},
-            {"id": 6, "weight": [0,0,0,0,0,0,0], "text": "valg"}
+        {"id": 2, "test": "Metformin", "weights": [
+            {"id": 1, "weight": [0,0,0,0], "text": "Ja"},
+            {"id": 2, "weight": [0,0,0,0], "text": "Nei"}
+        ]},
+        {"id": 3, "test": "Sulfonylurea", "weights": [
+            {"id": 1, "weight": [0,0,0,0], "text": "Ja"},
+            {"id": 2, "weight": [0,0,0,0], "text": "Nei"}
+        ]},
+        {"id": 4, "test": "Glitazon", "weights": [
+            {"id": 1, "weight": [0,0,0,0], "text": "Ja"},
+            {"id": 2, "weight": [0,0,0,0], "text": "Nei"}
+        ]},
+        {"id": 5, "test": "GLP-1 analog", "weights": [
+            {"id": 1, "weight": [0,0,0,0], "text": "Ja"},
+            {"id": 2, "weight": [0,0,0,0], "text": "Nei"}
+        ]},
+        {"id": 6, "test": "DPP4 - hemmer", "weights": [
+            {"id": 1, "weight": [0,0,0,0], "text": "Ja"},
+            {"id": 2, "weight": [0,0,0,0], "text": "Nei"}
+        ]},
+        {"id": 7, "test": "SGLT2 - hemmer", "weights": [
+            {"id": 1, "weight": [0,0,0,0], "text": "Ja"},
+            {"id": 2, "weight": [0,0,0,0], "text": "Nei"}
+        ]},
+        {"id": 8, "test": "Andre antidiabetika", "weights": [
+            {"id": 1, "weight": [0,0,0,0], "text": "Ja"},
+            {"id": 2, "weight": [0,0,0,0], "text": "Nei"}
+        ]},
+        {"id": 9, "test": "Insulin", "weights": [
+            {"id": 1, "weight": [0,0,0,0], "text": "Ja"},
+            {"id": 2, "weight": [0,0,0,0], "text": "Nei"}
+        ]},
+        {"id": 10, "test": "Albyl-E / andre platehemmer", "weights": [
+            {"id": 1, "weight": [0,0,0,0], "text": "Ja"},
+            {"id": 2, "weight": [0,0,0,0], "text": "Nei"}
+        ]},
+        {"id": 11, "test": "Antikoagulasjonsbehandling", "weights": [
+            {"id": 1, "weight": [0,0,0,0], "text": "Ja"},
+            {"id": 2, "weight": [0,0,0,0], "text": "Nei"}
+        ]},
+        {"id": 12, "test": "Lipidsenkende", "weights": [
+            {"id": 1, "weight": [0,0,0,0], "text": "Ja"},
+            {"id": 2, "weight": [0,0,0,0], "text": "Nei"}
+        ]},
+        {"id": 13, "test": "ACE-hemmer / all blokker", "weights": [
+            {"id": 1, "weight": [0,0,0,0], "text": "Ja"},
+            {"id": 2, "weight": [0,0,0,0], "text": "Nei"}
+        ]},
+        {"id": 14, "test": "Koronar hjertesykdom", "weights": [
+            {"id": 1, "weight": [0,0,0,0], "text": "Ja"},
+            {"id": 2, "weight": [0,0,0,0], "text": "Nei"}
+        ]},
+        {"id": 15, "test": "Atrieflimmer", "weights": [
+            {"id": 1, "weight": [0,0,0,0], "text": "Ja"},
+            {"id": 2, "weight": [0,0,0,0], "text": "Nei"}
+        ]},
+        {"id": 16, "test": "Hjerneslag (untatt TIA)", "weights": [
+            {"id": 1, "weight": [0,0,0,0], "text": "Ja"},
+            {"id": 2, "weight": [0,0,0,0], "text": "Nei"}
+        ]},
+        {"id": 17, "test": "Diabetes retinopati", "weights": [
+            {"id": 1, "weight": [0,0,0,0], "text": "Ja"},
+            {"id": 2, "weight": [0,0,0,0], "text": "Nei"}
+        ]},
+        {"id": 18, "test": "Nedsatt syn <0.3 (6/8) m/korr.", "weights": [
+            {"id": 1, "weight": [0,0,0,0], "text": "Ja"},
+            {"id": 2, "weight": [0,0,0,0], "text": "Nei"}
+        ]},
+        {"id": 19, "test": "Albuminuri eller nefropati", "weights": [
+            {"id": 1, "weight": [0,0,0,0], "text": "Ja"},
+            {"id": 2, "weight": [0,0,0,0], "text": "Nei"}
+        ]},
+        {"id": 20, "test": "Arteriell karkirurgi distalt for aorta", "weights": [
+            {"id": 1, "weight": [0,0,0,0], "text": "Ja"},
+            {"id": 2, "weight": [0,0,0,0], "text": "Nei"}
+        ]},
+        {"id": 21, "test": "Amputasjon (ikketraumatisk)", "weights": [
+            {"id": 1, "weight": [0,0,0,0], "text": "Ja"},
+            {"id": 2, "weight": [0,0,0,0], "text": "Nei"}
+        ]},
+        {"id": 22, "test": "Hatt diabetessår nedenfor ankel", "weights": [
+            {"id": 1, "weight": [0,0,0,0], "text": "Ja"},
+            {"id": 2, "weight": [0,0,0,0], "text": "Nei"}
+        ]},
+        {"id": 23, "test": "gjennomgått fedmekirurgi", "weights": [
+            {"id": 1, "weight": [0,0,0,0], "text": "Ja"},
+            {"id": 2, "weight": [0,0,0,0], "text": "Nei"}
         ]}
+        
     ]
 }
