@@ -191,7 +191,7 @@
                 {"id": 3, "text": "Vet ikke",   "weights": [0,0,0,0]}
             ]
         },
-        {"id": 24, "type": "alternatives", "group": "", 
+        {"id": 24, "type": "alternatives", "group": "Andre syndromer og arvelige forhold", 
             "question": "Har eller har dine foreldre hatt hjertesykdom (angina, hjerteinfarkt, operert for trange blodårer i hjertet)?",
             "alternatives": [
                 {"id": 1, "text": "Ja",         "weights": [0,0,0,0]}, 
@@ -199,7 +199,7 @@
                 {"id": 3, "text": "Vet ikke",   "weights": [0,0,0,0]}
             ]
         },
-        {"id": 25, "type": "alternatives", "group": "", 
+        {"id": 25, "type": "alternatives", "group": "Andre syndromer og arvelige forhold", 
             "question": "Hvis dine foreldre har hatt hjertesykdom: Fikk noen av dem dette i ”ung” alder, dvs. at din far fikk hjertesykdom før 55 års alder, eller at din mor fikk det før hun var 65 år?",
             "alternatives": [
                 {"id": 1, "text": "Ja",         "weights": [0,0,0,0]}, 
@@ -207,7 +207,7 @@
                 {"id": 3, "text": "Vet ikke",   "weights": [0,0,0,0]}
             ]
         },
-        {"id": 26, "type": "alternatives", "group": "", 
+        {"id": 26, "type": "alternatives", "group": "Andre syndromer og arvelige forhold", 
             "question": "Har du hatt hjerneslag? (Kryss av for nei hvis symptomene varte i mindre enn ett døgn)",
             "alternatives": [
                 {"id": 1, "text": "Ja",         "weights": [0,0,0,0]}, 
@@ -215,7 +215,7 @@
                 {"id": 3, "text": "Vet ikke",   "weights": [0,0,0,0]}
             ]
         },
-        {"id": 27, "type": "alternatives", "group": "", 
+        {"id": 27, "type": "alternatives", "group": "Andre syndromer og arvelige forhold", 
             "question": "Har andre i din nærmeste familie diabetes, dvs. dine foreldre, dine egne barn eller dine søsken?",
             "alternatives": [
                 {"id": 1, "text": "Ja",         "weights": [0,0,0,0]}, 
@@ -223,7 +223,7 @@
                 {"id": 3, "text": "Vet ikke",   "weights": [0,0,0,0]}
             ]
         },
-        {"id": 28, "type": "alternatives", "group": "", 
+        {"id": 28, "type": "alternatives", "group": "Andre syndromer og arvelige forhold", 
             "question": "Diabetes kan arte seg forskjellig i ulike befolkningsgrupper avhengig av etnisk opprinnelse. Vi ber deg derfor angi din etnisitet. (Annet angis dersom de andre gruppene ikke passer, eller dersom dine foreldre ikke tilhører samme gruppe, for eksempel om du har europeisk mor og asiatisk far ",
             "alternatives": [
                 {"id": 1, "text": "Norsk/europeer/amerikaner",  "weights": [0,0,0,0]}, 
