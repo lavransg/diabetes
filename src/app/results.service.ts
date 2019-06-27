@@ -115,7 +115,7 @@ export class ResultsService {
     this.completedAnswers = undefined;
     this.result = undefined;
     this.healthResult = undefined;
-    this.totalResult = undefined;
+    this.totalResult = [];
     this.highestCategory = undefined;
     this.report = undefined;
     this.questionService.endSurvey();
