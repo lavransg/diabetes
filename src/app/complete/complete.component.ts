@@ -44,11 +44,9 @@ export class CompleteComponent implements OnInit, AfterViewInit {
   }
 
   saveHealthWeights() {
-    if (!this.healthWeightsAdded) {
-      this.resultsService.getHealthResults(this.selectedAlternatives);
-      if (this.resultsService.result) {
-        this.calculateRelativeResult();
-      }
+    this.resultsService.getHealthResults(this.selectedAlternatives);
+    if (this.resultsService.result) {
+      this.calculateRelativeResult();
     }
     this.healthWeightsAdded = true;
   }

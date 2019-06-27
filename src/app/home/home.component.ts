@@ -79,9 +79,7 @@ export class HomeComponent implements OnInit {
   }
 
   saveHealthWeights() {
-    if (!this.healthWeightsAdded) {
-      this.resultsService.getHealthResults(this.selectedAlternatives);
-    }
+    this.resultsService.getHealthResults(this.selectedAlternatives);
     this.healthWeightsAdded = true;
   }
 
