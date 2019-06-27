@@ -39,6 +39,7 @@ export class ResultsService {
 
   // calculates the result weights of the health-values
   getHealthResults(answers: object[]) {
+    this.completedHealthAnswers = answers;
     const result = new Array(this.categories.length).fill(0);
     for (const answer of answers) {
       const testID = "testID";
@@ -79,15 +80,31 @@ export class ResultsService {
 
     // finding survey question text and selected answer text
     for (const answer of this.completedAnswers) {
-      const quesionID = "questionID";
-      const alternativeID = "alternativeID";
-      const question = this.questionService.questions.find(element => element.id === answer[quesionID]);
+      let questionID = "questionID"
+      let alternativeID = "alternativeID"
+      const question = this.questionService.questions.find(element => element.id === answer[questionID]);
       for (const alternative of question.alternatives) {
         if (alternative.id === answer[alternativeID]) {
           text += question.question + "\n" + "Svar: " + alternative.text + "\n\n";
         }
       }
     }
+
+    // finding health-values text and selected answer text
+    if (this.completedHealthAnswers) {
+      text += "\n\nFysiologiske helseverdier:\n\n"
+      for (const answer of this.completedHealthAnswers) {
+        const testID = "testID";
+        const alternativeID = "alternativeID";
+        const test = this.healthTestsService.healthTests.find(element => element.id === answer[testID]);
+        for (const alternative of test.weights) {
+          if (alternative.id === answer[alternativeID]) {
+            text += test.test + "\n" + "Svar: " + alternative.text + "\n\n";
+          }
+        }
+      }
+    }
+
     console.log(text);
     return text;
 
