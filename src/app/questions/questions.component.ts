@@ -25,7 +25,6 @@ export class QuestionsComponent implements OnInit {
       this.questionService.endSurvey();
       this.resultsService.completedAnswers = this.answers;
       this.resultsService.getResults(this.answers);
-      this.resultsService.generateReport(this.answers);
       this.router.navigate(["/complete"]);
       return;
     }

@@ -60,11 +60,15 @@ export class ResultsService {
 
   // calculates the result weights of both survey answers and the health-values
   calculateTotalResult() {
-    for (const [index, value] of this.result.entries()) {
-      if (this.healthResult) {
-        this.totalResult.push(value + this.healthResult[index]);
-      } else {this.totalResult = this.result; }
+    console.log(this.result)
+    if (this.result) {
+      for (const [index, value] of this.result.entries()) {
+        if (this.healthResult) {
+          this.totalResult.push(value + this.healthResult[index]);
+        } else {this.totalResult = this.result; }
+      }
     }
+
     this.highestCategory = this.totalResult.indexOf(Math.max.apply(null, this.totalResult));
   }
 
