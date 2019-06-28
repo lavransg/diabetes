@@ -131,11 +131,15 @@ export class ResultsService {
 
   // saves a JSON-file with question and answer id-pairs so that a survey can be re-run from this local file
   saveTest(id) {
-    if (this.completedAnswers) {
-      let filename = "";
-      filename += new Date().toUTCString().slice(5, -13);
-      filename += "-" + id + ".json";
-      const json = JSON.stringify(this.completedAnswers);
+    let filename = "";
+    filename += new Date().toUTCString().slice(5, -13) + "-" + id + ".json";
+    if (this.completedAnswers && !this.completedHealthAnswers) {
+      const json = JSON.stringify({questions: this.completedAnswers});
+      const blob = new Blob([json], {type: "application/json"});
+      FileSaver.saveAs(blob, filename);
+    }
+    else if (this.completedAnswers && this.completedHealthAnswers) {
+      const json = JSON.stringify({questions: this.completedAnswers, tests: this.completedHealthAnswers});
       const blob = new Blob([json], {type: "application/json"});
       FileSaver.saveAs(blob, filename);
     }

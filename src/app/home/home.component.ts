@@ -59,8 +59,11 @@ export class HomeComponent implements OnInit {
       filereader.onload = e => {
         const obj = JSON.parse(filereader.result as string);
         console.log(obj);
-        this.resultsService.completedAnswers = obj;
+        this.resultsService.completedAnswers = obj.questions;
         this.hasQuestions = true;
+        if (obj.tests) {
+          this.resultsService.completedHealthAnswers = obj.tests;
+        }
         this.completedTestUploaded = true;
       };
       this.completedTestFileName = event.target.files[0].name;
