@@ -3,10 +3,14 @@
 </button>
 
 <div class="question-container" *ngIf="nextQuestion">
-
+    
     <div class="container">
       <div class="row">
-        <div class="container h3" style="text-align: center;">{{nextQuestion.question}}</div>
+        <div class="container text-center text-primary h3">{{nextQuestion.group}}</div>
+      </div>
+      <br>
+      <div class="row">
+        <div class="container text-center h3">{{nextQuestion.question}}</div>
       </div>
       <br>
       <div class="row justify-content-center">

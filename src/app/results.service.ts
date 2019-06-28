@@ -10,6 +10,7 @@ export class ResultsService {
 
   completedAnswers: any[]; // question id's + selected alternative id's for survey questions
   completedHealthAnswers: any[]; // question id's + selected alternative id's for health variables
+  completedHealthAnswers2: any[];
   result: number[]; // final calculated weights from questions
   healthResult: number[]; // final calculated weights from tests
   totalResult: number[] = []; // final calculated weights from questions and tests
@@ -131,8 +132,8 @@ export class ResultsService {
 
   // saves a JSON-file with question and answer id-pairs so that a survey can be re-run from this local file
   saveTest(id) {
-    let filename = "";
-    filename += new Date().toUTCString().slice(5, -13) + "-" + id + ".json";
+    let filename = new Date().toUTCString().slice(5, -13) + "-" + id + ".json";
+
     if (this.completedAnswers && !this.completedHealthAnswers) {
       const json = JSON.stringify({questions: this.completedAnswers});
       const blob = new Blob([json], {type: "application/json"});
