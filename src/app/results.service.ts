@@ -39,6 +39,7 @@ export class ResultsService {
 
   // calculates the result weights of the health-values
   getHealthResults(answers: object[]) {
+    console.log("getHealthResults called")
     this.completedHealthAnswers = answers;
     const result = new Array(this.categories.length).fill(0);
     for (const answer of answers) {
@@ -46,6 +47,7 @@ export class ResultsService {
       const alternativeID = "alternativeID";
       const test = this.healthTestsService.healthTests.find(element => element.id === answer[testID]);
       for (const alternative of test.weights) {
+        console.log("getHealthResults alternatives",alternative.id)
         if (alternative.id === answer[alternativeID]) {
           for (const [index, weight] of alternative.weight.entries()) {
             result[index] += weight;
@@ -60,7 +62,7 @@ export class ResultsService {
 
   // calculates the result weights of both survey answers and the health-values
   calculateTotalResult() {
-    console.log(this.result)
+    this.totalResult = [];
     if (this.result) {
       for (const [index, value] of this.result.entries()) {
         if (this.healthResult) {
@@ -119,7 +121,7 @@ export class ResultsService {
   saveReport(id) {
     let report = this.generateReport();
     console.log(report)
-    let filename = new Date().toUTCString().slice(6, -13) + "-" + id + ".txt";
+    let filename = new Date().toUTCString().slice(5, -13) + "-" + id + ".txt";
     if (report) {
       report.replace(/\n/g, "\r\n");
       const blob = new Blob([report], {type: "text/plain", endings:'native'});
@@ -131,7 +133,7 @@ export class ResultsService {
   saveTest(id) {
     if (this.completedAnswers) {
       let filename = "";
-      filename += new Date().toUTCString().slice(6, -13);
+      filename += new Date().toUTCString().slice(5, -13);
       filename += "-" + id + ".json";
       const json = JSON.stringify(this.completedAnswers);
       const blob = new Blob([json], {type: "application/json"});
