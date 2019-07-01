@@ -27,17 +27,8 @@ export class HomeComponent implements OnInit {
   ngOnInit() {
     this.resultsService.clearResults();
     this.selectedHealthAlternatives = [];
-    if (this.questionService.questions[0]) {
-      this.hasQuestions = true;
-    }
-    if (this.healthTestsService.healthTests) {
-      this.healthTests = this.healthTestsService.healthTests;
-    }
-
-  }
-
-  ngAfterViewInit() {
-
+    if (this.questionService.questions[0]) { this.hasQuestions = true; }
+    if (this.healthTestsService.healthTests) { this.healthTests = this.healthTestsService.healthTests; }
   }
 
   questionsFileAdded(event) {
@@ -45,7 +36,6 @@ export class HomeComponent implements OnInit {
     if (event.target.files.length > 0) {
       filereader.onload = e => {
         const obj = JSON.parse(filereader.result as string);
-        console.log(obj);
         this.questionService.questions = obj.questions;
         this.hasQuestions = true;
         this.questionsUploaded = true;
@@ -60,7 +50,6 @@ export class HomeComponent implements OnInit {
     if (event.target.files.length > 0) {
       filereader.onload = e => {
         const obj = JSON.parse(filereader.result as string);
-        console.log(obj);
         this.resultsService.completedAnswers = obj.questions;
         this.hasQuestions = true;
         if (obj.tests) {
