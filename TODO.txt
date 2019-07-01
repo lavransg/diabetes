@@ -4,7 +4,7 @@
 x) Modify JSON.stringify to output a more readable template for questions
 x) reset uploaded / selected weights when going home from completed-page
 ) feedback for correctly uploaded files
-) save healthvalues to the test json file
+x) save healthvalues to the test json file
 ) ability to upload healthValues choises from local test json file
 
 ) Generate report:

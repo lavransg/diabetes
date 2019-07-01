@@ -14,7 +14,7 @@ export class CompleteComponent implements OnInit, AfterViewInit {
   saveTestFile = false;
   inputID = "Identifikator";
   healthWeightsAdded: boolean;
-  selectedAlternatives: any[] = [];
+  selectedHealthAlternatives: any[] = [];
 
   constructor(private healthTestsService: HealthTestsService, private resultsService: ResultsService) {
 
@@ -38,13 +38,13 @@ export class CompleteComponent implements OnInit, AfterViewInit {
   }
 
   radioSelected(testID, alternativeID) {
-    const filtered = this.selectedAlternatives.filter(element => element.testID !== testID); // removes element with same testID
+    const filtered = this.selectedHealthAlternatives.filter(element => element.testID !== testID); // removes element with same testID
     filtered.push({testID, alternativeID});
-    this.selectedAlternatives = filtered;
+    this.selectedHealthAlternatives = filtered;
   }
 
   saveHealthWeights() {
-    this.resultsService.getHealthResults(this.selectedAlternatives);
+    this.resultsService.getHealthResults(this.selectedHealthAlternatives);
     if (this.resultsService.result) {
       this.calculateRelativeResult();
     }

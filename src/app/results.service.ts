@@ -40,7 +40,6 @@ export class ResultsService {
 
   // calculates the result weights of the health-values
   getHealthResults(answers: object[]) {
-    console.log("getHealthResults called")
     this.completedHealthAnswers = answers;
     const result = new Array(this.categories.length).fill(0);
     for (const answer of answers) {
@@ -48,7 +47,6 @@ export class ResultsService {
       const alternativeID = "alternativeID";
       const test = this.healthTestsService.healthTests.find(element => element.id === answer[testID]);
       for (const alternative of test.weights) {
-        console.log("getHealthResults alternatives",alternative.id)
         if (alternative.id === answer[alternativeID]) {
           for (const [index, weight] of alternative.weight.entries()) {
             result[index] += weight;
@@ -81,6 +79,7 @@ export class ResultsService {
     if (!this.result) { return null; }
     let text = "";
 
+    // printing each category and its calculated result value
     for (const [index, category] of this.categories.entries()) {
       text += category + ": " + this.result[index] + " \n";
     }

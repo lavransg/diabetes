@@ -16,7 +16,7 @@ export class HomeComponent implements OnInit {
   completedTestUploaded = false;
   hasQuestions = false;
   healthTests: any;
-  selectedAlternatives: any[] = [];
+  selectedHealthAlternatives: any[] = [];
   healthWeightsAdded = false;
 
   constructor(
@@ -62,7 +62,7 @@ export class HomeComponent implements OnInit {
         this.resultsService.completedAnswers = obj.questions;
         this.hasQuestions = true;
         if (obj.tests) {
-          this.resultsService.completedHealthAnswers = obj.tests;
+          this.resultsService.getHealthResults(obj.tests);
         }
         this.completedTestUploaded = true;
       };
@@ -76,13 +76,13 @@ export class HomeComponent implements OnInit {
   }
 
   radioSelected(testID, alternativeID) {
-    const filtered = this.selectedAlternatives.filter(element => element.testID !== testID); // removes element with same testID
+    const filtered = this.selectedHealthAlternatives.filter(element => element.testID !== testID); // removes element with same testID
     filtered.push({testID, alternativeID});
-    this.selectedAlternatives = filtered;
+    this.selectedHealthAlternatives = filtered;
   }
 
   saveHealthWeights() {
-    this.resultsService.getHealthResults(this.selectedAlternatives);
+    this.resultsService.getHealthResults(this.selectedHealthAlternatives);
     this.healthWeightsAdded = true;
   }
 
