@@ -147,6 +147,7 @@ export class ResultsService {
 
   clearResults(){
     this.completedAnswers = undefined;
+    this.completedHealthAnswers = undefined;
     this.result = undefined;
     this.healthResult = undefined;
     this.totalResult = [];
