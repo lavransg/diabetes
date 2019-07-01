@@ -1,4 +1,13 @@
 {
+    "__comment": 
+    [
+        "Hvert svaralternativ har en liste med vekter, én vekt for hver kategori",
+        "Når en bruker velger et alternativ, summeres denne vekten i en totalsum for hver kategori",
+        "Det er viktig at listen med vekter er like lang som antallet kategorier, ellers vil ikke resultatet vises",
+        "Hvert spørsmål må ha en unik id, hvert alternativ må ha en unik id for sitt spørsmål (id-ene trenger ikke være kronologisk)",
+        "Hvert spørsmål kan tillhøre en gruppe - denne gruppen blir vist over spørsmålet når det stilles"
+
+    ],
     "categories": [
         "Mikrovaskulær",
         "Makrovaskulær",
