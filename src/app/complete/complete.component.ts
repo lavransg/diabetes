@@ -1,6 +1,5 @@
 import { Component, OnInit, AfterViewInit } from '@angular/core';
 import { ResultsService } from '../results.service';
-import { QuestionService } from '../question.service';
 import { HealthTestsService } from '../health-tests.service';
 
 @Component({
@@ -13,7 +12,6 @@ export class CompleteComponent implements OnInit, AfterViewInit {
   saveReportFile = false;
   saveTestFile = false;
   inputID = "Identifikator";
-  healthWeightsAdded: boolean;
   selectedHealthAlternatives: any[] = [];
 
   constructor(private healthTestsService: HealthTestsService, private resultsService: ResultsService) {
@@ -25,6 +23,7 @@ export class CompleteComponent implements OnInit, AfterViewInit {
   ngAfterViewInit() {
     if (this.resultsService.result) {
       this.calculateRelativeResult();
+      this.selectedHealthAlternatives = this.resultsService.completedHealthAnswers;
     }
   }
 
@@ -41,6 +40,14 @@ export class CompleteComponent implements OnInit, AfterViewInit {
     const filtered = this.selectedHealthAlternatives.filter(element => element.testID !== testID); // removes element with same testID
     filtered.push({testID, alternativeID});
     this.selectedHealthAlternatives = filtered;
+
+  }
+
+  isRadioSelected(testID, alternativeID) {
+    if (this.resultsService.completedHealthAnswers && this.resultsService.completedHealthAnswers.find(
+      element => element.testID === testID && element.alternativeID === alternativeID)
+    ) { return true; }
+    return false;
   }
 
   saveHealthWeights() {
@@ -48,7 +55,6 @@ export class CompleteComponent implements OnInit, AfterViewInit {
     if (this.resultsService.result) {
       this.calculateRelativeResult();
     }
-    this.healthWeightsAdded = true;
   }
 
 

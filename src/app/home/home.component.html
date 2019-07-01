@@ -53,7 +53,8 @@
               
               <h4>{{item.test}}</h4>
               <div class="custom-control custom-radio" *ngFor="let option of item.weights; index as j;">
-                  <input 
+                  <input
+                    [checked]="isRadioSelected(item.id,option.id)"
                     (click)="radioSelected(item.id,option.id)"
                     type="radio" id="{{''+item.id+option.id}}" 
                     name="{{item.id}}" 

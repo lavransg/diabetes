@@ -17,7 +17,6 @@ export class HomeComponent implements OnInit {
   hasQuestions = false;
   healthTests: any;
   selectedHealthAlternatives: any[] = [];
-  healthWeightsAdded = false;
 
   constructor(
     private questionService: QuestionService,
@@ -31,6 +30,9 @@ export class HomeComponent implements OnInit {
     }
     if (this.healthTestsService.healthTests) {
       this.healthTests = this.healthTestsService.healthTests;
+    }
+    if (this.resultsService.completedHealthAnswers) {
+      this.selectedHealthAlternatives = this.resultsService.completedHealthAnswers;
     }
   }
 
@@ -63,6 +65,7 @@ export class HomeComponent implements OnInit {
         this.hasQuestions = true;
         if (obj.tests) {
           this.resultsService.getHealthResults(obj.tests);
+          this.selectedHealthAlternatives = this.resultsService.completedHealthAnswers;
         }
         this.completedTestUploaded = true;
       };
@@ -81,9 +84,15 @@ export class HomeComponent implements OnInit {
     this.selectedHealthAlternatives = filtered;
   }
 
+  isRadioSelected(testID, alternativeID) {
+    if (this.resultsService.completedHealthAnswers && this.resultsService.completedHealthAnswers.find(
+      element => element.testID === testID && element.alternativeID === alternativeID)
+    ) { return true; }
+    return false;
+  }
+
   saveHealthWeights() {
     this.resultsService.getHealthResults(this.selectedHealthAlternatives);
-    this.healthWeightsAdded = true;
   }
 
 }

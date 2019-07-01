@@ -10,7 +10,6 @@ export class ResultsService {
 
   completedAnswers: any[]; // question id's + selected alternative id's for survey questions
   completedHealthAnswers: any[]; // question id's + selected alternative id's for health variables
-  completedHealthAnswers2: any[];
   result: number[]; // final calculated weights from questions
   healthResult: number[]; // final calculated weights from tests
   totalResult: number[] = []; // final calculated weights from questions and tests

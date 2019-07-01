@@ -81,7 +81,7 @@
                 
                 <h4>{{item.test}}</h4>
                 <div class="custom-control custom-radio" *ngFor="let option of item.weights; index as j;">
-                    <input (click)="radioSelected(item.id,option.id)" type="radio" id="{{''+item.id+option.id}}" name="{{item.id}}" class="custom-control-input">
+                    <input [checked]="isRadioSelected(item.id,option.id)" (click)="radioSelected(item.id,option.id)" type="radio" id="{{''+item.id+option.id}}" name="{{item.id}}" class="custom-control-input">
                     <label class="custom-control-label" for="{{''+item.id+option.id}}">{{option.text}}</label>
                 </div>
                 
