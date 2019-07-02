@@ -12,6 +12,7 @@ export class QuestionsComponent implements OnInit {
 
   nextQuestion: any;
   answers: any[] = [];
+  inputValue = "";
 
   constructor(private questionService: QuestionService, private resultsService: ResultsService, private router: Router) { }
 
@@ -19,8 +20,9 @@ export class QuestionsComponent implements OnInit {
     this.nextQuestion = this.questionService.getNextQuestion();
   }
 
-  next(questionID, alternativeID) {
-    this.answers.push({questionID, alternativeID});
+  next(questionID, alternativeID, value?) {
+    if (value){ this.answers.push({questionID, alternativeID, value}); }
+    else { this.answers.push({questionID, alternativeID}); }
     if (this.questionService.isComplete()) {
       this.questionService.endSurvey();
       this.resultsService.completedAnswers = this.answers;
@@ -29,6 +31,8 @@ export class QuestionsComponent implements OnInit {
       return;
     }
     this.nextQuestion = this.questionService.getNextQuestion();
+    this.inputValue = "";
+    console.log(this.answers)
   }
 
 }

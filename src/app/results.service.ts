@@ -86,12 +86,15 @@ export class ResultsService {
 
     // finding survey question text and selected answer text
     for (const answer of this.completedAnswers) {
-      let questionID = "questionID"
-      let alternativeID = "alternativeID"
-      const question = this.questionService.questions.find(element => element.id === answer[questionID]);
+      const question = this.questionService.questions.find(element => element.id === answer.questionID);
       for (const alternative of question.alternatives) {
-        if (alternative.id === answer[alternativeID]) {
-          text += question.question + "\n" + "Svar: " + alternative.text + "\n\n";
+        if (alternative.id === answer.alternativeID) {
+          if (answer["value"]){
+            text += question.question + "\n" + "Svar: " + answer.value + " " + alternative.unit + "\n\n";
+          }
+          else {
+            text += question.question + "\n" + "Svar: " + alternative.text + "\n\n";
+          }
         }
       }
     }
@@ -100,11 +103,9 @@ export class ResultsService {
     if (this.completedHealthAnswers) {
       text += "\n\nFysiologiske helseverdier:\n\n"
       for (const answer of this.completedHealthAnswers) {
-        const testID = "testID";
-        const alternativeID = "alternativeID";
-        const test = this.healthTestsService.healthTests.find(element => element.id === answer[testID]);
+        const test = this.healthTestsService.healthTests.find(element => element.id === answer.testID);
         for (const alternative of test.weights) {
-          if (alternative.id === answer[alternativeID]) {
+          if (alternative.id === answer.alternativeID) {
             text += test.test + "\n" + "Svar: " + alternative.text + "\n\n";
           }
         }
