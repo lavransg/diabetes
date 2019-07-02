@@ -62,16 +62,17 @@ export class ResultsService {
   // calculates the result weights of both survey answers and the health-values
   calculateTotalResult() {
     this.totalResult = [];
+    this.calculateMaxPossibleResult();
     if (this.result) {
       for (const [index, value] of this.result.entries()) {
         if (this.healthResult) {
-          this.totalResult.push(value + this.healthResult[index]);
-        } else {this.totalResult = this.result; }
+          this.totalResult.push(Math.round(((value + this.healthResult[index]) / this.maxPossibleResult[index]) * 100));
+        } else {this.totalResult.push(Math.round((value / this.maxPossibleResult[index]) * 100)); }
       }
     }
 
     this.highestCategory = this.totalResult.indexOf(Math.max.apply(null, this.totalResult));
-    this.calculateMaxPossibleResult();
+
   }
 
   calculateMaxPossibleResult() {
@@ -109,6 +110,7 @@ export class ResultsService {
       }
     }
     console.log("maxPossibleResult:",max);
+    this.maxPossibleResult = max;
   }
 
   // produces a text string with each survey question + selected answer
