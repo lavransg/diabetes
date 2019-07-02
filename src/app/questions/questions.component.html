@@ -13,13 +13,31 @@
         <div class="container text-center h3">{{nextQuestion.question}}</div>
       </div>
       <br>
-      <div class="row justify-content-center">
+
+      <div class="row justify-content-center"  *ngIf="nextQuestion.type !== 'input'">
         <div class="col-sm-auto alternative" *ngFor="let item of nextQuestion.alternatives">
           <button type="button" (click)="next(nextQuestion.id,item.id)" class="btn alternative-button btn-outline-primary btn-lg">
             {{item.text}}
           </button>
         </div>
       </div>
+
+      <div class="row justify-content-center" *ngIf="nextQuestion.type === 'input'">
+        <div class="col-sm-auto alternative" *ngFor="let item of nextQuestion.alternatives">
+
+          <div class="input-group mb-3">
+            <div class="input-group-prepend">
+              <span class="input-group-text" id="basic-addon1">enhet</span>
+            </div>
+            <input type="text" class="form-control" placeholder="placeholder" aria-label="Username" aria-describedby="basic-addon1">
+            <div class="input-group-append">
+              <button (click)="next(nextQuestion.id,item.id)" class="btn btn-outline-primary" type="button" id="button-addon2">Lagre</button>
+            </div>
+          </div>
+          
+        </div>
+      </div>
+
     </div>
 
 </div>
