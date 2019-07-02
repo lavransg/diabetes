@@ -13,6 +13,7 @@ export class ResultsService {
   result: number[]; // final calculated weights from questions
   healthResult: number[]; // final calculated weights from tests
   totalResult: number[] = []; // final calculated weights from questions and tests
+  maxPossibleResult: number[] = []; // maximum possible result for each class
   highestCategory: number;
   categories = this.questionService.categories;
 
@@ -70,6 +71,44 @@ export class ResultsService {
     }
 
     this.highestCategory = this.totalResult.indexOf(Math.max.apply(null, this.totalResult));
+    this.calculateMaxPossibleResult();
+  }
+
+  calculateMaxPossibleResult() {
+    const max = new Array(this.categories.length).fill(0);
+
+    // looping through questions
+    for (const question of this.questionService.questions) {
+      let qmax = new Array(this.categories.length).fill(0);
+      for (let i = 0; i < this.categories.length; i++) {
+        for (const alternative of question.alternatives) {
+          if ( alternative.weights[i] > qmax[i]) {
+            qmax[i] = alternative.weights[i];
+          }
+        }
+      }
+      for (const [index,value] of qmax.entries()){
+        max[index] += value;
+      }
+    }
+
+    // looping through healthValues
+    if (this.completedHealthAnswers) {
+      for (const test of this.healthTestsService.healthTests) {
+        let tmax = new Array(this.categories.length).fill(0);
+        for (let i = 0; i < this.categories.length; i++) {
+          for (const alternative of test.weights) {
+            if ( alternative.weights[i] > tmax[i]) {
+              tmax[i] = alternative.weights[i];
+            }
+          }
+        }
+        for (const [index,value] of tmax.entries()) {
+          max[index] += value;
+        }
+      }
+    }
+    console.log("maxPossibleResult:",max);
   }
 
   // produces a text string with each survey question + selected answer
