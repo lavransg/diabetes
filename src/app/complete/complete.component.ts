@@ -23,7 +23,9 @@ export class CompleteComponent implements OnInit, AfterViewInit {
   ngAfterViewInit() {
     if (this.resultsService.result) {
       this.calculateRelativeResult();
-      this.selectedHealthAlternatives = this.resultsService.completedHealthAnswers;
+      if (this.resultsService.completedHealthAnswers) {
+        this.selectedHealthAlternatives = this.resultsService.completedHealthAnswers;
+      }
     }
   }
 
