@@ -27,7 +27,7 @@ export class ResultsService {
       const alternativeID = "alternativeID";
       const question = this.questionService.questions.find(element => element.id === answer[quesionID]);
       for (const alternative of question.alternatives) {
-        if (alternative.id === answer[alternativeID]) {
+        if (alternative.id === answer[alternativeID] && alternative.weights) {
           for (const [index, weight] of alternative.weights.entries()) {
             result[index] += weight;
           }
@@ -83,7 +83,7 @@ export class ResultsService {
       let qmax = new Array(this.categories.length).fill(0);
       for (let i = 0; i < this.categories.length; i++) {
         for (const alternative of question.alternatives) {
-          if ( alternative.weights[i] > qmax[i]) {
+          if ( alternative.weights && alternative.weights[i] > qmax[i]) {
             qmax[i] = alternative.weights[i];
           }
         }
