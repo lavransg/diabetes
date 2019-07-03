@@ -1,14 +1,14 @@
 {
     "__comment": 
     [
-        "Hvert svaralternativ har en liste med vekter, én vekt for hver kategori",
+        "Hvert svaralternativ har en liste med vekter, én vekt mot hver kategori",
         "Når en bruker velger et alternativ, summeres denne vekten i en totalsum for hver kategori",
-        "Det er viktig at listen med vekter er like lang som antallet kategorier, ellers vil ikke resultatet vises",
-        "Hvert spørsmål må ha en unik id, hvert alternativ må ha en unik id for sitt spørsmål (id-ene trenger ikke være kronologisk)",
-        "Hvert spørsmål kan tillhøre en gruppe - denne gruppen blir vist over spørsmålet når det stilles",
+        "Det er viktig at listene med vekter er like lange som antallet kategorier, ellers vil ikke resultatet vises",
+        "Hvert spørsmål må ha en unik id, hvert alternativ må ha en unik id for sitt spørsmål (id-ene trenger ikke være kronologiske)",
+        "Hvert spørsmål kan tillhøre en gruppe (avsnitt) - denne gruppen blir vist over spørsmålet når det stilles",
         "",
-        "For alternativ med brukerinput, må alternativet ha en 'type': 'input' og en 'unit': 'enheten på input'",
-        "Alternativer som har brukerinput vil ikke telle mot vekting av klasser, men kun for rapportens del"
+        "For alternativ med brukerinput, må alternativet ha en 'type': 'input' og en 'unit': 'enheten til inputverdien'",
+        "Alternativer som har brukerinput vil ikke telle mot vekting av klasser og er kun for rapportens del"
 
     ],
     "categories": [
@@ -31,7 +31,7 @@
         {"id": 2, "group": "Diagnose", 
             "question": "Hvilken type diabetes har du?",
             "alternatives": [
-                {"id": 1, "text": "Type 1",    "weights": [220,50,130,500]}, 
+                {"id": 1, "text": "Type 1",    "weights": [220,50,130,100]}, 
                 {"id": 2, "text": "Type 2",    "weights": [0,0,0,0]},
                 {"id": 3, "text": "vet ikke",  "weights": [0,0,0,0]}
             ]
@@ -58,7 +58,7 @@
             ]
         },
         {"id": 6, "group": "Behandling", 
-            "question": "Bruker du insulin",
+            "question": "Bruker du insulin?",
             "alternatives": [
                 {"id": 1, "text": "Ja",         "weights": [0,0,0,0]}, 
                 {"id": 2, "text": "Nei",        "weights": [0,0,0,0]},
@@ -66,7 +66,7 @@
             ]
         },
         {"id": 7, "group": "Behandling", 
-            "question": "Bruker du tabletter mot diabetes",
+            "question": "Bruker du tabletter mot diabetes?",
             "alternatives": [
                 {"id": 1, "text": "Ja",         "weights": [0,0,0,0]}, 
                 {"id": 2, "text": "Nei",        "weights": [0,0,0,0]},

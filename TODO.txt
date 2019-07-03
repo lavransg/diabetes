@@ -5,8 +5,8 @@ x) Modify JSON.stringify to output a more readable template for questions
 x) reset uploaded / selected weights when going home from completed-page
 ) feedback for correctly uploaded files
 x) save healthvalues to the test json file
-) ability to upload healthValues choises from local test json file
-) make final results be on the scale 0-100?
+x) ability to upload healthValues choises from local test json file
+x) make final results be on the scale 0-100?
 
 ) Generate report:
 
@@ -14,6 +14,6 @@ x- save as text file
 x- file name should contain timestamp
 x- should contain final classification
 x- should contain all answers ( or useful answers should be selectable when making question template )
-- privacy concerns
+x- privacy concerns
 
 
