@@ -99,8 +99,8 @@ export class ResultsService {
         let tmax = new Array(this.categories.length).fill(0);
         for (let i = 0; i < this.categories.length; i++) {
           for (const alternative of test.weights) {
-            if ( alternative.weights[i] > tmax[i]) {
-              tmax[i] = alternative.weights[i];
+            if (alternative && alternative.weight[i] > tmax[i]) {
+              tmax[i] = alternative.weight[i];
             }
           }
         }
