@@ -7,6 +7,8 @@ x) reset uploaded / selected weights when going home from completed-page
 x) save healthvalues to the test json file
 x) ability to upload healthValues choises from local test json file
 x) make final results be on the scale 0-100?
+) the calculation of results seem to use several loops in several functions, might need a refactor
+) make a larger informational website for the test to be a part of
 
 ) Generate report:
 

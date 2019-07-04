@@ -18,9 +18,9 @@
 
       <div class="modal-body">
         
-        <div class="form-group">
-          <div class="custom-file">
-            <input type="file" class="custom-file-input" id="customFile" (change)="questionsFileAdded($event)">
+        <div class="form-group" [ngClass]="{'was-validated': this.questionsUploaded}">
+          <div class="custom-file" >
+            <input type="file"  class="custom-file-input" id="customFile" (change)="questionsFileAdded($event)">
             <label class="custom-file-label" for="customFile">{{this.questionsFileName}}</label>
           </div>
         </div>
@@ -96,12 +96,13 @@
   <button type="button" *ngIf="hasQuestions" routerLink="/questions" class="btn btn-outline-primary btn-lg">
     Start test
   </button>
-  <button type="button" *ngIf="completedTestUploaded" (click)="showUploadedTest()" routerLink="/complete" class="btn btn-outline-primary btn-lg">
-    Vis opplastet test
-  </button>
   <br><br>
   <button type="button" class="btn btn-outline-primary btn-lg" data-toggle="modal" data-target="#exampleModalCenter">
     Last opp fullført test
+  </button>
+  <br><br>
+  <button type="button" *ngIf="completedTestUploaded" (click)="showUploadedTest()" routerLink="/complete" class="btn btn-outline-primary btn-lg">
+    Vis opplastet test
   </button>
 </div>
 
@@ -117,12 +118,18 @@
       </div>
       <div class="modal-body">
 
-        <div class="form-group">
+        <div class="form-group" [ngClass]="{'was-validated': this.completedTestUploaded}">
           <div class="custom-file">
             <input type="file" class="custom-file-input" id="completedTestFile" (change)="completedTestFileAdded($event)">
             <label class="custom-file-label" for="completedTestFile">{{this.completedTestFileName}}</label>
           </div>
         </div>
+        <div class="w-100 text-center">
+          <button type="button" data-dismiss="modal" *ngIf="completedTestUploaded" (click)="showUploadedTest()" routerLink="/complete" class="btn btn-outline-primary">
+            Vis opplastet test
+          </button>
+        </div>
+        
 
       </div>
     </div>

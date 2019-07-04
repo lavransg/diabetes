@@ -16,3 +16,13 @@ a:hover{
     max-height: calc(100vh - 400px);
     overflow-y: scroll;
 }
+.upload-success{
+    border-color: #28a745;
+}
+
+.custom-select.is-invalid, .form-control.is-invalid, .was-validated .custom-select:invalid, .was-validated .form-control:invalid {
+    border-color: #f04e4e;
+}
+.form-control{
+    border-color: red;
+}
