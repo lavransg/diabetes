@@ -80,9 +80,26 @@
               <div class="form-group" id="{{item.id}}" *ngFor="let item of this.healthTestsService.healthTests; index as i;">
                 
                 <h4>{{item.test}}</h4>
-                <div class="custom-control custom-radio" *ngFor="let alternative of item.alternatives; index as j;">
-                    <input [checked]="isRadioSelected(item.id,alternative.id)" (click)="radioSelected(item.id,alternative.id)" type="radio" id="{{''+item.id+alternative.id}}" name="{{item.id}}" class="custom-control-input">
-                    <label class="custom-control-label" for="{{''+item.id+alternative.id}}">{{alternative.text}}</label>
+                <div *ngFor="let alternative of item.alternatives; index as j;">
+                
+                    <div *ngIf="alternative.type !== 'input'" class="custom-control custom-radio" >
+                      <input
+                        [checked]="isRadioSelected(item.id,alternative.id)"
+                        (click)="radioSelected(item.id,alternative.id)"
+                        type="radio" id="{{''+item.id+alternative.id}}" 
+                        name="{{item.id}}" 
+                        class="custom-control-input"
+                        >
+                      <label class="custom-control-label" for="{{''+item.id+alternative.id}}">{{alternative.text}}</label>
+                    </div>
+    
+                    <div class="input-group input-group-sm" *ngIf="alternative.type === 'input'">
+                      <div class="input-group-prepend">
+                        <span class="input-group-text" id="health-value1">{{alternative.unit}}</span>
+                      </div>
+                      <input type="text" class="form-control" (change)="radioSelected(item.id,alternative.id,$event.target.value)" placeholder="">
+                    </div>
+    
                 </div>
                 
               </div>

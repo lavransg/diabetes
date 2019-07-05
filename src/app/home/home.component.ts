@@ -67,10 +67,20 @@ export class HomeComponent implements OnInit {
     this.resultsService.getResults(this.resultsService.completedAnswers);
   }
 
-  radioSelected(testID, alternativeID) {
-    const filtered = this.selectedHealthAlternatives.filter(element => element.testID !== testID); // removes element with same testID
-    filtered.push({testID, alternativeID});
-    this.selectedHealthAlternatives = filtered;
+  radioSelected(testID, alternativeID,value?) {
+
+    let selection = this.selectedHealthAlternatives.find( element => element.testID === testID);
+    if (selection) {
+      if (value) {selection["value"] = value;}
+      else {
+        selection["testID"] = testID;
+        selection["alternativeID"] = alternativeID;
+      }
+    }
+    else {
+      if (value) { this.selectedHealthAlternatives.push({testID, alternativeID, value}); }
+      else {this.selectedHealthAlternatives.push({testID, alternativeID});}
+    }
   }
 
   isRadioSelected(testID, alternativeID) {

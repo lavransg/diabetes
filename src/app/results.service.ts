@@ -23,11 +23,9 @@ export class ResultsService {
   getResults(answers: object[]) {
     const result = new Array(this.categories.length).fill(0);
     for (const answer of answers) {
-      const quesionID = "questionID";
-      const alternativeID = "alternativeID";
-      const question = this.questionService.questions.find(element => element.id === answer[quesionID]);
+      const question = this.questionService.questions.find(element => element.id === answer["questionID"]);
       for (const alternative of question.alternatives) {
-        if (alternative.id === answer[alternativeID] && alternative.weights) {
+        if (alternative.id === answer["alternativeID"] && alternative.weights) {
           for (const [index, weight] of alternative.weights.entries()) {
             result[index] += weight;
           }
@@ -43,11 +41,9 @@ export class ResultsService {
     this.completedHealthAnswers = answers;
     const result = new Array(this.categories.length).fill(0);
     for (const answer of answers) {
-      const testID = "testID";
-      const alternativeID = "alternativeID";
-      const test = this.healthTestsService.healthTests.find(element => element.id === answer[testID]);
+      const test = this.healthTestsService.healthTests.find(element => element.id === answer["testID"]);
       for (const alternative of test.alternatives) {
-        if (alternative.id === answer[alternativeID]) {
+        if (alternative.id === answer["alternativeID"]) {
           for (const [index, weight] of alternative.weights.entries()) {
             result[index] += weight;
           }
@@ -127,14 +123,11 @@ export class ResultsService {
 
     // finding survey question text and selected answer text
     for (const answer of this.completedAnswers) {
-      let questionID = "questionID"
-      let alternativeID = "alternativeID"
-      let value = "value"
-      const question = this.questionService.questions.find(element => element.id === answer[questionID]);
+      const question = this.questionService.questions.find(element => element.id === answer["questionID"]);
       for (const alternative of question.alternatives) {
-        if (alternative.id === answer[alternativeID]) {
+        if (alternative.id === answer["alternativeID"]) {
           if (answer["value"]){
-            text += question.question + "\n" + "Svar: " + answer[value] + " " + alternative.text + "\n\n";
+            text += question.question + "\n" + "Svar: " + answer["value"] + " " + alternative.text + "\n\n";
           }
           else {
             text += question.question + "\n" + "Svar: " + alternative.text + "\n\n";
@@ -147,12 +140,14 @@ export class ResultsService {
     if (this.completedHealthAnswers) {
       text += "\n\nFysiologiske helseverdier:\n\n"
       for (const answer of this.completedHealthAnswers) {
-        const testID = "testID";
-        const alternativeID = "alternativeID";
-        const test = this.healthTestsService.healthTests.find(element => element.id === answer[testID]);
+        const test = this.healthTestsService.healthTests.find(element => element.id === answer["testID"]);
         for (const alternative of test.alternatives) {
-          if (alternative.id === answer[alternativeID]) {
-            text += test.test + "\n" + "Svar: " + alternative.text + "\n\n";
+          if (alternative.id === answer["alternativeID"]) {
+            text += test.test + "\n" + "Svar: " + alternative.text;
+            if (answer.value){
+              text += "\nVerdi: " + answer.value;
+            }
+            text += "\n\n";
           }
         }
       }

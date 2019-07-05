@@ -350,6 +350,7 @@
             {"id": 5, "weights": [0,0,0,0], "text": "Veldig høy"}
         ]},
         {"id": 25, "test": "Kol/HDL-ratio", "alternatives": [
+            {"id": 0, "type": "input", "unit": "ratio", "text": "",   "weights": [0,0,0,0]},
             {"id": 1, "weights": [0,0,0,0], "text": "Veldig lav"},
             {"id": 2, "weights": [0,0,0,0], "text": "Lav"},
             {"id": 3, "weights": [0,0,0,0], "text": "Normal"},
@@ -357,6 +358,7 @@
             {"id": 5, "weights": [0,0,0,0], "text": "Veldig høy"}
         ]},
         {"id": 26, "test": "LDL", "alternatives": [
+            {"id": 0, "type": "input", "unit": "LDL", "text": "",   "weights": [0,0,0,0]},
             {"id": 1, "weights": [0,0,0,0], "text": "Veldig lav"},
             {"id": 2, "weights": [0,0,0,0], "text": "Lav"},
             {"id": 3, "weights": [0,0,0,0], "text": "Normal"},
@@ -364,6 +366,7 @@
             {"id": 5, "weights": [0,0,0,0], "text": "Veldig høy"}
         ]},
         {"id": 27, "test": "Triglyserider", "alternatives": [
+            {"id": 0, "type": "input", "unit": "Triglyserider", "text": "",   "weights": [0,0,0,0]},
             {"id": 1, "weights": [0,0,0,0], "text": "Veldig lav"},
             {"id": 2, "weights": [0,0,0,0], "text": "Lav"},
             {"id": 3, "weights": [0,0,0,0], "text": "Normal"},
@@ -371,6 +374,7 @@
             {"id": 5, "weights": [0,0,0,0], "text": "Veldig høy"}
         ]},
         {"id": 28, "test": "Blodtrykk", "alternatives": [
+            {"id": 0, "type": "input", "unit": "blodtrykk", "text": "",   "weights": [0,0,0,0]},
             {"id": 1, "weights": [0,0,0,0], "text": "Veldig lav"},
             {"id": 2, "weights": [0,0,0,0], "text": "Lav"},
             {"id": 3, "weights": [0,0,0,0], "text": "Normal"},
@@ -378,6 +382,7 @@
             {"id": 5, "weights": [0,0,0,0], "text": "Veldig høy"}
         ]},
         {"id": 29, "test": "Vekt", "alternatives": [
+            {"id": 0, "type": "input", "unit": "kg", "text": "",   "weights": [0,0,0,0]},
             {"id": 1, "weights": [0,0,0,0], "text": "Veldig lav"},
             {"id": 2, "weights": [0,0,0,0], "text": "Lav"},
             {"id": 3, "weights": [0,0,0,0], "text": "Normal"},

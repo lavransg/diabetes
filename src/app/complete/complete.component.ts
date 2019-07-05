@@ -38,11 +38,19 @@ export class CompleteComponent implements OnInit, AfterViewInit {
     }
   }
 
-  radioSelected(testID, alternativeID) {
-    const filtered = this.selectedHealthAlternatives.filter(element => element.testID !== testID); // removes element with same testID
-    filtered.push({testID, alternativeID});
-    this.selectedHealthAlternatives = filtered;
-
+  radioSelected(testID, alternativeID,value?) {
+    let selection = this.selectedHealthAlternatives.find( element => element.testID === testID);
+    if (selection) {
+      if (value) {selection["value"] = value;}
+      else {
+        selection["testID"] = testID;
+        selection["alternativeID"] = alternativeID;
+      }
+    }
+    else {
+      if (value) { this.selectedHealthAlternatives.push({testID, alternativeID, value}); }
+      else {this.selectedHealthAlternatives.push({testID, alternativeID});}
+    }
   }
 
   isRadioSelected(testID, alternativeID) {
@@ -74,18 +82,23 @@ export class CompleteComponent implements OnInit, AfterViewInit {
     for (const [index,value] of result.entries()) {
       relativeResult.push(Math.round((value / this.resultsService.maxPossibleResult[index]) * 100));
     }
-    console.log(relativeResult)
+    console.log("relativeResult",relativeResult)
     const bars = document.getElementsByClassName("bar");
-    Array.from(bars).forEach((x: HTMLElement, index) => x.style.height = `${(relativeResult[index] * 3)}px`);
+    console.log(bars)
+    Array.from(bars).forEach((x: HTMLElement, index) => {
+      console.log("setting bar ",index," to ", relativeResult[index]);
+      x.style.height = `${(relativeResult[index] * 3)}px`;
+    });
 
     if (healthResult) {
+      console.log("healthResult:",healthResult)
       for (const [index,value] of healthResult.entries()) {
         relativeHealthResult.push(Math.round((value / this.resultsService.maxPossibleResult[index]) * 100));
       }
       console.log(relativeHealthResult)
       const barsHealth = document.getElementsByClassName("bar-health");
       Array.from(barsHealth).forEach((x: HTMLElement, index) => x.style.height = `${(relativeHealthResult[index] * 3)}px`);
-      Array.from(bars).forEach((x: HTMLElement, index) => x.style.borderRadius = "0 0 4px 4px");
+      // Array.from(bars).forEach((x: HTMLElement, index) => x.style.borderRadius = "0 0 4px 4px");
     }
 
   }
