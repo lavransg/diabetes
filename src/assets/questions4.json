@@ -249,97 +249,140 @@
         }
       ],
       "tests": [
-        {"id": 1, "test": "Bare kost/mosjon", "weights": [
-            {"id": 1, "weight": [50,70,30,100], "text": "Ja"},
-            {"id": 2, "weight": [0,0,0,0], "text": "Nei"}
+        {"id": 1, "test": "Bare kost/mosjon", "alternatives": [
+            {"id": 1, "weights": [50,70,30,100], "text": "Ja"},
+            {"id": 2, "weights": [0,0,0,0], "text": "Nei"}
         ]},
-        {"id": 2, "test": "Metformin", "weights": [
-            {"id": 1, "weight": [0,0,0,0], "text": "Ja"},
-            {"id": 2, "weight": [0,0,0,0], "text": "Nei"}
+        {"id": 2, "test": "Metformin", "alternatives": [
+            {"id": 1, "weights": [0,0,0,0], "text": "Ja"},
+            {"id": 2, "weights": [0,0,0,0], "text": "Nei"}
         ]},
-        {"id": 3, "test": "Sulfonylurea", "weights": [
-            {"id": 1, "weight": [0,0,0,0], "text": "Ja"},
-            {"id": 2, "weight": [0,0,0,0], "text": "Nei"}
+        {"id": 3, "test": "Sulfonylurea", "alternatives": [
+            {"id": 1, "weights": [0,0,0,0], "text": "Ja"},
+            {"id": 2, "weights": [0,0,0,0], "text": "Nei"}
         ]},
-        {"id": 4, "test": "Glitazon", "weights": [
-            {"id": 1, "weight": [0,0,0,0], "text": "Ja"},
-            {"id": 2, "weight": [0,0,0,0], "text": "Nei"}
+        {"id": 4, "test": "Glitazon", "alternatives": [
+            {"id": 1, "weights": [0,0,0,0], "text": "Ja"},
+            {"id": 2, "weights": [0,0,0,0], "text": "Nei"}
         ]},
-        {"id": 5, "test": "GLP-1 analog", "weights": [
-            {"id": 1, "weight": [0,0,0,0], "text": "Ja"},
-            {"id": 2, "weight": [0,0,0,0], "text": "Nei"}
+        {"id": 5, "test": "GLP-1 analog", "alternatives": [
+            {"id": 1, "weights": [0,0,0,0], "text": "Ja"},
+            {"id": 2, "weights": [0,0,0,0], "text": "Nei"}
         ]},
-        {"id": 6, "test": "DPP4 - hemmer", "weights": [
-            {"id": 1, "weight": [0,0,0,0], "text": "Ja"},
-            {"id": 2, "weight": [0,0,0,0], "text": "Nei"}
+        {"id": 6, "test": "DPP4 - hemmer", "alternatives": [
+            {"id": 1, "weights": [0,0,0,0], "text": "Ja"},
+            {"id": 2, "weights": [0,0,0,0], "text": "Nei"}
         ]},
-        {"id": 7, "test": "SGLT2 - hemmer", "weights": [
-            {"id": 1, "weight": [0,0,0,0], "text": "Ja"},
-            {"id": 2, "weight": [0,0,0,0], "text": "Nei"}
+        {"id": 7, "test": "SGLT2 - hemmer", "alternatives": [
+            {"id": 1, "weights": [0,0,0,0], "text": "Ja"},
+            {"id": 2, "weights": [0,0,0,0], "text": "Nei"}
         ]},
-        {"id": 8, "test": "Andre antidiabetika", "weights": [
-            {"id": 1, "weight": [0,0,0,0], "text": "Ja"},
-            {"id": 2, "weight": [0,0,0,0], "text": "Nei"}
+        {"id": 8, "test": "Andre antidiabetika", "alternatives": [
+            {"id": 1, "weights": [0,0,0,0], "text": "Ja"},
+            {"id": 2, "weights": [0,0,0,0], "text": "Nei"}
         ]},
-        {"id": 9, "test": "Insulin", "weights": [
-            {"id": 1, "weight": [0,0,0,0], "text": "Ja"},
-            {"id": 2, "weight": [0,0,0,0], "text": "Nei"}
+        {"id": 9, "test": "Insulin", "alternatives": [
+            {"id": 1, "weights": [0,0,0,0], "text": "Ja"},
+            {"id": 2, "weights": [0,0,0,0], "text": "Nei"}
         ]},
-        {"id": 10, "test": "Albyl-E / andre platehemmer", "weights": [
-            {"id": 1, "weight": [0,0,0,0], "text": "Ja"},
-            {"id": 2, "weight": [0,0,0,0], "text": "Nei"}
+        {"id": 10, "test": "Albyl-E / andre platehemmer", "alternatives": [
+            {"id": 1, "weights": [0,0,0,0], "text": "Ja"},
+            {"id": 2, "weights": [0,0,0,0], "text": "Nei"}
         ]},
-        {"id": 11, "test": "Antikoagulasjonsbehandling", "weights": [
-            {"id": 1, "weight": [0,0,0,0], "text": "Ja"},
-            {"id": 2, "weight": [0,0,0,0], "text": "Nei"}
+        {"id": 11, "test": "Antikoagulasjonsbehandling", "alternatives": [
+            {"id": 1, "weights": [0,0,0,0], "text": "Ja"},
+            {"id": 2, "weights": [0,0,0,0], "text": "Nei"}
         ]},
-        {"id": 12, "test": "Lipidsenkende", "weights": [
-            {"id": 1, "weight": [0,0,0,0], "text": "Ja"},
-            {"id": 2, "weight": [0,0,0,0], "text": "Nei"}
+        {"id": 12, "test": "Lipidsenkende", "alternatives": [
+            {"id": 1, "weights": [0,0,0,0], "text": "Ja"},
+            {"id": 2, "weights": [0,0,0,0], "text": "Nei"}
         ]},
-        {"id": 13, "test": "ACE-hemmer / all blokker", "weights": [
-            {"id": 1, "weight": [0,0,0,0], "text": "Ja"},
-            {"id": 2, "weight": [0,0,0,0], "text": "Nei"}
+        {"id": 13, "test": "ACE-hemmer / all blokker", "alternatives": [
+            {"id": 1, "weights": [0,0,0,0], "text": "Ja"},
+            {"id": 2, "weights": [0,0,0,0], "text": "Nei"}
         ]},
-        {"id": 14, "test": "Koronar hjertesykdom", "weights": [
-            {"id": 1, "weight": [0,0,0,0], "text": "Ja"},
-            {"id": 2, "weight": [0,0,0,0], "text": "Nei"}
+        {"id": 14, "test": "Koronar hjertesykdom", "alternatives": [
+            {"id": 1, "weights": [0,0,0,0], "text": "Ja"},
+            {"id": 2, "weights": [0,0,0,0], "text": "Nei"}
         ]},
-        {"id": 15, "test": "Atrieflimmer", "weights": [
-            {"id": 1, "weight": [0,0,0,0], "text": "Ja"},
-            {"id": 2, "weight": [0,0,0,0], "text": "Nei"}
+        {"id": 15, "test": "Atrieflimmer", "alternatives": [
+            {"id": 1, "weights": [0,0,0,0], "text": "Ja"},
+            {"id": 2, "weights": [0,0,0,0], "text": "Nei"}
         ]},
-        {"id": 16, "test": "Hjerneslag (untatt TIA)", "weights": [
-            {"id": 1, "weight": [0,0,0,0], "text": "Ja"},
-            {"id": 2, "weight": [0,0,0,0], "text": "Nei"}
+        {"id": 16, "test": "Hjerneslag (untatt TIA)", "alternatives": [
+            {"id": 1, "weights": [0,0,0,0], "text": "Ja"},
+            {"id": 2, "weights": [0,0,0,0], "text": "Nei"}
         ]},
-        {"id": 17, "test": "Diabetes retinopati", "weights": [
-            {"id": 1, "weight": [0,0,0,0], "text": "Ja"},
-            {"id": 2, "weight": [0,0,0,0], "text": "Nei"}
+        {"id": 17, "test": "Diabetes retinopati", "alternatives": [
+            {"id": 1, "weights": [0,0,0,0], "text": "Ja"},
+            {"id": 2, "weights": [0,0,0,0], "text": "Nei"}
         ]},
-        {"id": 18, "test": "Nedsatt syn <0.3 (6/8) m/korr.", "weights": [
-            {"id": 1, "weight": [0,0,0,0], "text": "Ja"},
-            {"id": 2, "weight": [0,0,0,0], "text": "Nei"}
+        {"id": 18, "test": "Nedsatt syn <0.3 (6/8) m/korr.", "alternatives": [
+            {"id": 1, "weights": [0,0,0,0], "text": "Ja"},
+            {"id": 2, "weights": [0,0,0,0], "text": "Nei"}
         ]},
-        {"id": 19, "test": "Albuminuri eller nefropati", "weights": [
-            {"id": 1, "weight": [0,0,0,0], "text": "Ja"},
-            {"id": 2, "weight": [0,0,0,0], "text": "Nei"}
+        {"id": 19, "test": "Albuminuri eller nefropati", "alternatives": [
+            {"id": 1, "weights": [0,0,0,0], "text": "Ja"},
+            {"id": 2, "weights": [0,0,0,0], "text": "Nei"}
         ]},
-        {"id": 20, "test": "Arteriell karkirurgi distalt for aorta", "weights": [
-            {"id": 1, "weight": [0,0,0,0], "text": "Ja"},
-            {"id": 2, "weight": [0,0,0,0], "text": "Nei"}
+        {"id": 20, "test": "Arteriell karkirurgi distalt for aorta", "alternatives": [
+            {"id": 1, "weights": [0,0,0,0], "text": "Ja"},
+            {"id": 2, "weights": [0,0,0,0], "text": "Nei"}
         ]},
-        {"id": 21, "test": "Amputasjon (ikketraumatisk)", "weights": [
-            {"id": 1, "weight": [0,0,0,0], "text": "Ja"},
-            {"id": 2, "weight": [0,0,0,0], "text": "Nei"}
+        {"id": 21, "test": "Amputasjon (ikketraumatisk)", "alternatives": [
+            {"id": 1, "weights": [0,0,0,0], "text": "Ja"},
+            {"id": 2, "weights": [0,0,0,0], "text": "Nei"}
         ]},
-        {"id": 22, "test": "Hatt diabetessår nedenfor ankel", "weights": [
-            {"id": 1, "weight": [0,0,0,0], "text": "Ja"},
-            {"id": 2, "weight": [0,0,0,0], "text": "Nei"}
+        {"id": 22, "test": "Hatt diabetessår nedenfor ankel", "alternatives": [
+            {"id": 1, "weights": [0,0,0,0], "text": "Ja"},
+            {"id": 2, "weights": [0,0,0,0], "text": "Nei"}
         ]},
-        {"id": 23, "test": "gjennomgått fedmekirurgi", "weights": [
-            {"id": 1, "weight": [0,0,0,0], "text": "Ja"},
-            {"id": 2, "weight": [0,0,0,0], "text": "Nei"}
+        {"id": 23, "test": "Gjennomgått fedmekirurgi", "alternatives": [
+            {"id": 1, "weights": [0,0,0,0], "text": "Ja"},
+            {"id": 2, "weights": [0,0,0,0], "text": "Nei"}
+        ]},
+        {"id": 24, "test": "HbA1c mmol/mol", "alternatives": [
+            {"id": 0, "type": "input", "unit": "mmol/mol", "text": "",   "weights": [0,0,0,0]},
+            {"id": 1, "weights": [0,0,0,0], "text": "Veldig lav"},
+            {"id": 2, "weights": [0,0,0,0], "text": "Lav"},
+            {"id": 3, "weights": [0,0,0,0], "text": "Normal"},
+            {"id": 4, "weights": [0,0,0,0], "text": "Høy"},
+            {"id": 5, "weights": [0,0,0,0], "text": "Veldig høy"}
+        ]},
+        {"id": 25, "test": "Kol/HDL-ratio", "alternatives": [
+            {"id": 1, "weights": [0,0,0,0], "text": "Veldig lav"},
+            {"id": 2, "weights": [0,0,0,0], "text": "Lav"},
+            {"id": 3, "weights": [0,0,0,0], "text": "Normal"},
+            {"id": 4, "weights": [0,0,0,0], "text": "Høy"},
+            {"id": 5, "weights": [0,0,0,0], "text": "Veldig høy"}
+        ]},
+        {"id": 26, "test": "LDL", "alternatives": [
+            {"id": 1, "weights": [0,0,0,0], "text": "Veldig lav"},
+            {"id": 2, "weights": [0,0,0,0], "text": "Lav"},
+            {"id": 3, "weights": [0,0,0,0], "text": "Normal"},
+            {"id": 4, "weights": [0,0,0,0], "text": "Høy"},
+            {"id": 5, "weights": [0,0,0,0], "text": "Veldig høy"}
+        ]},
+        {"id": 27, "test": "Triglyserider", "alternatives": [
+            {"id": 1, "weights": [0,0,0,0], "text": "Veldig lav"},
+            {"id": 2, "weights": [0,0,0,0], "text": "Lav"},
+            {"id": 3, "weights": [0,0,0,0], "text": "Normal"},
+            {"id": 4, "weights": [0,0,0,0], "text": "Høy"},
+            {"id": 5, "weights": [0,0,0,0], "text": "Veldig høy"}
+        ]},
+        {"id": 28, "test": "Blodtrykk", "alternatives": [
+            {"id": 1, "weights": [0,0,0,0], "text": "Veldig lav"},
+            {"id": 2, "weights": [0,0,0,0], "text": "Lav"},
+            {"id": 3, "weights": [0,0,0,0], "text": "Normal"},
+            {"id": 4, "weights": [0,0,0,0], "text": "Høy"},
+            {"id": 5, "weights": [0,0,0,0], "text": "Veldig høy"}
+        ]},
+        {"id": 29, "test": "Vekt", "alternatives": [
+            {"id": 1, "weights": [0,0,0,0], "text": "Veldig lav"},
+            {"id": 2, "weights": [0,0,0,0], "text": "Lav"},
+            {"id": 3, "weights": [0,0,0,0], "text": "Normal"},
+            {"id": 4, "weights": [0,0,0,0], "text": "Høy"},
+            {"id": 5, "weights": [0,0,0,0], "text": "Veldig høy"}
         ]}
         
     ]

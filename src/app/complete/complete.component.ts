@@ -70,7 +70,7 @@ export class CompleteComponent implements OnInit, AfterViewInit {
     const relativeResult = [];
     const relativeHealthResult = [];
     console.log(this.resultsService.maxPossibleResult)
-
+    console.log(result)
     for (const [index,value] of result.entries()) {
       relativeResult.push(Math.round((value / this.resultsService.maxPossibleResult[index]) * 100));
     }

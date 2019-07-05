@@ -3,7 +3,7 @@
 
 x) Modify JSON.stringify to output a more readable template for questions
 x) reset uploaded / selected weights when going home from completed-page
-) feedback for correctly uploaded files
+x) feedback for correctly uploaded files
 x) save healthvalues to the test json file
 x) ability to upload healthValues choises from local test json file
 x) make final results be on the scale 0-100?

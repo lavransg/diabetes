@@ -52,15 +52,15 @@
             <div class="form-group" id="{{item.id}}" *ngFor="let item of healthTests; index as i;">
               
               <h4>{{item.test}}</h4>
-              <div class="custom-control custom-radio" *ngFor="let option of item.weights; index as j;">
+              <div class="custom-control custom-radio" *ngFor="let alternative of item.alternatives; index as j;">
                   <input
-                    [checked]="isRadioSelected(item.id,option.id)"
-                    (click)="radioSelected(item.id,option.id)"
-                    type="radio" id="{{''+item.id+option.id}}" 
+                    [checked]="isRadioSelected(item.id,alternative.id)"
+                    (click)="radioSelected(item.id,alternative.id)"
+                    type="radio" id="{{''+item.id+alternative.id}}" 
                     name="{{item.id}}" 
                     class="custom-control-input"
                     >
-                  <label class="custom-control-label" for="{{''+item.id+option.id}}">{{option.text}}</label>
+                  <label class="custom-control-label" for="{{''+item.id+alternative.id}}">{{alternative.text}}</label>
               </div>
               
             </div>

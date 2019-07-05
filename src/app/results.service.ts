@@ -46,9 +46,9 @@ export class ResultsService {
       const testID = "testID";
       const alternativeID = "alternativeID";
       const test = this.healthTestsService.healthTests.find(element => element.id === answer[testID]);
-      for (const alternative of test.weights) {
+      for (const alternative of test.alternatives) {
         if (alternative.id === answer[alternativeID]) {
-          for (const [index, weight] of alternative.weight.entries()) {
+          for (const [index, weight] of alternative.weights.entries()) {
             result[index] += weight;
           }
         }
@@ -98,9 +98,9 @@ export class ResultsService {
       for (const test of this.healthTestsService.healthTests) {
         let tmax = new Array(this.categories.length).fill(0);
         for (let i = 0; i < this.categories.length; i++) {
-          for (const alternative of test.weights) {
-            if (alternative && alternative.weight[i] > tmax[i]) {
-              tmax[i] = alternative.weight[i];
+          for (const alternative of test.alternatives) {
+            if (alternative && alternative.weights[i] > tmax[i]) {
+              tmax[i] = alternative.weights[i];
             }
           }
         }
@@ -121,7 +121,7 @@ export class ResultsService {
 
     // printing each category and its calculated result value
     for (const [index, category] of this.categories.entries()) {
-      text += category + ": " + this.result[index] + " \n";
+      text += category + ": " + this.totalResult[index] + "/100 \n";
     }
     text += "\n";
 
@@ -150,7 +150,7 @@ export class ResultsService {
         const testID = "testID";
         const alternativeID = "alternativeID";
         const test = this.healthTestsService.healthTests.find(element => element.id === answer[testID]);
-        for (const alternative of test.weights) {
+        for (const alternative of test.alternatives) {
           if (alternative.id === answer[alternativeID]) {
             text += test.test + "\n" + "Svar: " + alternative.text + "\n\n";
           }
