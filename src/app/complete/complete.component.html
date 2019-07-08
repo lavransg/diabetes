@@ -130,21 +130,23 @@
 
 
 <div class="results-container text-center" *ngIf="!this.resultsService.result"><h3>Ingen resultater, fullfør en test først</h3></div>
-<div class="results-container"><div class="container" *ngIf="this.resultsService.result">
+<div class="results-container">
+    <div class="container-fluid" *ngIf="this.resultsService.result">
         
-        <div class="row align-items-end">
-            <div class="col align-self-end" *ngFor="let item of this.resultsService.categories; index as i;">
+        <div class="row">
+            <div class="col col-category" *ngFor="let item of this.resultsService.categories; index as i;">
 
                 <div class="bar-container">
                     <div class="bar-health" [ngClass]="{'tallest-bar-health':this.resultsService.highestCategory === i}"></div>
                     <div class="bar" [ngClass]="{'tallest-bar':this.resultsService.highestCategory === i}"></div>
-                    <div class="category-text">
-                        {{item}}
-                        <br><h2>{{this.resultsService.totalResult[i]}}/100</h2>
-                    </div>
+                </div>
+                <div class="category-text">
+                    <b>{{item}}</b>
+                    <br><h4>{{this.resultsService.totalResult[i]}}/100</h4>
                 </div>
 
             </div>
+            <!-- <div class="col w-100"></div> -->
         </div>
     
     </div>

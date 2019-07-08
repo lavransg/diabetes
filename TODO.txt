@@ -11,6 +11,7 @@ x) make final results be on the scale 0-100?
 ) make a larger informational website for the test to be a part of
 ) make some of the input elements, modals and other html elements into template components
 ) make certain bars for certain categories different colors (attribute in questions-json)
+) add inherent weights - weights irrespective of selected results - to the questions json file
 
 x) Generate report:
 
