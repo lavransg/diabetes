@@ -73,29 +73,18 @@ export class CompleteComponent implements OnInit, AfterViewInit {
   calculateRelativeResult() {
     const result = this.resultsService.result;
     const healthResult = this.resultsService.healthResult;
-    const highestCategory = this.resultsService.highestCategory;
-    const highestValue = this.resultsService.totalResult[highestCategory];
     const relativeResult = [];
     const relativeHealthResult = [];
-    console.log(this.resultsService.maxPossibleResult)
-    console.log(result)
     for (const [index,value] of result.entries()) {
       relativeResult.push(Math.round((value / this.resultsService.maxPossibleResult[index]) * 100));
     }
-    console.log("relativeResult",relativeResult)
-    const bars = document.getElementsByClassName("bar");
-    console.log(bars)
-    Array.from(bars).forEach((x: HTMLElement, index) => {
-      console.log("setting bar ",index," to ", relativeResult[index]);
-      x.style.height = `${(relativeResult[index] * 3)}px`;
-    });
+    let bars = document.getElementsByClassName("bar");
+    Array.from(bars).forEach((x: HTMLElement, index) => { x.style.height = `${(relativeResult[index] * 3)}px`;});
 
-    if (healthResult) {
-      console.log("healthResult:",healthResult)
+    if (healthResult && false) {
       for (const [index,value] of healthResult.entries()) {
         relativeHealthResult.push(Math.round((value / this.resultsService.maxPossibleResult[index]) * 100));
       }
-      console.log(relativeHealthResult)
       const barsHealth = document.getElementsByClassName("bar-health");
       Array.from(barsHealth).forEach((x: HTMLElement, index) => x.style.height = `${(relativeHealthResult[index] * 3)}px`);
       Array.from(bars).forEach((x: HTMLElement, index) => x.style.borderRadius = "0 0 4px 4px");

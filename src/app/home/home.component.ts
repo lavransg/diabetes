@@ -91,6 +91,10 @@ export class HomeComponent implements OnInit {
 
   saveHealthWeights() {
     this.resultsService.getHealthResults(this.selectedHealthAlternatives);
+    if (this.resultsService.completedAnswers){
+      this.resultsService.getResults(this.resultsService.completedAnswers);
+    }
+
   }
 
 }
