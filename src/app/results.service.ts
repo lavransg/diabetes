@@ -2,7 +2,6 @@ import { Injectable } from '@angular/core';
 import { QuestionService } from './question.service';
 import { HealthTestsService } from './health-tests.service';
 import * as FileSaver from 'file-saver';
-import { log } from 'util';
 
 @Injectable({
   providedIn: 'root'
@@ -22,7 +21,6 @@ export class ResultsService {
 
   // calculates the result weights of the survey answers
   getResults(answers: object[]) {
-    console.log("getResults called")
     const result = new Array(this.categories.length).fill(0);
     for (const answer of answers) {
       const question = this.questionService.questions.find(element => element.id === answer["questionID"]);
@@ -40,7 +38,6 @@ export class ResultsService {
 
   // calculates the result weights of the health-values
   getHealthResults(answers: object[]) {
-    console.log("getHealthResults called")
     this.completedHealthAnswers = answers;
     const result = new Array(this.categories.length).fill(0);
     for (const answer of answers) {
@@ -55,28 +52,26 @@ export class ResultsService {
     }
     this.healthResult = result;
     this.calculateTotalResult();
-
   }
 
   // calculates the result weights of both survey answers and the health-values
   calculateTotalResult() {
-    console.log("calculateTotalResult called")
     this.totalResult = [];
     this.calculateMaxPossibleResult();
     if (this.result) {
       for (const [index, value] of this.result.entries()) {
         if (this.healthResult) {
           this.totalResult.push(Math.round(((value + this.healthResult[index]) / this.maxPossibleResult[index]) * 100));
-        } else {this.totalResult.push(Math.round((value / this.maxPossibleResult[index]) * 100)); }
+        } else {
+          this.totalResult.push(Math.round((value / this.maxPossibleResult[index]) * 100));
+        }
       }
     }
-
     this.highestCategory = this.totalResult.indexOf(Math.max.apply(null, this.totalResult));
 
   }
 
   calculateMaxPossibleResult() {
-    console.log("calculateMaxPossibleResult called")
     const max = new Array(this.categories.length).fill(0);
 
     // looping through questions
@@ -110,7 +105,6 @@ export class ResultsService {
         }
       }
     }
-    console.log("maxPossibleResult:",max);
     this.maxPossibleResult = max;
   }
 
@@ -158,7 +152,6 @@ export class ResultsService {
       }
     }
 
-    console.log(text);
     return text;
 
   }
@@ -193,7 +186,6 @@ export class ResultsService {
   }
 
   clearResults(){
-    console.log("clearResults called")
     this.completedAnswers = undefined;
     this.completedHealthAnswers = undefined;
     this.result = undefined;

@@ -7,18 +7,14 @@ import { HealthTestsService } from '../health-tests.service';
   templateUrl: './complete.component.html',
   styleUrls: ['./complete.component.css']
 })
-export class CompleteComponent implements OnInit, AfterViewInit {
+export class CompleteComponent implements AfterViewInit {
 
   saveReportFile = false;
   saveTestFile = false;
   inputID = "Identifikator";
   selectedHealthAlternatives: any[] = [];
 
-  constructor(private healthTestsService: HealthTestsService, private resultsService: ResultsService) {
-
-  }
-
-  ngOnInit() {}
+  constructor(private healthTestsService: HealthTestsService, private resultsService: ResultsService) {}
 
   ngAfterViewInit() {
     if (this.resultsService.result) {
@@ -30,12 +26,8 @@ export class CompleteComponent implements OnInit, AfterViewInit {
   }
 
   saveFiles() {
-    if (this.saveReportFile) {
-      this.resultsService.saveReport(this.inputID);
-    }
-    if (this.saveTestFile) {
-      this.resultsService.saveTest(this.inputID);
-    }
+    if (this.saveReportFile) { this.resultsService.saveReport(this.inputID); }
+    if (this.saveTestFile) { this.resultsService.saveTest(this.inputID); }
   }
 
   radioSelected(testID, alternativeID,value?) {
@@ -62,9 +54,7 @@ export class CompleteComponent implements OnInit, AfterViewInit {
 
   saveHealthWeights() {
     this.resultsService.getHealthResults(this.selectedHealthAlternatives);
-    if (this.resultsService.result) {
-      this.calculateRelativeResult();
-    }
+    this.calculateRelativeResult();
   }
 
   // this function is used for making ratios for a bar graphs heights.
@@ -81,7 +71,7 @@ export class CompleteComponent implements OnInit, AfterViewInit {
     let bars = document.getElementsByClassName("bar");
     Array.from(bars).forEach((x: HTMLElement, index) => { x.style.height = `${(relativeResult[index] * 3)}px`;});
 
-    if (healthResult && false) {
+    if (healthResult) {
       for (const [index,value] of healthResult.entries()) {
         relativeHealthResult.push(Math.round((value / this.resultsService.maxPossibleResult[index]) * 100));
       }

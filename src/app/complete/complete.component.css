@@ -13,13 +13,13 @@
 .bar{
     border-radius: 4px 4px 4px 4px;
     width: 100%;
-    max-width: 150px;
+    max-width: 130px;
     background-color: #007bff;
 }
 .bar-health{
     border-radius: 4px 4px 0 0;
     width: 100%;
-    max-width: 150px;
+    max-width: 130px;
     background-color: #3d9bff;
 }
 .category-text{
@@ -38,4 +38,10 @@
 .health-test-container{
     max-height: calc(100vh - 300px);
     overflow-y: scroll;
+}
+.tallest-bar{
+    background-color: #28a745;
+}
+.tallest-bar-health{
+    background-color: #4bc267;
 }
