@@ -2,13 +2,13 @@
     "__comment": 
     [
         "Hvert svaralternativ har en liste med vekter, én vekt mot hver kategori",
-        "Når en bruker velger et alternativ, summeres denne vekten i en totalsum for hver kategori",
-        "Det er viktig at listene med vekter er like lange som antallet kategorier, ellers vil ikke resultatet vises",
+        "Når en bruker velger et alternativ, summeres vekten og man får til slutt en verdi mellom 0 og 100 etter hvor stor del av det maksimale mulige resultatet summen gir",
+        "Det er viktig at listene med vekter er like lange som antallet kategorier, ellers vil ikke resultatet vises korrekt",
         "Hvert spørsmål må ha en unik id, hvert alternativ må ha en unik id for sitt spørsmål (id-ene trenger ikke være kronologiske)",
         "Hvert spørsmål kan tillhøre en gruppe (avsnitt) - denne gruppen blir vist over spørsmålet når det stilles",
         "",
         "For alternativ med brukerinput, må alternativet ha en 'type': 'input' og en 'unit': 'enheten til inputverdien'",
-        "Alternativer som har brukerinput vil ikke telle mot vekting av klasser og er kun for rapportens del"
+        "Alternativer som har brukerinput vil foreløpig ikke telle mot vekting av klasser og er kun for rapportens del"
 
     ],
     "categories": [
@@ -25,8 +25,6 @@
         "Midjemål og BMI",
         "Røyking",
         "Sosioøkonomiske faktorer"
-
-        
     ],
     "questions": [
         {"id": 1, "group": "Diagnose", 
@@ -36,7 +34,8 @@
                 {"id": 2, "text": "5-9 år",    "weights": [0,0,0,0,0,0,0,0,0,0,0,0,0]},
                 {"id": 3, "text": "10-14 år",  "weights": [0,0,0,0,0,0,0,0,0,0,0,0,0]},
                 {"id": 4, "text": "15-19 år",  "weights": [0,0,0,0,0,0,0,0,0,0,0,0,0]},
-                {"id": 5, "text": "20+ år",    "weights": [0,0,0,0,0,0,0,0,0,0,0,0,0]}
+                {"id": 5, "text": "20+ år",    "weights": [0,0,0,0,0,0,0,0,0,0,0,0,0]},
+                {"id": 6, "text": "vet ikke",  "weights": [0,0,0,0,0,0,0,0,0,0,0,0,0]}
             ]
         },
         {"id": 2, "group": "Diagnose", 
@@ -47,6 +46,17 @@
                 {"id": 3, "text": "vet ikke",  "weights": [0,0,0,0,0,0,0,0,0,0,0,0,0]}
             ]
         },
+        {"id": 2.1, "group": "Diagnose", 
+            "question": "Hva er din alder?", 
+            "alternatives": [
+                {"id": 1, "text": "under 30",   "weights": [0,0,0,0,0,0,0,0,0,0,0,0,0]}, 
+                {"id": 2, "text": "30-39",      "weights": [0,0,0,0,0,0,0,0,0,0,0,0,0]}, 
+                {"id": 3, "text": "40-49",      "weights": [0,0,0,0,0,0,0,0,0,0,0,0,0]}, 
+                {"id": 4, "text": "50-59",      "weights": [0,0,0,0,0,0,0,0,0,0,0,0,0]}, 
+                {"id": 5, "text": "60-69",      "weights": [0,0,0,0,0,0,0,0,0,0,0,0,0]},
+                {"id": 6, "text": "70-79",      "weights": [0,0,0,0,0,0,0,0,0,0,0,0,0]},
+                {"id": 7, "text": "80+",        "weights": [0,0,0,0,0,0,0,0,0,0,0,0,0]}
+        ]},
         {"id": 3, "group": "Diagnose", 
             "question": "Hvor høy er du?",
             "alternatives": [
@@ -157,7 +167,8 @@
                 {"id": 2, "text": "1-2 ganger i uken",    "weights": [0,0,0,0,0,0,0,0,0,0,0,0,0]},
                 {"id": 3, "text": "3-4 ganger i uken",    "weights": [0,0,0,0,0,0,0,0,0,0,0,0,0]},
                 {"id": 4, "text": "5-6 ganger i uken",    "weights": [0,0,0,0,0,0,0,0,0,0,0,0,0]},
-                {"id": 5, "text": "7+ ganger i uken",     "weights": [0,0,0,0,0,0,0,0,0,0,0,0,0]}
+                {"id": 5, "text": "7+ ganger i uken",     "weights": [0,0,0,0,0,0,0,0,0,0,0,0,0]},
+                {"id": 6, "text": "vet ikke",             "weights": [0,0,0,0,0,0,0,0,0,0,0,0,0]}
             ]
         },
         {"id": 17, "group": "Syn", 
@@ -257,7 +268,93 @@
                 {"id": 3, "text": "Asiat",                      "weights": [0,0,0,0,0,0,0,0,0,0,0,0,0]}, 
                 {"id": 4, "text": "Annet",                      "weights": [0,0,0,0,0,0,0,0,0,0,0,0,0]}
             ]
-        }
+        },
+        {"id": 29, "group": "Bakgrunn", 
+            "question": "Sivilstatus", 
+            "alternatives": [
+                {"id": 1, "text": "Gift",       "weights": [0,0,0,0,0,0,0,0,0,0,0,0,0]}, 
+                {"id": 2, "text": "enslig",     "weights": [0,0,0,0,0,0,0,0,0,0,0,0,0]},
+                {"id": 3, "text": "Samboer",    "weights": [0,0,0,0,0,0,0,0,0,0,0,0,0]},
+                {"id": 4, "text": "Annet",      "weights": [0,0,0,0,0,0,0,0,0,0,0,0,0]}
+        ]},
+        {"id": 29.1, "group": "Bakgrunn", 
+            "question": "Bosted", 
+            "alternatives": [
+                {"id": 1, "text": "Kristiansund",   "weights": [0,0,0,0,0,0,0,0,0,0,0,0,0]}, 
+                {"id": 2, "text": "Averøy",         "weights": [0,0,0,0,0,0,0,0,0,0,0,0,0]},
+                {"id": 3, "text": "Annen kommune",   "weights": [0,0,0,0,0,0,0,0,0,0,0,0,0]}
+        ]},
+        {"id": 29.2, "group": "Bakgrunn",
+            "question": "Hvilken utdanning har du?", 
+            "alternatives": [
+                {"id": 1, "text": "Grunnskole",         "weights": [0,0,0,0,0,0,0,0,0,0,0,0,0]}, 
+                {"id": 2, "text": "Videregående skole", "weights": [0,0,0,0,0,0,0,0,0,0,0,0,0]},
+                {"id": 3, "text": "Bachelorgrad",       "weights": [0,0,0,0,0,0,0,0,0,0,0,0,0]},
+                {"id": 4, "text": "Mastergrad",         "weights": [0,0,0,0,0,0,0,0,0,0,0,0,0]},
+                {"id": 5, "text": "Doktorgrad",         "weights": [0,0,0,0,0,0,0,0,0,0,0,0,0]},
+                {"id": 6, "text": "vet ikke",           "weights": [0,0,0,0,0,0,0,0,0,0,0,0,0]}
+        ]},
+        {"id": 30, "group": "Bakgrunn", 
+            "question": "Hvilken inntekt har du?", 
+            "alternatives": [
+                {"id": 1, "text": "0 - 300.000kr",       "weights": [0,0,0,0,0,0,0,0,0,0,0,0,0]}, 
+                {"id": 2, "text": "300.000 - 500.000kr", "weights": [0,0,0,0,0,0,0,0,0,0,0,0,0]},
+                {"id": 3, "text": "500.000 - 700.000kr", "weights": [0,0,0,0,0,0,0,0,0,0,0,0,0]},
+                {"id": 4, "text": "700.000kr +",         "weights": [0,0,0,0,0,0,0,0,0,0,0,0,0]},
+                {"id": 5, "text": "vet ikke",            "weights": [0,0,0,0,0,0,0,0,0,0,0,0,0]}
+        ]},
+        {"id": 31, "group": "Bakgrunn", 
+            "question": "I hvilken grad har du generell kunskap om teknologi?", 
+            "alternatives": [
+                {"id": 1, "text": "Ingen kunnskap",     "weights": [0,0,0,0,0,0,0,0,0,0,0,0,0]}, 
+                {"id": 2, "text": "Noe kunnskap",       "weights": [0,0,0,0,0,0,0,0,0,0,0,0,0]},
+                {"id": 3, "text": "Middels kunnskap",   "weights": [0,0,0,0,0,0,0,0,0,0,0,0,0]},
+                {"id": 4, "text": "Mye kunnskap",       "weights": [0,0,0,0,0,0,0,0,0,0,0,0,0]}
+        ]},
+        {"id": 32, "group": "Bakgrunn", 
+            "question": "Hva er din holdning til teknologi?", 
+            "alternatives": [
+                {"id": 1, "text": "Negativ",    "weights": [0,0,0,0,0,0,0,0,0,0,0,0,0]}, 
+                {"id": 2, "text": "Likegyldig", "weights": [0,0,0,0,0,0,0,0,0,0,0,0,0]},
+                {"id": 3, "text": "Positiv",    "weights": [0,0,0,0,0,0,0,0,0,0,0,0,0]}
+        ]},
+        {"id": 33, "group": "Motivasjon og psykisk helse", 
+            "question": "Hvor motivert er du til å forbedre din situasjon?", 
+            "alternatives": [
+                {"id": 1, "text": "Ikke motivert",      "weights": [0,0,0,0,0,0,0,0,0,0,0,0,0]}, 
+                {"id": 2, "text": "Noe motivert",       "weights": [0,0,0,0,0,0,0,0,0,0,0,0,0]},
+                {"id": 3, "text": "Middels motivert",   "weights": [0,0,0,0,0,0,0,0,0,0,0,0,0]},
+                {"id": 4, "text": "Ganske motivert",    "weights": [0,0,0,0,0,0,0,0,0,0,0,0,0]},
+                {"id": 5, "text": "Veldig motivert",    "weights": [0,0,0,0,0,0,0,0,0,0,0,0,0]}
+        ]},
+        {"id": 34, "group": "Motivasjon og psykisk helse", 
+            "question": "I hvilken grad har du psykiske utfordringer?", 
+            "alternatives": [
+                {"id": 1, "text": "Ingen utfordringer", "weights": [0,0,0,0,0,0,0,0,0,0,0,0,0]}, 
+                {"id": 2, "text": "Noen utfordringer",  "weights": [0,0,0,0,0,0,0,0,0,0,0,0,0]},
+                {"id": 3, "text": "Mange utfordringer", "weights": [0,0,0,0,0,0,0,0,0,0,0,0,0]},
+                {"id": 6, "text": "vet ikke",           "weights": [0,0,0,0,0,0,0,0,0,0,0,0,0]}
+        ]},
+        {"id": 20, "group": "Motivasjon og psykisk helse", 
+            "question": "Hvor mange timer sover du normalt hver natt?", 
+            "alternatives": [
+                {"id": 1, "text": "2",      "weights": [0,0,0,0,0,0,0,0,0,0,0,0,0]}, 
+                {"id": 2, "text": "3",      "weights": [0,0,0,0,0,0,0,0,0,0,0,0,0]},
+                {"id": 3, "text": "4",      "weights": [0,0,0,0,0,0,0,0,0,0,0,0,0]},
+                {"id": 4, "text": "5",      "weights": [0,0,0,0,0,0,0,0,0,0,0,0,0]},
+                {"id": 5, "text": "6",      "weights": [0,0,0,0,0,0,0,0,0,0,0,0,0]},
+                {"id": 6, "text": "7",      "weights": [0,0,0,0,0,0,0,0,0,0,0,0,0]},
+                {"id": 7, "text": "8",      "weights": [0,0,0,0,0,0,0,0,0,0,0,0,0]},
+                {"id": 8, "text": "9",      "weights": [0,0,0,0,0,0,0,0,0,0,0,0,0]},
+                {"id": 9, "text": "10+",    "weights": [0,0,0,0,0,0,0,0,0,0,0,0,0]}
+        ]},
+        {"id": 21, "group": "Motivasjon og psykisk helse", 
+            "question": "Tar du medikamenter for å sove?", 
+            "alternatives": [
+                {"id": 1, "text": "Ja",         "weights": [0,0,0,0,0,0,0,0,0,0,0,0,0]}, 
+                {"id": 2, "text": "Nei",        "weights": [0,0,0,0,0,0,0,0,0,0,0,0,0]},
+                {"id": 6, "text": "vet ikke",   "weights": [0,0,0,0,0,0,0,0,0,0,0,0,0]}
+        ]}
       ],
       "tests": [
         {"id": 1, "test": "Bare kost/mosjon", "alternatives": [
