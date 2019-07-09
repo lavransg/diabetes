@@ -1,7 +1,7 @@
 import { Component, OnInit, AfterViewInit } from '@angular/core';
 import { ResultsService } from '../results.service';
+import { QuestionService } from '../question.service';
 import { HealthTestsService } from '../health-tests.service';
-
 @Component({
   selector: 'app-complete',
   templateUrl: './complete.component.html',
@@ -13,10 +13,16 @@ export class CompleteComponent implements AfterViewInit {
   saveTestFile = false;
   inputID = "Identifikator";
   selectedHealthAlternatives: any[] = [];
+  colors: number[] = this.questionService.colors;
 
-  constructor(private healthTestsService: HealthTestsService, private resultsService: ResultsService) {}
+  constructor(
+    private healthTestsService: HealthTestsService,
+    private resultsService: ResultsService,
+    private questionService: QuestionService
+  ) {}
 
   ngAfterViewInit() {
+    console.log(this.colors)
     if (this.resultsService.result) {
       this.calculateRelativeResult();
       if (this.resultsService.completedHealthAnswers) {

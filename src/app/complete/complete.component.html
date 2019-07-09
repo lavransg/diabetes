@@ -137,8 +137,18 @@
             <div class="col col-category" *ngFor="let item of this.resultsService.categories; index as i;">
 
                 <div class="bar-container">
-                    <div class="bar-health" [ngClass]="{'tallest-bar-health':this.resultsService.highestCategory === i}"></div>
-                    <div class="bar" [ngClass]="{'tallest-bar':this.resultsService.highestCategory === i}"></div>
+                    <div class="bar-health" [ngClass]="{
+                        'color-light-1': this.colors[i] == 1, 
+                        'color-light-2': this.colors[i] == 2, 
+                        'color-light-3': this.colors[i] == 3, 
+                        'color-light-4': this.colors[i] == 4,
+                        'tallest-bar-health':this.resultsService.highestCategory === i}"></div>
+                    <div class="bar" [ngClass]="{ 
+                        'color-1': this.colors[i] == 1, 
+                        'color-2': this.colors[i] == 2, 
+                        'color-3': this.colors[i] == 3, 
+                        'color-4': this.colors[i] == 4,
+                        'tallest-bar':this.resultsService.highestCategory === i}"></div>
                 </div>
                 <div class="category-text">
                     <b>{{item}}</b>

@@ -8,6 +8,7 @@ export class QuestionService {
 
   public questions: any[] = questions.questions;
   public categories: any[] = questions.categories;
+  public colors: number[] = questions.colors;
   questionIndex = 0;
 
   constructor() { }

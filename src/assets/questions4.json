@@ -26,6 +26,7 @@
         "Røyking",
         "Sosioøkonomiske faktorer"
     ],
+    "colors": [3,3,1,1,1,1,1,1,1,1,2,2,2],
     "questions": [
         {"id": 1, "group": "Diagnose", 
             "question": "Hvor lenge har du hatt diabetes?",
