@@ -50,6 +50,22 @@
     max-height: calc(100vh - 300px);
     overflow-y: scroll;
 }
+.action-category-container{
+    min-width: 250px;
+    max-width: 250px;
+    border-radius: 6px;
+    background-color: rgb(241, 241, 241);
+    margin: 10px 10px;
+    padding: 5px 10px;
+    color: #0099CC;
+}
+.action{
+    border-bottom: 1px solid #0099CC;
+    margin-bottom: 10px;
+}
+.subaction{
+    margin-bottom: 5px;
+}
 .tallest-bar{
     background-color: #28a745;
 }
