@@ -10,8 +10,14 @@ x) make final results be on the scale 0-100?
 ) the calculation of results seem to use several loops in several functions, might need a refactor
 ) make a larger informational website for the test to be a part of
 ) make some of the input elements, modals and other html elements into template components
-) make certain bars for certain categories different colors (attribute in questions-json)
+x) make certain bars for certain categories different colors (attribute in questions-json)
 ) add inherent weights - weights irrespective of selected results - to the questions json file
+) instead of making the scoring based the max possible score, base it on a "threshold" maximum - i.e if you reach X points you get 100/100
+) Add "dependentWeights" to some alternatives containing conditional question answers and their respective weights.
+    eg. "depenentWeights":{[
+            {dependencies: [{question: 1, answer: 1},{question: 4, answer: 2}], weights: [0,0,...,0]},
+            {dependencies: [{question: 3, answer: 4},{question: 14, answer: 1}], weights: [0,0,...,0]},
+        ]}
 
 x) Generate report:
 

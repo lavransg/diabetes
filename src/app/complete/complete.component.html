@@ -128,8 +128,9 @@
     </div>
   </div> <!-- End of edit health-values modal -->
 
-
+<!-- Container for results -->
 <div class="results-container text-center" *ngIf="!this.resultsService.result"><h3>Ingen resultater, fullfør en test først</h3></div>
+
 <div class="results-container">
     <div class="container-fluid" *ngIf="this.resultsService.result">
         
@@ -160,4 +161,10 @@
         </div>
     
     </div>
+</div> <!-- End of Container for results -->
+
+<div class="actions-container">
+
+
+    
 </div>

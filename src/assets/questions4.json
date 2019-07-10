@@ -133,7 +133,7 @@
         {"id": 12, "group": "Egenaktivitet og røykevaner", 
             "question": "Har du i løpet av det siste året hatt så lavt blodsukker (alvorlig ”føling”) at du måtte ha hjelp av andre for å komme over det?",
             "alternatives": [
-                {"id": 1, "text": "Ja",         "weights": [0,0,0,0,0,0,0,0,0,0,0,0,0]}, 
+                {"id": 1, "text": "Ja",         "weights": [100,100,0,0,0,0,0,0,0,0,0,0,0]}, 
                 {"id": 2, "text": "Nei",        "weights": [0,0,0,0,0,0,0,0,0,0,0,0,0]},
                 {"id": 3, "text": "Vet ikke",   "weights": [0,0,0,0,0,0,0,0,0,0,0,0,0]}
             ]
@@ -149,7 +149,7 @@
         {"id": 14, "group": "Egenaktivitet og røykevaner", 
             "question": "Røyker du daglig nå?",
             "alternatives": [
-                {"id": 1, "text": "Ja",     "weights": [0,0,0,0,0,0,0,0,0,0,0,0,0]}, 
+                {"id": 1, "text": "Ja",     "weights": [0,0,0,200,0,0,0,0,100,0,0,0,0]}, 
                 {"id": 2, "text": "Nei",    "weights": [0,0,0,0,0,0,0,0,0,0,0,0,0]}
             ]
         },
@@ -164,12 +164,12 @@
         {"id": 16, "group": "Egenaktivitet og røykevaner", 
             "question": "Hvor ofte mosjonerer du vanligvis hver uke? Med mosjon menes at du på fritid eller i arbeid går, sykler, svømmer eller er fysisk aktiv på annen måte i til sammen minst 30 minutter, slik at du blir litt andpusten eller varm.",
             "alternatives": [
-                {"id": 1, "text": "Mindre enn en gang hver uke",    "weights": [0,0,0,0,0,0,0,0,0,0,0,0,0]}, 
-                {"id": 2, "text": "1-2 ganger i uken",    "weights": [0,0,0,0,0,0,0,0,0,0,0,0,0]},
-                {"id": 3, "text": "3-4 ganger i uken",    "weights": [0,0,0,0,0,0,0,0,0,0,0,0,0]},
-                {"id": 4, "text": "5-6 ganger i uken",    "weights": [0,0,0,0,0,0,0,0,0,0,0,0,0]},
-                {"id": 5, "text": "7+ ganger i uken",     "weights": [0,0,0,0,0,0,0,0,0,0,0,0,0]},
-                {"id": 6, "text": "vet ikke",             "weights": [0,0,0,0,0,0,0,0,0,0,0,0,0]}
+                {"id": 1, "text": "Mindre enn en gang hver uke", "weights": [0,0,0,0,100,0,250,0,0,0,0,0,0]}, 
+                {"id": 2, "text": "1-2 ganger i uken",           "weights": [0,0,0,0,50,0,200,0,0,0,0,0,0]},
+                {"id": 3, "text": "3-4 ganger i uken",           "weights": [0,0,0,0,0,0,100,0,0,0,0,0,0]},
+                {"id": 4, "text": "5-6 ganger i uken",           "weights": [0,0,0,0,0,0,0,0,0,0,0,0,0]},
+                {"id": 5, "text": "7+ ganger i uken",            "weights": [0,0,0,0,0,0,0,0,0,0,0,0,0]},
+                {"id": 6, "text": "vet ikke",                    "weights": [0,0,0,0,0,0,0,0,0,0,0,0,0]}
             ]
         },
         {"id": 17, "group": "Syn", 
@@ -183,7 +183,7 @@
         {"id": 18, "group": "Syn", 
             "question": "Har du fått laserbehandling av øynene pga. din diabetes?",
             "alternatives": [
-                {"id": 1, "text": "Ja",         "weights": [0,0,0,0,0,0,0,0,0,0,0,0,0]}, 
+                {"id": 1, "text": "Ja",         "weights": [200,0,0,0,0,0,0,0,0,0,0,0,0]}, 
                 {"id": 2, "text": "Nei",        "weights": [0,0,0,0,0,0,0,0,0,0,0,0,0]},
                 {"id": 3, "text": "Vet ikke",   "weights": [0,0,0,0,0,0,0,0,0,0,0,0,0]}
             ]
@@ -191,7 +191,7 @@
         {"id": 19, "group": "Fotproblemer", 
             "question": "Er du operert eller blokket pga. trange blodårer i beina?",
             "alternatives": [
-                {"id": 1, "text": "Ja",         "weights": [0,0,0,0,0,0,0,0,0,0,0,0,0]}, 
+                {"id": 1, "text": "Ja",         "weights": [200,0,0,0,0,0,0,0,0,0,0,0,0]},
                 {"id": 2, "text": "Nei",        "weights": [0,0,0,0,0,0,0,0,0,0,0,0,0]},
                 {"id": 3, "text": "Vet ikke",   "weights": [0,0,0,0,0,0,0,0,0,0,0,0,0]}
             ]
@@ -499,5 +499,47 @@
             {"id": 5, "weights": [0,0,0,0,0,0,0,0,0,0,0,0,0], "text": "Veldig høy"}
         ]}
         
+    ],
+    "actions": [
+        {"name": "action1", "weights": [0,0,0,0,0,0,0,0,0,0,0,0,0],
+        "subactions": [
+            {"name": "action11", "weights": [0,0,0,0,0,0,0,0,0,0,0,0,0]},
+            {"name": "action12", "weights": [0,0,0,0,0,0,0,0,0,0,0,0,0]},
+            {"name": "action13", "weights": [0,0,0,0,0,0,0,0,0,0,0,0,0]},
+            {"name": "action14", "weights": [0,0,0,0,0,0,0,0,0,0,0,0,0]},
+            {"name": "action15", "weights": [0,0,0,0,0,0,0,0,0,0,0,0,0]}
+        ]},
+        {"name": "action2", "weights": [0,0,0,0,0,0,0,0,0,0,0,0,0],
+        "subactions": [
+            {"name": "action21", "weights": [0,0,0,0,0,0,0,0,0,0,0,0,0]},
+            {"name": "action22", "weights": [0,0,0,0,0,0,0,0,0,0,0,0,0]},
+            {"name": "action23", "weights": [0,0,0,0,0,0,0,0,0,0,0,0,0]},
+            {"name": "action24", "weights": [0,0,0,0,0,0,0,0,0,0,0,0,0]},
+            {"name": "action25", "weights": [0,0,0,0,0,0,0,0,0,0,0,0,0]}
+        ]},
+        {"name": "action3", "weights": [0,0,0,0,0,0,0,0,0,0,0,0,0],
+        "subactions": [
+            {"name": "action31", "weights": [0,0,0,0,0,0,0,0,0,0,0,0,0]},
+            {"name": "action32", "weights": [0,0,0,0,0,0,0,0,0,0,0,0,0]},
+            {"name": "action33", "weights": [0,0,0,0,0,0,0,0,0,0,0,0,0]},
+            {"name": "action34", "weights": [0,0,0,0,0,0,0,0,0,0,0,0,0]},
+            {"name": "action35", "weights": [0,0,0,0,0,0,0,0,0,0,0,0,0]}
+        ]},
+        {"name": "action4", "weights": [0,0,0,0,0,0,0,0,0,0,0,0,0],
+        "subactions": [
+            {"name": "action41", "weights": [0,0,0,0,0,0,0,0,0,0,0,0,0]},
+            {"name": "action42", "weights": [0,0,0,0,0,0,0,0,0,0,0,0,0]},
+            {"name": "action43", "weights": [0,0,0,0,0,0,0,0,0,0,0,0,0]},
+            {"name": "action44", "weights": [0,0,0,0,0,0,0,0,0,0,0,0,0]},
+            {"name": "action45", "weights": [0,0,0,0,0,0,0,0,0,0,0,0,0]}
+        ]},
+        {"name": "action5", "weights": [0,0,0,0,0,0,0,0,0,0,0,0,0],
+        "subactions": [
+            {"name": "action51", "weights": [0,0,0,0,0,0,0,0,0,0,0,0,0]},
+            {"name": "action52", "weights": [0,0,0,0,0,0,0,0,0,0,0,0,0]},
+            {"name": "action53", "weights": [0,0,0,0,0,0,0,0,0,0,0,0,0]},
+            {"name": "action54", "weights": [0,0,0,0,0,0,0,0,0,0,0,0,0]},
+            {"name": "action55", "weights": [0,0,0,0,0,0,0,0,0,0,0,0,0]}
+        ]}
     ]
 }
