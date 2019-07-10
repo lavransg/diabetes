@@ -501,45 +501,35 @@
         
     ],
     "actions": [
-        {"name": "action1", "weights": [0,0,0,0,0,0,0,0,0,0,0,0,0],
+        {"name": "Trening", "weights": [0,0,0,0,0,0,0,0,0,0,0,0,0],
         "subactions": [
-            {"name": "action11", "weights": [0,0,0,0,0,0,0,0,0,0,0,0,0]},
-            {"name": "action12", "weights": [0,0,0,0,0,0,0,0,0,0,0,0,0]},
-            {"name": "action13", "weights": [0,0,0,0,0,0,0,0,0,0,0,0,0]},
-            {"name": "action14", "weights": [0,0,0,0,0,0,0,0,0,0,0,0,0]},
-            {"name": "action15", "weights": [0,0,0,0,0,0,0,0,0,0,0,0,0]}
+            {"name": "Gåturer",                 "weights": [0,0,0,0,0,0,0,0,0,0,0,0,0]},
+            {"name": "Gruppetrening",           "weights": [0,0,0,0,0,0,0,0,0,0,0,0,0]},
+            {"name": "Styrketrening",           "weights": [0,0,0,0,0,0,0,0,0,0,0,0,0]},
+            {"name": "Joggetrening",            "weights": [0,0,0,0,0,0,0,0,0,0,0,0,0]},
+            {"name": "Høyintensitetstrening",   "weights": [0,0,0,0,0,0,0,0,0,0,0,0,0]}
         ]},
-        {"name": "action2", "weights": [0,0,0,0,0,0,0,0,0,0,0,0,0],
+        {"name": "Kostholdslære", "weights": [0,0,0,0,0,0,0,0,0,0,0,0,0],
         "subactions": [
-            {"name": "action21", "weights": [0,0,0,0,0,0,0,0,0,0,0,0,0]},
-            {"name": "action22", "weights": [0,0,0,0,0,0,0,0,0,0,0,0,0]},
-            {"name": "action23", "weights": [0,0,0,0,0,0,0,0,0,0,0,0,0]},
-            {"name": "action24", "weights": [0,0,0,0,0,0,0,0,0,0,0,0,0]},
-            {"name": "action25", "weights": [0,0,0,0,0,0,0,0,0,0,0,0,0]}
+            {"name": "Matlagingsaktiviteter",       "weights": [0,0,0,0,0,0,0,0,0,0,0,0,0]},
+            {"name": "Gruppearbeid om kosthold",    "weights": [0,0,0,0,0,0,0,0,0,0,0,0,0]},
+            {"name": "Planlegging av kosthold",     "weights": [0,0,0,0,0,0,0,0,0,0,0,0,0]}
         ]},
-        {"name": "action3", "weights": [0,0,0,0,0,0,0,0,0,0,0,0,0],
+        {"name": "Motiverende samtale",             "weights": [0,0,0,0,0,0,0,0,0,0,0,0,0],
         "subactions": [
-            {"name": "action31", "weights": [0,0,0,0,0,0,0,0,0,0,0,0,0]},
-            {"name": "action32", "weights": [0,0,0,0,0,0,0,0,0,0,0,0,0]},
-            {"name": "action33", "weights": [0,0,0,0,0,0,0,0,0,0,0,0,0]},
-            {"name": "action34", "weights": [0,0,0,0,0,0,0,0,0,0,0,0,0]},
-            {"name": "action35", "weights": [0,0,0,0,0,0,0,0,0,0,0,0,0]}
+            {"name": "Gruppesamtale om motivasjon",    "weights": [0,0,0,0,0,0,0,0,0,0,0,0,0]}
         ]},
-        {"name": "action4", "weights": [0,0,0,0,0,0,0,0,0,0,0,0,0],
+        {"name": "Medikament​lære", "weights": [0,0,0,0,0,0,0,0,0,0,0,0,0],
         "subactions": [
-            {"name": "action41", "weights": [0,0,0,0,0,0,0,0,0,0,0,0,0]},
-            {"name": "action42", "weights": [0,0,0,0,0,0,0,0,0,0,0,0,0]},
-            {"name": "action43", "weights": [0,0,0,0,0,0,0,0,0,0,0,0,0]},
-            {"name": "action44", "weights": [0,0,0,0,0,0,0,0,0,0,0,0,0]},
-            {"name": "action45", "weights": [0,0,0,0,0,0,0,0,0,0,0,0,0]}
         ]},
-        {"name": "action5", "weights": [0,0,0,0,0,0,0,0,0,0,0,0,0],
+        {"name": "vektreduksjon", "weights": [0,0,0,0,0,0,0,0,0,0,0,0,0],
         "subactions": [
-            {"name": "action51", "weights": [0,0,0,0,0,0,0,0,0,0,0,0,0]},
-            {"name": "action52", "weights": [0,0,0,0,0,0,0,0,0,0,0,0,0]},
-            {"name": "action53", "weights": [0,0,0,0,0,0,0,0,0,0,0,0,0]},
-            {"name": "action54", "weights": [0,0,0,0,0,0,0,0,0,0,0,0,0]},
-            {"name": "action55", "weights": [0,0,0,0,0,0,0,0,0,0,0,0,0]}
+        ]},
+        {"name": "Stressmestring", "weights": [0,0,0,0,0,0,0,0,0,0,0,0,0],
+        "subactions": [
+            {"name": "Gruppearbeid om stressmestring",   "weights": [0,0,0,0,0,0,0,0,0,0,0,0,0]},
+            {"name": "Stressmestringsplan", "weights": [0,0,0,0,0,0,0,0,0,0,0,0,0]},
+            {"name": "Mestringsøvelser", "weights": [0,0,0,0,0,0,0,0,0,0,0,0,0]}
         ]}
     ]
 }
