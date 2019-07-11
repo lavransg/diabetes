@@ -31,7 +31,7 @@
         {"id": 1, "group": "Diagnose", 
             "question": "Hvor lenge har du hatt diabetes?",
             "alternatives": [
-                {"id": 1, "text": "0-4 år",    "weights": [100,30,90,10,20,80,60,30,10,90,80,40,40]}, 
+                {"id": 1, "text": "0-4 år",    "weights": [70,30,90,10,20,80,60,30,10,90,80,40,40]}, 
                 {"id": 2, "text": "5-9 år",    "weights": [0,0,0,0,0,0,0,0,0,0,0,0,0]},
                 {"id": 3, "text": "10-14 år",  "weights": [0,0,0,0,0,0,0,0,0,0,0,0,0]},
                 {"id": 4, "text": "15-19 år",  "weights": [0,0,0,0,0,0,0,0,0,0,0,0,0]},
@@ -42,7 +42,7 @@
         {"id": 2, "group": "Diagnose", 
             "question": "Hvilken type diabetes har du?",
             "alternatives": [
-                {"id": 1, "text": "Type 1",    "weights": [220,50,130,100,40,80,110,70,150,170,60,20,30]}, 
+                {"id": 1, "text": "Type 1",    "weights": [80,50,30,40,20,60,30,70,10,60,40,20,30]}, 
                 {"id": 2, "text": "Type 2",    "weights": [0,0,0,0,0,0,0,0,0,0,0,0,0]},
                 {"id": 3, "text": "vet ikke",  "weights": [0,0,0,0,0,0,0,0,0,0,0,0,0]}
             ]
@@ -122,18 +122,18 @@
         {"id": 11, "group": "Egenaktivitet og røykevaner", 
             "question": "Måler du noen gang selv hvor mye sukker (glukose) du har i blodet (blodsukker)? (Svar ”ja” også om noen hjelper deg eller gjør det for deg)",
             "alternatives": [
-                {"id": 1, "text": "Nei",    "weights": [0,0,0,0,0,0,0,0,0,0,0,0,0]},
-                {"id": 2, "text": "Sjeldnere enn en gang i uken",    "weights": [0,0,0,0,0,0,0,0,0,0,0,0,0]},
-                {"id": 3, "text": "1-2 ganger i uken",    "weights": [0,0,0,0,0,0,0,0,0,0,0,0,0]},
-                {"id": 4, "text": "3-4 ganger i uken",    "weights": [0,0,0,0,0,0,0,0,0,0,0,0,0]},
-                {"id": 5, "text": "5-6 ganger i uken",    "weights": [0,0,0,0,0,0,0,0,0,0,0,0,0]},
-                {"id": 6, "text": "7+ ganger i uken",    "weights": [0,0,0,0,0,0,0,0,0,0,0,0,0]}
+                {"id": 1, "text": "Nei",                            "weights": [0,0,0,0,0,0,0,0,0,0,0,0,0]},
+                {"id": 2, "text": "Sjeldnere enn en gang i uken",   "weights": [0,0,0,0,0,0,0,0,0,0,0,0,0]},
+                {"id": 3, "text": "1-2 ganger i uken",              "weights": [0,0,0,0,0,0,0,0,0,0,0,0,0]},
+                {"id": 4, "text": "3-4 ganger i uken",              "weights": [0,0,0,0,0,0,0,0,0,0,0,0,0]},
+                {"id": 5, "text": "5-6 ganger i uken",              "weights": [0,0,0,0,0,0,0,0,0,0,0,0,0]},
+                {"id": 6, "text": "7+ ganger i uken",               "weights": [0,0,0,0,0,0,0,0,0,0,0,0,0]}
             ]
         },
         {"id": 12, "group": "Egenaktivitet og røykevaner", 
             "question": "Har du i løpet av det siste året hatt så lavt blodsukker (alvorlig ”føling”) at du måtte ha hjelp av andre for å komme over det?",
             "alternatives": [
-                {"id": 1, "text": "Ja",         "weights": [100,100,0,0,0,0,0,0,0,0,0,0,0]}, 
+                {"id": 1, "text": "Ja",         "weights": [30,30,0,0,0,0,0,0,0,0,0,0,0]}, 
                 {"id": 2, "text": "Nei",        "weights": [0,0,0,0,0,0,0,0,0,0,0,0,0]},
                 {"id": 3, "text": "Vet ikke",   "weights": [0,0,0,0,0,0,0,0,0,0,0,0,0]}
             ]
@@ -149,7 +149,7 @@
         {"id": 14, "group": "Egenaktivitet og røykevaner", 
             "question": "Røyker du daglig nå?",
             "alternatives": [
-                {"id": 1, "text": "Ja",     "weights": [0,0,0,200,0,0,0,0,100,0,0,0,0]}, 
+                {"id": 1, "text": "Ja",     "weights": [0,0,0,90,0,0,0,0,100,0,0,0,0]}, 
                 {"id": 2, "text": "Nei",    "weights": [0,0,0,0,0,0,0,0,0,0,0,0,0]}
             ]
         },
@@ -164,9 +164,9 @@
         {"id": 16, "group": "Egenaktivitet og røykevaner", 
             "question": "Hvor ofte mosjonerer du vanligvis hver uke? Med mosjon menes at du på fritid eller i arbeid går, sykler, svømmer eller er fysisk aktiv på annen måte i til sammen minst 30 minutter, slik at du blir litt andpusten eller varm.",
             "alternatives": [
-                {"id": 1, "text": "Mindre enn en gang hver uke", "weights": [0,0,0,0,100,0,250,0,0,0,0,0,0]}, 
-                {"id": 2, "text": "1-2 ganger i uken",           "weights": [0,0,0,0,50,0,200,0,0,0,0,0,0]},
-                {"id": 3, "text": "3-4 ganger i uken",           "weights": [0,0,0,0,0,0,100,0,0,0,0,0,0]},
+                {"id": 1, "text": "Mindre enn en gang hver uke", "weights": [0,0,0,0,40,0,100,0,0,0,0,0,0]}, 
+                {"id": 2, "text": "1-2 ganger i uken",           "weights": [0,0,0,0,30,0,70,0,0,0,0,0,0]},
+                {"id": 3, "text": "3-4 ganger i uken",           "weights": [0,0,0,0,0,0,30,0,0,0,0,0,0]},
                 {"id": 4, "text": "5-6 ganger i uken",           "weights": [0,0,0,0,0,0,0,0,0,0,0,0,0]},
                 {"id": 5, "text": "7+ ganger i uken",            "weights": [0,0,0,0,0,0,0,0,0,0,0,0,0]},
                 {"id": 6, "text": "vet ikke",                    "weights": [0,0,0,0,0,0,0,0,0,0,0,0,0]}
@@ -183,7 +183,7 @@
         {"id": 18, "group": "Syn", 
             "question": "Har du fått laserbehandling av øynene pga. din diabetes?",
             "alternatives": [
-                {"id": 1, "text": "Ja",         "weights": [200,0,0,0,0,0,0,0,0,0,0,0,0]}, 
+                {"id": 1, "text": "Ja",         "weights": [70,0,0,0,0,0,0,0,0,0,0,0,0]}, 
                 {"id": 2, "text": "Nei",        "weights": [0,0,0,0,0,0,0,0,0,0,0,0,0]},
                 {"id": 3, "text": "Vet ikke",   "weights": [0,0,0,0,0,0,0,0,0,0,0,0,0]}
             ]
@@ -191,7 +191,7 @@
         {"id": 19, "group": "Fotproblemer", 
             "question": "Er du operert eller blokket pga. trange blodårer i beina?",
             "alternatives": [
-                {"id": 1, "text": "Ja",         "weights": [200,0,0,0,0,0,0,0,0,0,0,0,0]},
+                {"id": 1, "text": "Ja",         "weights": [70,0,0,0,0,0,0,0,0,0,0,0,0]},
                 {"id": 2, "text": "Nei",        "weights": [0,0,0,0,0,0,0,0,0,0,0,0,0]},
                 {"id": 3, "text": "Vet ikke",   "weights": [0,0,0,0,0,0,0,0,0,0,0,0,0]}
             ]
@@ -283,7 +283,7 @@
             "alternatives": [
                 {"id": 1, "text": "Kristiansund",   "weights": [0,0,0,0,0,0,0,0,0,0,0,0,0]}, 
                 {"id": 2, "text": "Averøy",         "weights": [0,0,0,0,0,0,0,0,0,0,0,0,0]},
-                {"id": 3, "text": "Annen kommune",   "weights": [0,0,0,0,0,0,0,0,0,0,0,0,0]}
+                {"id": 3, "text": "Annen kommune",  "weights": [0,0,0,0,0,0,0,0,0,0,0,0,0]}
         ]},
         {"id": 29.2, "group": "Bakgrunn",
             "question": "Hvilken utdanning har du?", 
@@ -359,7 +359,7 @@
       ],
       "tests": [
         {"id": 1, "test": "Bare kost/mosjon", "alternatives": [
-            {"id": 1, "weights": [50,70,30,100,130,80,40,60,20,90,150,30,60], "text": "Ja"},
+            {"id": 1, "weights": [50,70,30,20,40,80,40,60,20,90,20,30,60], "text": "Ja"},
             {"id": 2, "weights": [0,0,0,0,0,0,0,0,0,0,0,0,0], "text": "Nei"}
         ]},
         {"id": 2, "test": "Metformin", "alternatives": [
