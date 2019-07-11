@@ -14,12 +14,17 @@ export class CompleteComponent implements AfterViewInit {
   inputID = "Identifikator";
   selectedHealthAlternatives: any[] = [];
   colors: number[] = this.questionService.colors;
+  actions: any[];
 
   constructor(
-    private healthTestsService: HealthTestsService,
+    private healthTestsService: HealthTestsService, // this is used in HTML by by the health test modal
     private resultsService: ResultsService,
     private questionService: QuestionService
   ) {}
+
+  ngOnInit() {
+    this.calculateActionResults();
+  }
 
   ngAfterViewInit() {
     console.log(this.colors)
@@ -61,6 +66,24 @@ export class CompleteComponent implements AfterViewInit {
   saveHealthWeights() {
     this.resultsService.getHealthResults(this.selectedHealthAlternatives);
     this.calculateRelativeResult();
+    this.calculateActionResults();
+  }
+
+  calculateActionResults() {
+    if(this.questionService.actions && this.resultsService.totalResult){
+      let actions = this.questionService.actions;
+      const totalResult = this.resultsService.totalResult;
+      for (let action of actions) {
+        let sum = 0;
+        for (let [index,weight] of action.weights.entries()) {
+          sum += totalResult[index] * weight
+        }
+        if (sum > 100) {sum = 100}
+        action["value"] = Math.round(sum);
+      }
+      this.actions = actions;
+    }
+
   }
 
   // this function is used for making ratios for a bar graphs heights.
