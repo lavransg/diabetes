@@ -71,6 +71,18 @@ export class ResultsService {
 
   }
 
+  // this function should replace the one above when weights are changed to be between 0-100
+  calculateTotalResult2() {
+    this.totalResult = [];
+    if (this.result) {
+      for (const [index, value] of this.result.entries()) {
+        let categoryScore = this.healthResult ? Math.min(value + this.healthResult[index],100) : Math.min(value,100);
+        this.totalResult.push(categoryScore);
+      }
+    }
+    this.highestCategory = this.totalResult.indexOf(Math.max.apply(null, this.totalResult));
+  }
+
   calculateMaxPossibleResult() {
     const max = new Array(this.categories.length).fill(0);
 
