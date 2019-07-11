@@ -80,6 +80,16 @@ export class CompleteComponent implements AfterViewInit {
         }
         if (sum > 100) {sum = 100}
         action["value"] = Math.round(sum);
+
+        for (let subaction of action.subactions){
+          console.log("subaction:",subaction)
+          let sum2 = 0;
+          for (let [index,weight] of subaction.weights.entries()){
+            sum2 += totalResult[index] * weight;
+          }
+          if (sum2 > 100) {sum = 100}
+          subaction["value"] = Math.round(sum2);
+        }
       }
       this.actions = actions;
     }
