@@ -90,10 +90,18 @@ export class CompleteComponent implements AfterViewInit {
           if (sum2 > 100) {sum = 100}
           subaction["value"] = Math.round(sum2);
         }
+        action.subactions.sort(this.compareActions);
       }
+      actions.sort(this.compareActions)
       this.actions = actions;
     }
 
+  }
+
+  compareActions(a,b) {
+    if ( a.value > b.value ){return -1;}
+    if ( a.value < b.value ){return 1;}
+    return 0;
   }
 
   // this function is used for making ratios for a bar graphs heights.
