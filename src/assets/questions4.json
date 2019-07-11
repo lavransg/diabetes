@@ -519,6 +519,10 @@
         "subactions": [
             {"name": "Gruppesamtale om motivasjon",    "weights": [0,0,0,0,0.8,0,0,0,0,0,0,0,0]}
         ]},
+        {"name": "Sykdomslære",                 "weights": [0,0,0,0,0,0,0,0,0,0,0,0,0],
+        "subactions": [
+            {"name": "Gruppesamtale om sykdom", "weights": [0,0,0,0,0,0,0,0,0,0,0,0,0]}
+        ]},
         {"name": "Medikament​lære", "weights": [0,0,0,0,0,0,0,0,0,0,0,0,0],
         "subactions": [
         ]},
