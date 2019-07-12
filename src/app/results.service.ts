@@ -27,7 +27,7 @@ export class ResultsService {
       for (const alternative of question.alternatives) {
         if (alternative.id === answer["alternativeID"] && alternative.weights) {
           for (const [index, weight] of alternative.weights.entries()) {
-            result[index] += weight;
+            result[index] += Math.min(weight,100);
           }
         }
       }
@@ -45,7 +45,7 @@ export class ResultsService {
       for (const alternative of test.alternatives) {
         if (alternative.id === answer["alternativeID"]) {
           for (const [index, weight] of alternative.weights.entries()) {
-            result[index] += weight;
+            result[index] += Math.min(weight,100);
           }
         }
       }
@@ -55,7 +55,7 @@ export class ResultsService {
   }
 
   // calculates the result weights of both survey answers and the health-values
-  calculateTotalResult() {
+/*   calculateTotalResultOld() {
     this.totalResult = [];
     this.calculateMaxPossibleResult();
     if (this.result) {
@@ -67,12 +67,13 @@ export class ResultsService {
         }
       }
     }
+    console.log("totalresult:",this.totalResult)
     this.highestCategory = this.totalResult.indexOf(Math.max.apply(null, this.totalResult));
 
-  }
+  } */
 
   // this function should replace the one above when weights are changed to be between 0-100
-  calculateTotalResult2() {
+  calculateTotalResult() {
     this.totalResult = [];
     if (this.result) {
       for (const [index, value] of this.result.entries()) {
@@ -83,7 +84,7 @@ export class ResultsService {
     this.highestCategory = this.totalResult.indexOf(Math.max.apply(null, this.totalResult));
   }
 
-  calculateMaxPossibleResult() {
+/*   calculateMaxPossibleResult() {
     const max = new Array(this.categories.length).fill(0);
 
     // looping through questions
@@ -118,7 +119,7 @@ export class ResultsService {
       }
     }
     this.maxPossibleResult = max;
-  }
+  } */
 
   // produces a text string with each survey question + selected answer
   // used when saving a report text file on the users machine

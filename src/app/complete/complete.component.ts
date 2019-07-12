@@ -28,7 +28,7 @@ export class CompleteComponent implements AfterViewInit {
 
   ngAfterViewInit() {
     if (this.resultsService.result) {
-      this.calculateRelativeResult();
+      this.calculateBarHeights();
       if (this.resultsService.completedHealthAnswers) {
         this.selectedHealthAlternatives = this.resultsService.completedHealthAnswers;
       }
@@ -64,7 +64,7 @@ export class CompleteComponent implements AfterViewInit {
 
   saveHealthWeights() {
     this.resultsService.getHealthResults(this.selectedHealthAlternatives);
-    this.calculateRelativeResult();
+    this.calculateBarHeights();
     this.calculateActionResults();
   }
 
@@ -73,20 +73,17 @@ export class CompleteComponent implements AfterViewInit {
       let actions = this.questionService.actions;
       const totalResult = this.resultsService.totalResult;
       for (let action of actions) {
+
         let sum = 0;
-        for (let [index,weight] of action.weights.entries()) {
-          sum += totalResult[index] * weight
-        }
+        for (let [index,weight] of action.weights.entries()) { sum += totalResult[index] * weight;}
         if (sum > 100) {sum = 100}
         action["value"] = Math.round(sum);
 
         for (let subaction of action.subactions){
-          let sum2 = 0;
-          for (let [index,weight] of subaction.weights.entries()){
-            sum2 += totalResult[index] * weight;
-          }
-          if (sum2 > 100) {sum = 100}
-          subaction["value"] = Math.round(sum2);
+          let subsum = 0;
+          for (let [index,weight] of subaction.weights.entries()){ subsum += totalResult[index] * weight;}
+          if (subsum > 100) {subsum = 100}
+          subaction["value"] = Math.round(subsum);
         }
         action.subactions.sort(this.compareActions);
       }
@@ -102,27 +99,43 @@ export class CompleteComponent implements AfterViewInit {
     return 0;
   }
 
-  // this function is used for making ratios for a bar graphs heights.
-  // the tallest bar has value 1, while all other bars are the fraction of points that category has compared to the max
-  // these values are used to calculate height in pixels
-  calculateRelativeResult() {
+  calculateBarHeights() {
     const result = this.resultsService.result;
     const healthResult = this.resultsService.healthResult;
-    const relativeResult = [];
-    const relativeHealthResult = [];
-    for (const [index,value] of result.entries()) {
+    const totalResult = this.resultsService.totalResult;
+    let relativeResult = [];
+    let relativeHealthResult = [];
+    /* for (const [index,value] of result.entries()) {
       relativeResult.push(Math.round((value / this.resultsService.maxPossibleResult[index]) * 100));
-    }
-    let bars = document.getElementsByClassName("bar");
-    Array.from(bars).forEach((x: HTMLElement, index) => { x.style.height = `${(relativeResult[index] * 2.5)}px`;});
+    } */
+    const bars = document.getElementsByClassName("bar");
+    const barsHealth = document.getElementsByClassName("bar-health");
 
     if (healthResult) {
       for (const [index,value] of healthResult.entries()) {
-        relativeHealthResult.push(Math.round((value / this.resultsService.maxPossibleResult[index]) * 100));
+        if (value + result[index] > 100) {
+          relativeHealthResult.push(Math.round((value / (value + result[index])) * 100));
+          relativeResult.push(Math.round((result[index] / (value + result[index])) * 100));
+        }
+        else{
+          relativeHealthResult.push(value)
+          relativeResult.push(result[index])
+        }
       }
-      const barsHealth = document.getElementsByClassName("bar-health");
       Array.from(barsHealth).forEach((x: HTMLElement, index) => x.style.height = `${(relativeHealthResult[index] * 2.5)}px`);
-      Array.from(bars).forEach((x: HTMLElement, index) => x.style.borderRadius = "0 0 4px 4px");
+      Array.from(bars).forEach((x: HTMLElement, index) => {
+        x.style.height = `${(relativeResult[index] * 2.5)}px`;
+        x.style.borderRadius = "0 0 4px 4px";
+        if (healthResult[index] == 0){
+          x.style.borderRadius = "4px 4px 4px 4px";
+        }
+      });
+    }
+    else{
+      Array.from(bars).forEach((x: HTMLElement, index) => {
+        x.style.height = `${(result[index] * 2.5)}px`;
+        x.style.borderRadius = "4px 4px 4px 4px";
+      });
     }
 
   }

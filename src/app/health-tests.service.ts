@@ -8,7 +8,5 @@ export class HealthTestsService {
 
   public healthTests: any[] = data.tests;
 
-  constructor() {
-    console.log(this.healthTests);
-  }
+  constructor() {}
 }
