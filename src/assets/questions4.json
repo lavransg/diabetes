@@ -82,7 +82,7 @@
         {"id": 6, "group": "Behandling", 
             "question": "Bruker du insulin?",
             "alternatives": [
-                {"id": 1, "text": "Ja",         "weights": [0,0,0,0,0,0,0,0,0,0,0,0,0]}, 
+                {"id": 1, "text": "Ja",         "weights": [0,15,0,0,0,0,0,0,0,0,0,0,0]}, 
                 {"id": 2, "text": "Nei",        "weights": [0,0,0,0,0,0,0,0,0,0,0,0,0]},
                 {"id": 3, "text": "Vet ikke",   "weights": [0,0,0,0,0,0,0,0,0,0,0,0,0]}
             ]
@@ -90,7 +90,7 @@
         {"id": 7, "group": "Behandling", 
             "question": "Bruker du tabletter mot diabetes?",
             "alternatives": [
-                {"id": 1, "text": "Ja",         "weights": [0,0,0,0,0,0,0,0,0,0,0,0,0]}, 
+                {"id": 1, "text": "Ja",         "weights": [0,10,0,0,0,0,0,0,0,0,0,0,0]}, 
                 {"id": 2, "text": "Nei",        "weights": [0,0,0,0,0,0,0,0,0,0,0,0,0]},
                 {"id": 3, "text": "Vet ikke",   "weights": [0,0,0,0,0,0,0,0,0,0,0,0,0]}
             ]
@@ -98,7 +98,7 @@
         {"id": 8, "group": "Behandling", 
             "question": "Bruker du kolesterolsenkende tabletter?",
             "alternatives": [
-                {"id": 1, "text": "Ja",         "weights": [0,0,0,0,0,0,0,0,0,0,0,0,0]}, 
+                {"id": 1, "text": "Ja",         "weights": [0,10,0,0,0,0,0,0,0,0,0,0,0]}, 
                 {"id": 2, "text": "Nei",        "weights": [0,0,0,0,0,0,0,0,0,0,0,0,0]},
                 {"id": 3, "text": "Vet ikke",   "weights": [0,0,0,0,0,0,0,0,0,0,0,0,0]}
             ]
@@ -106,7 +106,7 @@
         {"id": 9, "group": "Behandling", 
             "question": "Bruker du tabletter mot høyt blodtrykk?",
             "alternatives": [
-                {"id": 1, "text": "Ja",         "weights": [0,0,0,0,0,0,0,0,0,0,0,0,0]}, 
+                {"id": 1, "text": "Ja",         "weights": [0,10,0,0,0,0,0,0,0,0,0,0,0]}, 
                 {"id": 2, "text": "Nei",        "weights": [0,0,0,0,0,0,0,0,0,0,0,0,0]},
                 {"id": 3, "text": "Vet ikke",   "weights": [0,0,0,0,0,0,0,0,0,0,0,0,0]}
             ]
@@ -114,7 +114,7 @@
         {"id": 10, "group": "Behandling", 
             "question": "Bruker du blodfortynnende tabletter?",
             "alternatives": [
-                {"id": 1, "text": "Ja",         "weights": [0,0,0,0,0,0,0,0,0,0,0,0,0]}, 
+                {"id": 1, "text": "Ja",         "weights": [0,10,0,0,0,0,0,0,0,0,0,0,0]}, 
                 {"id": 2, "text": "Nei",        "weights": [0,0,0,0,0,0,0,0,0,0,0,0,0]},
                 {"id": 3, "text": "Vet ikke",   "weights": [0,0,0,0,0,0,0,0,0,0,0,0,0]}
             ]
@@ -183,7 +183,7 @@
         {"id": 18, "group": "Syn", 
             "question": "Har du fått laserbehandling av øynene pga. din diabetes?",
             "alternatives": [
-                {"id": 1, "text": "Ja",         "weights": [70,0,0,0,0,0,0,0,0,0,0,0,0]}, 
+                {"id": 1, "text": "Ja",         "weights": [50,0,0,0,0,0,0,0,0,0,0,0,0]}, 
                 {"id": 2, "text": "Nei",        "weights": [0,0,0,0,0,0,0,0,0,0,0,0,0]},
                 {"id": 3, "text": "Vet ikke",   "weights": [0,0,0,0,0,0,0,0,0,0,0,0,0]}
             ]
@@ -191,7 +191,7 @@
         {"id": 19, "group": "Fotproblemer", 
             "question": "Er du operert eller blokket pga. trange blodårer i beina?",
             "alternatives": [
-                {"id": 1, "text": "Ja",         "weights": [70,0,0,0,0,0,0,0,0,0,0,0,0]},
+                {"id": 1, "text": "Ja",         "weights": [40,0,0,0,0,0,0,0,0,0,0,0,0]},
                 {"id": 2, "text": "Nei",        "weights": [0,0,0,0,0,0,0,0,0,0,0,0,0]},
                 {"id": 3, "text": "Vet ikke",   "weights": [0,0,0,0,0,0,0,0,0,0,0,0,0]}
             ]
@@ -199,7 +199,7 @@
         {"id": 20, "group": "Fotproblemer", 
             "question": "Har du fått amputert deler av ett eller begge bein pga. dårlig blodsirkulasjon?",
             "alternatives": [
-                {"id": 1, "text": "Ja",         "weights": [0,0,0,0,0,0,0,0,0,0,0,0,0]}, 
+                {"id": 1, "text": "Ja",         "weights": [70,0,0,0,0,0,0,0,0,0,0,0,0]}, 
                 {"id": 2, "text": "Nei",        "weights": [0,0,0,0,0,0,0,0,0,0,0,0,0]},
                 {"id": 3, "text": "Vet ikke",   "weights": [0,0,0,0,0,0,0,0,0,0,0,0,0]}
             ]
@@ -207,7 +207,7 @@
         {"id": 21, "group": "Fotproblemer", 
             "question": "Har du noen gang hatt sår på føttene (nedenfor ankelen) som har brukt over 3 uker på å gro?",
             "alternatives": [
-                {"id": 1, "text": "Nei",                "weights": [0,0,0,0,0,0,0,0,0,0,0,0,0]}, 
+                {"id": 1, "text": "Nei",                "weights": [40,0,0,0,0,0,0,0,0,0,0,0,0]}, 
                 {"id": 2, "text": "Ja, en gang",        "weights": [0,0,0,0,0,0,0,0,0,0,0,0,0]},
                 {"id": 3, "text": "ja, flere ganger",   "weights": [0,0,0,0,0,0,0,0,0,0,0,0,0]},
                 {"id": 4, "text": "Vet ikke",           "weights": [0,0,0,0,0,0,0,0,0,0,0,0,0]}
@@ -224,7 +224,7 @@
         {"id": 23, "group": "Andre syndromer og arvelige forhold", 
             "question": "Har eller har du hatt angina (hjertekrampe), hjerteinfarkt eller er du blitt operert for trange blodårer i hjertet (stentet/blokket/bypass)?",
             "alternatives": [
-                {"id": 1, "text": "Ja",         "weights": [0,0,0,0,0,0,0,0,0,0,0,0,0]}, 
+                {"id": 1, "text": "Ja",         "weights": [0,35,0,0,0,0,0,60,0,0,0,0,0]}, 
                 {"id": 2, "text": "Nei",        "weights": [0,0,0,0,0,0,0,0,0,0,0,0,0]},
                 {"id": 3, "text": "Vet ikke",   "weights": [0,0,0,0,0,0,0,0,0,0,0,0,0]}
             ]
@@ -232,7 +232,7 @@
         {"id": 24, "group": "Andre syndromer og arvelige forhold", 
             "question": "Har eller har dine foreldre hatt hjertesykdom (angina, hjerteinfarkt, operert for trange blodårer i hjertet)?",
             "alternatives": [
-                {"id": 1, "text": "Ja",         "weights": [0,0,0,0,0,0,0,0,0,0,0,0,0]}, 
+                {"id": 1, "text": "Ja",         "weights": [0,30,40,0,0,0,0,0,45,0,0,0,0]}, 
                 {"id": 2, "text": "Nei",        "weights": [0,0,0,0,0,0,0,0,0,0,0,0,0]},
                 {"id": 3, "text": "Vet ikke",   "weights": [0,0,0,0,0,0,0,0,0,0,0,0,0]}
             ]
@@ -240,7 +240,7 @@
         {"id": 25, "group": "Andre syndromer og arvelige forhold", 
             "question": "Hvis dine foreldre har hatt hjertesykdom: Fikk noen av dem dette i ”ung” alder, dvs. at din far fikk hjertesykdom før 55 års alder, eller at din mor fikk det før hun var 65 år?",
             "alternatives": [
-                {"id": 1, "text": "Ja",         "weights": [0,0,0,0,0,0,0,0,0,0,0,0,0]}, 
+                {"id": 1, "text": "Ja",         "weights": [0,20,20,0,0,0,0,0,15,0,0,0,0]}, 
                 {"id": 2, "text": "Nei",        "weights": [0,0,0,0,0,0,0,0,0,0,0,0,0]},
                 {"id": 3, "text": "Vet ikke",   "weights": [0,0,0,0,0,0,0,0,0,0,0,0,0]}
             ]
@@ -248,7 +248,7 @@
         {"id": 26, "group": "Andre syndromer og arvelige forhold", 
             "question": "Har du hatt hjerneslag? (Kryss av for nei hvis symptomene varte i mindre enn ett døgn)",
             "alternatives": [
-                {"id": 1, "text": "Ja",         "weights": [0,0,0,0,0,0,0,0,0,0,0,0,0]}, 
+                {"id": 1, "text": "Ja",         "weights": [0,30,0,0,0,0,0,70,70,0,0,0,0]}, 
                 {"id": 2, "text": "Nei",        "weights": [0,0,0,0,0,0,0,0,0,0,0,0,0]},
                 {"id": 3, "text": "Vet ikke",   "weights": [0,0,0,0,0,0,0,0,0,0,0,0,0]}
             ]
@@ -256,7 +256,7 @@
         {"id": 27, "group": "Andre syndromer og arvelige forhold", 
             "question": "Har andre i din nærmeste familie diabetes, dvs. dine foreldre, dine egne barn eller dine søsken?",
             "alternatives": [
-                {"id": 1, "text": "Ja",         "weights": [0,0,0,0,0,0,0,0,0,0,0,0,0]}, 
+                {"id": 1, "text": "Ja",         "weights": [0,15,25,0,0,0,0,0,15,0,0,0,0]}, 
                 {"id": 2, "text": "Nei",        "weights": [0,0,0,0,0,0,0,0,0,0,0,0,0]},
                 {"id": 3, "text": "Vet ikke",   "weights": [0,0,0,0,0,0,0,0,0,0,0,0,0]}
             ]
@@ -273,9 +273,9 @@
         {"id": 29, "group": "Bakgrunn", 
             "question": "Sivilstatus", 
             "alternatives": [
-                {"id": 1, "text": "Gift",       "weights": [0,0,0,0,0,0,0,0,0,0,0,0,0]}, 
+                {"id": 1, "text": "Gift",       "weights": [0,0,0,0,0,0,0,0,0,0,0,0,65]}, 
                 {"id": 2, "text": "enslig",     "weights": [0,0,0,0,0,0,0,0,0,0,0,0,0]},
-                {"id": 3, "text": "Samboer",    "weights": [0,0,0,0,0,0,0,0,0,0,0,0,0]},
+                {"id": 3, "text": "Samboer",    "weights": [0,0,0,0,0,0,0,0,0,0,0,0,55]},
                 {"id": 4, "text": "Annet",      "weights": [0,0,0,0,0,0,0,0,0,0,0,0,0]}
         ]},
         {"id": 29.1, "group": "Bakgrunn", 
@@ -290,9 +290,9 @@
             "alternatives": [
                 {"id": 1, "text": "Grunnskole",         "weights": [0,0,0,0,0,0,0,0,0,0,0,0,0]}, 
                 {"id": 2, "text": "Videregående skole", "weights": [0,0,0,0,0,0,0,0,0,0,0,0,0]},
-                {"id": 3, "text": "Bachelorgrad",       "weights": [0,0,0,0,0,0,0,0,0,0,0,0,0]},
-                {"id": 4, "text": "Mastergrad",         "weights": [0,0,0,0,0,0,0,0,0,0,0,0,0]},
-                {"id": 5, "text": "Doktorgrad",         "weights": [0,0,0,0,0,0,0,0,0,0,0,0,0]},
+                {"id": 3, "text": "Bachelorgrad",       "weights": [0,0,0,0,0,0,0,0,0,0,0,0,20]},
+                {"id": 4, "text": "Mastergrad",         "weights": [0,0,0,0,0,0,0,0,0,0,0,0,30]},
+                {"id": 5, "text": "Doktorgrad",         "weights": [0,0,0,0,0,0,0,0,0,0,0,0,35]},
                 {"id": 6, "text": "vet ikke",           "weights": [0,0,0,0,0,0,0,0,0,0,0,0,0]}
         ]},
         {"id": 30, "group": "Bakgrunn", 
@@ -300,8 +300,8 @@
             "alternatives": [
                 {"id": 1, "text": "0 - 300.000kr",       "weights": [0,0,0,0,0,0,0,0,0,0,0,0,0]}, 
                 {"id": 2, "text": "300.000 - 500.000kr", "weights": [0,0,0,0,0,0,0,0,0,0,0,0,0]},
-                {"id": 3, "text": "500.000 - 700.000kr", "weights": [0,0,0,0,0,0,0,0,0,0,0,0,0]},
-                {"id": 4, "text": "700.000kr +",         "weights": [0,0,0,0,0,0,0,0,0,0,0,0,0]},
+                {"id": 3, "text": "500.000 - 700.000kr", "weights": [0,0,0,0,0,0,0,0,0,0,0,0,5]},
+                {"id": 4, "text": "700.000kr +",         "weights": [0,0,0,0,0,0,0,0,0,0,0,0,10]},
                 {"id": 5, "text": "vet ikke",            "weights": [0,0,0,0,0,0,0,0,0,0,0,0,0]}
         ]},
         {"id": 31, "group": "Bakgrunn", 
@@ -322,9 +322,9 @@
         {"id": 33, "group": "Motivasjon og psykisk helse", 
             "question": "Hvor motivert er du til å forbedre din situasjon?", 
             "alternatives": [
-                {"id": 1, "text": "Ikke motivert",      "weights": [0,0,0,0,0,0,0,0,0,0,0,0,0]}, 
-                {"id": 2, "text": "Noe motivert",       "weights": [0,0,0,0,0,0,0,0,0,0,0,0,0]},
-                {"id": 3, "text": "Middels motivert",   "weights": [0,0,0,0,0,0,0,0,0,0,0,0,0]},
+                {"id": 1, "text": "Ikke motivert",      "weights": [0,0,0,0,90,0,0,0,0,0,0,0,0]}, 
+                {"id": 2, "text": "Noe motivert",       "weights": [0,0,0,0,75,0,0,0,0,0,0,0,0]},
+                {"id": 3, "text": "Middels motivert",   "weights": [0,0,0,0,20,0,0,0,0,0,0,0,0]},
                 {"id": 4, "text": "Ganske motivert",    "weights": [0,0,0,0,0,0,0,0,0,0,0,0,0]},
                 {"id": 5, "text": "Veldig motivert",    "weights": [0,0,0,0,0,0,0,0,0,0,0,0,0]}
         ]},
@@ -332,17 +332,17 @@
             "question": "I hvilken grad har du psykiske utfordringer?", 
             "alternatives": [
                 {"id": 1, "text": "Ingen utfordringer", "weights": [0,0,0,0,0,0,0,0,0,0,0,0,0]}, 
-                {"id": 2, "text": "Noen utfordringer",  "weights": [0,0,0,0,0,0,0,0,0,0,0,0,0]},
-                {"id": 3, "text": "Mange utfordringer", "weights": [0,0,0,0,0,0,0,0,0,0,0,0,0]},
+                {"id": 2, "text": "Noen utfordringer",  "weights": [0,0,0,0,0,35,0,0,0,0,0,0,0]},
+                {"id": 3, "text": "Mange utfordringer", "weights": [0,0,0,0,0,90,0,0,0,0,0,0,0]},
                 {"id": 6, "text": "vet ikke",           "weights": [0,0,0,0,0,0,0,0,0,0,0,0,0]}
         ]},
         {"id": 20, "group": "Motivasjon og psykisk helse", 
             "question": "Hvor mange timer sover du normalt hver natt?", 
             "alternatives": [
-                {"id": 1, "text": "2",      "weights": [0,0,0,0,0,0,0,0,0,0,0,0,0]}, 
-                {"id": 2, "text": "3",      "weights": [0,0,0,0,0,0,0,0,0,0,0,0,0]},
-                {"id": 3, "text": "4",      "weights": [0,0,0,0,0,0,0,0,0,0,0,0,0]},
-                {"id": 4, "text": "5",      "weights": [0,0,0,0,0,0,0,0,0,0,0,0,0]},
+                {"id": 1, "text": "2",      "weights": [0,0,0,0,0,100,0,0,0,0,0,0,0]}, 
+                {"id": 2, "text": "3",      "weights": [0,0,0,0,0,90,0,0,0,0,0,0,0]},
+                {"id": 3, "text": "4",      "weights": [0,0,0,0,0,75,0,0,0,0,0,0,0]},
+                {"id": 4, "text": "5",      "weights": [0,0,0,0,0,20,0,0,0,0,0,0,0]},
                 {"id": 5, "text": "6",      "weights": [0,0,0,0,0,0,0,0,0,0,0,0,0]},
                 {"id": 6, "text": "7",      "weights": [0,0,0,0,0,0,0,0,0,0,0,0,0]},
                 {"id": 7, "text": "8",      "weights": [0,0,0,0,0,0,0,0,0,0,0,0,0]},
@@ -352,7 +352,7 @@
         {"id": 21, "group": "Motivasjon og psykisk helse", 
             "question": "Tar du medikamenter for å sove?", 
             "alternatives": [
-                {"id": 1, "text": "Ja",         "weights": [0,0,0,0,0,0,0,0,0,0,0,0,0]}, 
+                {"id": 1, "text": "Ja",         "weights": [0,0,0,0,0,15,0,0,0,0,0,0,0]}, 
                 {"id": 2, "text": "Nei",        "weights": [0,0,0,0,0,0,0,0,0,0,0,0,0]},
                 {"id": 6, "text": "vet ikke",   "weights": [0,0,0,0,0,0,0,0,0,0,0,0,0]}
         ]}
