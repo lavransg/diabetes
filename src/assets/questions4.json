@@ -31,7 +31,7 @@
         {"id": 1, "group": "Diagnose", 
             "question": "Hvor lenge har du hatt diabetes?",
             "alternatives": [
-                {"id": 1, "text": "0-4 år",    "weights": [70,30,40,10,20,40,60,30,10,20,50,40,40]}, 
+                {"id": 1, "text": "0-4 år",    "weights": [0,0,0,0,0,0,0,0,0,0,0,0,0]}, 
                 {"id": 2, "text": "5-9 år",    "weights": [0,0,0,0,0,0,0,0,0,0,0,0,0]},
                 {"id": 3, "text": "10-14 år",  "weights": [0,0,0,0,0,0,0,0,0,0,0,0,0]},
                 {"id": 4, "text": "15-19 år",  "weights": [0,0,0,0,0,0,0,0,0,0,0,0,0]},
