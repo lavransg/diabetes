@@ -133,7 +133,7 @@
         {"id": 12, "group": "Egenaktivitet og røykevaner", 
             "question": "Har du i løpet av det siste året hatt så lavt blodsukker (alvorlig ”føling”) at du måtte ha hjelp av andre for å komme over det?",
             "alternatives": [
-                {"id": 1, "text": "Ja",         "weights": [30,30,0,0,0,0,0,0,0,0,0,0,0]}, 
+                {"id": 1, "text": "Ja",         "weights": [25,25,0,0,0,0,0,0,0,0,0,0,0]}, 
                 {"id": 2, "text": "Nei",        "weights": [0,0,0,0,0,0,0,0,0,0,0,0,0]},
                 {"id": 3, "text": "Vet ikke",   "weights": [0,0,0,0,0,0,0,0,0,0,0,0,0]}
             ]
@@ -164,9 +164,9 @@
         {"id": 16, "group": "Egenaktivitet og røykevaner", 
             "question": "Hvor ofte mosjonerer du vanligvis hver uke? Med mosjon menes at du på fritid eller i arbeid går, sykler, svømmer eller er fysisk aktiv på annen måte i til sammen minst 30 minutter, slik at du blir litt andpusten eller varm.",
             "alternatives": [
-                {"id": 1, "text": "Mindre enn en gang hver uke", "weights": [0,0,0,0,40,0,100,0,0,0,0,0,0]}, 
-                {"id": 2, "text": "1-2 ganger i uken",           "weights": [0,0,0,0,30,0,70,0,0,0,0,0,0]},
-                {"id": 3, "text": "3-4 ganger i uken",           "weights": [0,0,0,0,0,0,30,0,0,0,0,0,0]},
+                {"id": 1, "text": "Mindre enn en gang hver uke", "weights": [0,0,0,20,0,0,90,0,0,0,0,0,0]}, 
+                {"id": 2, "text": "1-2 ganger i uken",           "weights": [0,0,0,15,0,0,65,0,0,0,0,0,0]},
+                {"id": 3, "text": "3-4 ganger i uken",           "weights": [0,0,0,0,0,0,25,0,0,0,0,0,0]},
                 {"id": 4, "text": "5-6 ganger i uken",           "weights": [0,0,0,0,0,0,0,0,0,0,0,0,0]},
                 {"id": 5, "text": "7+ ganger i uken",            "weights": [0,0,0,0,0,0,0,0,0,0,0,0,0]},
                 {"id": 6, "text": "vet ikke",                    "weights": [0,0,0,0,0,0,0,0,0,0,0,0,0]}
@@ -183,7 +183,7 @@
         {"id": 18, "group": "Syn", 
             "question": "Har du fått laserbehandling av øynene pga. din diabetes?",
             "alternatives": [
-                {"id": 1, "text": "Ja",         "weights": [50,0,0,0,0,0,0,0,0,0,0,0,0]}, 
+                {"id": 1, "text": "Ja",         "weights": [35,0,0,0,0,0,0,0,0,0,0,0,0]}, 
                 {"id": 2, "text": "Nei",        "weights": [0,0,0,0,0,0,0,0,0,0,0,0,0]},
                 {"id": 3, "text": "Vet ikke",   "weights": [0,0,0,0,0,0,0,0,0,0,0,0,0]}
             ]
@@ -191,7 +191,7 @@
         {"id": 19, "group": "Fotproblemer", 
             "question": "Er du operert eller blokket pga. trange blodårer i beina?",
             "alternatives": [
-                {"id": 1, "text": "Ja",         "weights": [40,0,0,0,0,0,0,0,0,0,0,0,0]},
+                {"id": 1, "text": "Ja",         "weights": [30,0,0,0,0,0,0,0,0,0,0,0,0]},
                 {"id": 2, "text": "Nei",        "weights": [0,0,0,0,0,0,0,0,0,0,0,0,0]},
                 {"id": 3, "text": "Vet ikke",   "weights": [0,0,0,0,0,0,0,0,0,0,0,0,0]}
             ]
@@ -199,7 +199,7 @@
         {"id": 20, "group": "Fotproblemer", 
             "question": "Har du fått amputert deler av ett eller begge bein pga. dårlig blodsirkulasjon?",
             "alternatives": [
-                {"id": 1, "text": "Ja",         "weights": [70,0,0,0,0,0,0,0,0,0,0,0,0]}, 
+                {"id": 1, "text": "Ja",         "weights": [60,0,0,0,0,0,0,0,0,0,0,0,0]}, 
                 {"id": 2, "text": "Nei",        "weights": [0,0,0,0,0,0,0,0,0,0,0,0,0]},
                 {"id": 3, "text": "Vet ikke",   "weights": [0,0,0,0,0,0,0,0,0,0,0,0,0]}
             ]
@@ -207,9 +207,9 @@
         {"id": 21, "group": "Fotproblemer", 
             "question": "Har du noen gang hatt sår på føttene (nedenfor ankelen) som har brukt over 3 uker på å gro?",
             "alternatives": [
-                {"id": 1, "text": "Nei",                "weights": [40,0,0,0,0,0,0,0,0,0,0,0,0]}, 
-                {"id": 2, "text": "Ja, en gang",        "weights": [0,0,0,0,0,0,0,0,0,0,0,0,0]},
-                {"id": 3, "text": "ja, flere ganger",   "weights": [0,0,0,0,0,0,0,0,0,0,0,0,0]},
+                {"id": 1, "text": "Nei",                "weights": [0,0,0,0,0,0,0,0,0,0,0,0,0]}, 
+                {"id": 2, "text": "Ja, en gang",        "weights": [10,0,0,0,0,0,0,0,0,0,0,0,0]},
+                {"id": 3, "text": "ja, flere ganger",   "weights": [15,0,0,0,0,0,0,0,0,0,0,0,0]},
                 {"id": 4, "text": "Vet ikke",           "weights": [0,0,0,0,0,0,0,0,0,0,0,0,0]}
             ]
         },
@@ -232,7 +232,7 @@
         {"id": 24, "group": "Andre syndromer og arvelige forhold", 
             "question": "Har eller har dine foreldre hatt hjertesykdom (angina, hjerteinfarkt, operert for trange blodårer i hjertet)?",
             "alternatives": [
-                {"id": 1, "text": "Ja",         "weights": [0,30,40,0,0,0,0,0,45,0,0,0,0]}, 
+                {"id": 1, "text": "Ja",         "weights": [0,25,40,0,0,0,0,0,45,0,0,0,0]}, 
                 {"id": 2, "text": "Nei",        "weights": [0,0,0,0,0,0,0,0,0,0,0,0,0]},
                 {"id": 3, "text": "Vet ikke",   "weights": [0,0,0,0,0,0,0,0,0,0,0,0,0]}
             ]
@@ -359,7 +359,7 @@
       ],
       "tests": [
         {"id": 1, "test": "Bare kost/mosjon", "alternatives": [
-            {"id": 1, "weights": [50,20,30,20,40,50,40,60,20,10,20,30,20], "text": "Ja"},
+            {"id": 1, "weights": [10,20,15,0,0,0,0,40,20,10,20,0,0], "text": "Ja"},
             {"id": 2, "weights": [0,0,0,0,0,0,0,0,0,0,0,0,0], "text": "Nei"}
         ]},
         {"id": 2, "test": "Metformin", "alternatives": [
