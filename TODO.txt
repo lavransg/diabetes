@@ -15,6 +15,7 @@ x) make certain bars for certain categories different colors (attribute in quest
 ) handle negative weights
 ) Add info-window on hover for actions - containing which categories are used to weight and how much. (later also which specific questions)
 ) instead of making the scoring based the max possible score, base it on a "threshold" maximum - i.e if you reach X points you get 100/100
+) make radar chart for health values that has numeric values
 ) Add "dependentWeights" to some alternatives containing conditional question answers and their respective weights.
     eg. "depenentWeights":{[
             {dependencies: [{question: 1, answer: 1},{question: 4, answer: 2}], weights: [0,0,...,0]},
