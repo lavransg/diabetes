@@ -6,13 +6,15 @@ import { AppComponent } from './app.component';
 import { HomeComponent } from './home/home.component';
 import { CompleteComponent } from './complete/complete.component';
 import { QuestionsComponent } from './questions/questions.component';
+import { EditComponent } from './edit/edit.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     HomeComponent,
     CompleteComponent,
-    QuestionsComponent
+    QuestionsComponent,
+    EditComponent
   ],
   imports: [
     BrowserModule,

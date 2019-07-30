@@ -16,7 +16,13 @@
       </div>
       <!-- MODAL CONTENT -->
 
-      <div class="modal-body">
+      <div class="modal-body">  
+
+        <div class="form-group">
+          <button type="button" routerLink="/edit" class="btn btn-block btn-outline-primary" data-dismiss="modal">
+            Rediger spørsmål, tester, og vekter 
+          </button>
+        </div>
         
         <div class="form-group" [ngClass]="{'was-validated': this.questionsUploaded}">
           <div class="custom-file" >
@@ -27,7 +33,7 @@
 
         <div class="form-group">
           <a download="questions.json" target="_blank" href="../../assets/questions5.json">
-            <button type="button" class="home btn btn-block btn-outline-primary">
+            <button type="button" class="btn btn-block btn-outline-primary">
                 Last ned JSON-mal for spørsmål og vekter
             </button>
           </a>
