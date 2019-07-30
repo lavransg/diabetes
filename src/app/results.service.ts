@@ -24,10 +24,12 @@ export class ResultsService {
     const result = new Array(this.categories.length).fill(0);
     for (const answer of answers) {
       const question = this.questionService.questions.find(element => element.id === answer["questionID"]);
-      for (const alternative of question.alternatives) {
-        if (alternative.id === answer["alternativeID"] && alternative.weights) {
-          for (const [index, weight] of alternative.weights.entries()) {
-            result[index] += Math.min(weight,100);
+      if (question){
+        for (const alternative of question.alternatives) {
+          if (alternative.id === answer["alternativeID"] && alternative.weights) {
+            for (const [index, weight] of alternative.weights.entries()) {
+              result[index] += Math.min(weight,100);
+            }
           }
         }
       }
@@ -42,10 +44,12 @@ export class ResultsService {
     const result = new Array(this.categories.length).fill(0);
     for (const answer of answers) {
       const test = this.healthTestsService.healthTests.find(element => element.id === answer["testID"]);
-      for (const alternative of test.alternatives) {
-        if (alternative.id === answer["alternativeID"]) {
-          for (const [index, weight] of alternative.weights.entries()) {
-            result[index] += Math.min(weight,100);
+      if (test){
+        for (const alternative of test.alternatives) {
+          if (alternative.id === answer["alternativeID"]) {
+            for (const [index, weight] of alternative.weights.entries()) {
+              result[index] += Math.min(weight,100);
+            }
           }
         }
       }
