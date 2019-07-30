@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { QuestionService } from '../question.service';
 
 @Component({
   selector: 'app-edit',
@@ -7,9 +8,13 @@ import { Component, OnInit } from '@angular/core';
 })
 export class EditComponent implements OnInit {
 
-  constructor() { }
+  objectKeys = Object.keys
+  data: any[];
+  constructor(private questionService: QuestionService) {
+  }
 
   ngOnInit() {
+    if (this.questionService.data) { this.data = this.questionService.data; }
   }
 
 }

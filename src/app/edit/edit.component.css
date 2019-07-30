@@ -1,0 +1,29 @@
+.page{
+    padding-top: 30px;
+}
+
+.data-container{
+    padding-left: 40px;
+}
+
+.item-container{
+    width: 600px;
+    min-height: 40px;
+    padding: 5px 10px;
+    font-size: 1.5rem;
+    margin: 5px 0px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: rgb(3, 187, 248);
+    border-radius: 10px;
+}
+
+.item-level-1{
+    background-color: rgb(74, 198, 240);
+    font-size: 1.3rem;
+}
+
+.item-level-2{
+    background-color: rgb(124, 207, 235);
+}

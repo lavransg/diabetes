@@ -11,6 +11,7 @@ export class QuestionService {
   public colors: number[] = data.colors;
   public actions: any[] = data.actions;
   public healthTests: any[] = data.tests;
+  public data: any[] = data;
 
   questionIndex = 0;
 

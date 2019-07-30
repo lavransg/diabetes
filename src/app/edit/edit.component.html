@@ -1,3 +1,35 @@
-<p>
-  Denne siden skal inneholde grensesnitt for å legge til / fjerne spørsmål, tester, og vekter
-</p>
+<div class="page">
+  
+  <div class="data-container">
+    <div class="item-container">Kategorier</div>
+    <div class="data-container" *ngFor="let item of data.categories">
+      <div class="item-container item-level-1">{{item}}</div>
+    </div>
+  
+  </div>
+  
+  <div class="data-container">
+    <div class="item-container">Spørsmål</div>
+    <div class="data-container" *ngFor="let item of data.questions">
+      <div class="item-container item-level-1">{{item.question}}</div>
+    </div>
+  
+  </div>
+  
+  <div class="data-container">
+    <div class="item-container">Helsetester</div>
+    <div class="data-container" *ngFor="let item of data.tests">
+      <div class="item-container item-level-1">{{item.test}}</div>
+    </div>
+  
+  </div>
+  
+  <div class="data-container">
+    <div class="item-container">Tiltak</div>
+    <div class="data-container" *ngFor="let item of data.actions">
+      <div class="item-container item-level-1">{{item.name}}</div>
+    </div>
+  
+  </div>
+
+</div>
