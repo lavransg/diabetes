@@ -1,15 +1,17 @@
 import { Injectable } from '@angular/core';
-import questions from '../assets/questions5.json';
+import data from '../assets/questions5.json';
 
 @Injectable({
   providedIn: 'root'
 })
 export class QuestionService {
 
-  public questions: any[] = questions.questions;
-  public categories: any[] = questions.categories;
-  public colors: number[] = questions.colors;
-  public actions: any[] = questions.actions;
+  public questions: any[] = data.questions;
+  public categories: any[] = data.categories;
+  public colors: number[] = data.colors;
+  public actions: any[] = data.actions;
+  public healthTests: any[] = data.tests;
+
   questionIndex = 0;
 
   constructor() { }

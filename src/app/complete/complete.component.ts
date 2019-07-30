@@ -1,7 +1,6 @@
 import { Component, OnInit, AfterViewInit } from '@angular/core';
 import { ResultsService } from '../results.service';
 import { QuestionService } from '../question.service';
-import { HealthTestsService } from '../health-tests.service';
 @Component({
   selector: 'app-complete',
   templateUrl: './complete.component.html',
@@ -17,7 +16,6 @@ export class CompleteComponent implements AfterViewInit {
   actions: any[];
 
   constructor(
-    private healthTestsService: HealthTestsService, // this is used in HTML by by the health test modal
     private resultsService: ResultsService,
     private questionService: QuestionService
   ) {}

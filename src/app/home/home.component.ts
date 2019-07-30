@@ -1,6 +1,5 @@
 import { Component, OnInit } from '@angular/core';
 import { QuestionService } from '../question.service';
-import { HealthTestsService } from '../health-tests.service';
 import { ResultsService } from '../results.service';
 
 @Component({
@@ -20,7 +19,6 @@ export class HomeComponent implements OnInit {
 
   constructor(
     private questionService: QuestionService,
-    private healthTestsService: HealthTestsService,
     private resultsService: ResultsService
   ) { }
 
@@ -28,7 +26,7 @@ export class HomeComponent implements OnInit {
     this.resultsService.clearResults();
     this.selectedHealthAlternatives = [];
     if (this.questionService.questions[0]) { this.hasQuestions = true; }
-    if (this.healthTestsService.healthTests) { this.healthTests = this.healthTestsService.healthTests; }
+    if (this.questionService.healthTests) { this.healthTests = this.questionService.healthTests; }
   }
 
   questionsFileAdded(event) {

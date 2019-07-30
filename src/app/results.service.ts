@@ -1,6 +1,5 @@
 import { Injectable } from '@angular/core';
 import { QuestionService } from './question.service';
-import { HealthTestsService } from './health-tests.service';
 import * as FileSaver from 'file-saver';
 
 @Injectable({
@@ -17,7 +16,7 @@ export class ResultsService {
   highestCategory: number;
   categories = this.questionService.categories;
 
-  constructor(private questionService: QuestionService, private healthTestsService: HealthTestsService) {}
+  constructor(private questionService: QuestionService) {}
 
   // calculates the result weights of the survey answers
   getResults(answers: object[]) {
@@ -43,7 +42,7 @@ export class ResultsService {
     this.completedHealthAnswers = answers;
     const result = new Array(this.categories.length).fill(0);
     for (const answer of answers) {
-      const test = this.healthTestsService.healthTests.find(element => element.id === answer["testID"]);
+      const test = this.questionService.healthTests.find(element => element.id === answer["testID"]);
       if (test){
         for (const alternative of test.alternatives) {
           if (alternative.id === answer["alternativeID"]) {
@@ -108,7 +107,7 @@ export class ResultsService {
 
     // looping through healthValues
     if (this.completedHealthAnswers) {
-      for (const test of this.healthTestsService.healthTests) {
+      for (const test of this.questionService.healthTests) {
         let tmax = new Array(this.categories.length).fill(0);
         for (let i = 0; i < this.categories.length; i++) {
           for (const alternative of test.alternatives) {
@@ -156,7 +155,7 @@ export class ResultsService {
     if (this.completedHealthAnswers) {
       text += "\n\nFysiologiske helseverdier:\n\n"
       for (const answer of this.completedHealthAnswers) {
-        const test = this.healthTestsService.healthTests.find(element => element.id === answer["testID"]);
+        const test = this.questionService.healthTests.find(element => element.id === answer["testID"]);
         for (const alternative of test.alternatives) {
           if (alternative.id === answer["alternativeID"]) {
             text += test.test + "\n" + "Svar: " + alternative.text;

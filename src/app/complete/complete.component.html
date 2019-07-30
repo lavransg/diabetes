@@ -77,7 +77,7 @@
           <div class="collapse" id="collapseExample">
   
             <div class="card card-body health-test-container">
-              <div class="form-group" id="{{item.id}}" *ngFor="let item of this.healthTestsService.healthTests; index as i;">
+              <div class="form-group" id="{{item.id}}" *ngFor="let item of this.questionService.healthTests; index as i;">
                 
                 <h4>{{item.test}}</h4>
                 <div *ngFor="let alternative of item.alternatives; index as j;">
