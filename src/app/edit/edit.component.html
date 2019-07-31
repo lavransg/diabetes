@@ -1,7 +1,10 @@
 <div class="page">
   
   <div class="data-container">
-    <div class="item-container">Kategorier</div>
+    <div class="item-container">
+      Kategorier
+      <button> expand </button>
+    </div>
     <div class="data-container" *ngFor="let item of data.categories">
       <div class="item-container item-level-1">{{item}}</div>
     </div>
