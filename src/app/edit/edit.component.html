@@ -2,19 +2,22 @@
   <div class="data-container">
     <div class="item-container">
       Kategorier
-      <button type="button" class="btn btn-white p0" (click)="kategorier=!kategorier">
+      <button type="button" class="btn btn-white p0" (click)="data.categories.expanded=!data.categories.expanded">
         <i class="icon ion-md-menu"></i>
       </button>
     </div>
-    <div class="data-container" *ngFor="let item of data.categories" [ngClass]="kategorier ? 'expanded' : 'closed'">
+    <div class="data-container" *ngFor="let item of data.categories" [ngClass]="data.categories.expanded ? 'expanded' : 'closed'">
       <div class="item-container item-level-1">
         {{item}}
-        <button type="button" class="btn btn-white p0">
-          <i class="icon ion-md-create"></i>
-        </button>
-        <button type="button" class="btn btn-white p0">
-          <i class="icon ion-md-close"></i>
-        </button>
+        <div>
+          <button type="button" class="btn btn-white p0">
+            <i class="icon ion-md-create"></i>
+          </button>
+          <button type="button" class="btn btn-white p0">
+            <i class="icon ion-md-close"></i>
+          </button>
+        </div>
+        
       </div>
       
     </div>
@@ -54,10 +57,7 @@
         
         <div class="item-container item-level-2">
           {{alternative.text}}
-          <div class="buttons-container">
-            <button type="button" class="btn btn-white p0">
-              <i class="icon ion-md-add"></i>
-            </button>
+          <div>
             <button type="button" class="btn btn-white p0">
               <i class="icon ion-md-create"></i>
             </button>
@@ -79,9 +79,6 @@
                 <button type="button" class="btn btn-white p0">
                   <i class="icon ion-md-create"></i>
                 </button>
-                <button type="button" class="btn btn-white p0">
-                  <i class="icon ion-md-close"></i>
-                </button>
               </div>
           </div>
           
@@ -95,11 +92,11 @@
   <div class="data-container">
     <div class="item-container">
       Helsetester
-      <button type="button" class="btn btn-white p0" (click)="helsetester=!helsetester">
+      <button type="button" class="btn btn-white p0" (click)="data.tests.expanded=!data.tests.expanded">
         <i class="icon ion-md-menu"></i>
       </button>
     </div>
-    <div class="data-container" *ngFor="let test of data.tests" [ngClass]="helsetester ? 'expanded' : 'closed'">
+    <div class="data-container" *ngFor="let test of data.tests" [ngClass]="data.tests.expanded ? 'expanded' : 'closed'">
       <div class="item-container item-level-1">
           {{test.test}}
           <div class="buttons-container">
@@ -122,10 +119,7 @@
           
           <div class="item-container item-level-2">
             {{alternative.text}}
-            <div class="buttons-container">
-              <button type="button" class="btn btn-white p0">
-                <i class="icon ion-md-add"></i>
-              </button>
+            <div>
               <button type="button" class="btn btn-white p0">
                 <i class="icon ion-md-create"></i>
               </button>
@@ -147,9 +141,6 @@
                   <button type="button" class="btn btn-white p0">
                     <i class="icon ion-md-create"></i>
                   </button>
-                  <button type="button" class="btn btn-white p0">
-                    <i class="icon ion-md-close"></i>
-                  </button>
                 </div>
             </div>
             
@@ -164,12 +155,12 @@
 
     <div class="item-container">
       Tiltak
-      <button type="button" class="btn btn-white p0" (click)="tiltak=!tiltak">
+      <button type="button" class="btn btn-white p0" (click)="data.actions.expanded=!data.actions.expanded">
         <i class="icon ion-md-menu"></i>
       </button>
     </div>
 
-    <div class="data-container" *ngFor="let action of data.actions" [ngClass]="tiltak ? 'expanded' : 'closed'">
+    <div class="data-container" *ngFor="let action of data.actions" [ngClass]="data.actions.expanded ? 'expanded' : 'closed'">
       
       <div class="item-container item-level-1">
         

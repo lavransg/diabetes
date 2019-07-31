@@ -14,7 +14,7 @@ export class QuestionsComponent implements OnInit {
   answers: any[] = [];
   inputValue = "";
 
-  constructor(private questionService: QuestionService, private resultsService: ResultsService, private router: Router) { }
+  constructor(public questionService: QuestionService, public resultsService: ResultsService, private router: Router) { }
 
   ngOnInit() {
     this.nextQuestion = this.questionService.getNextQuestion();

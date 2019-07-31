@@ -16,8 +16,8 @@ export class CompleteComponent implements AfterViewInit {
   actions: any[];
 
   constructor(
-    private resultsService: ResultsService,
-    private questionService: QuestionService
+    public resultsService: ResultsService,
+    public questionService: QuestionService
   ) {}
 
   ngOnInit() {
