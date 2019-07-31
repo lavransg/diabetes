@@ -2,6 +2,11 @@
     padding-top: 30px;
 }
 
+.nav-icon{
+    width: 30px;
+    height: 30px;
+}
+
 .data-container{
     padding-left: 40px;
 }

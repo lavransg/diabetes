@@ -1,4 +1,15 @@
+
+<button class="btn btn-white btn-sm" routerLink="/">
+  <img class="nav-icon" src="../../assets/icons/home.svg" alt="#">
+</button>
+
 <div class="page">
+
+  <!-- 
+    
+    CATEGORIES 
+
+  -->
   <div class="data-container">
     <div class="item-container">
       Kategorier
@@ -6,9 +17,9 @@
         <i class="icon ion-md-menu"></i>
       </button>
     </div>
-    <div class="data-container" *ngFor="let item of data.categories" [ngClass]="data.categories.expanded ? 'expanded' : 'closed'">
+    <div class="data-container" *ngFor="let category of data.categories" [ngClass]="data.categories.expanded ? 'expanded' : 'closed'">
       <div class="item-container item-level-1">
-        {{item}}
+        {{category}}
         <div>
           <button type="button" class="btn btn-white p0">
             <i class="icon ion-md-create"></i>
@@ -24,6 +35,11 @@
   
   </div>
   
+  <!-- 
+    
+    QUESTIONS 
+  
+  -->
   <div class="data-container">
 
     <div class="item-container">
@@ -75,7 +91,9 @@
           <div class="item-container item-level-3">
               <div>{{data.categories[i]}}</div>
               <div>
-                <div class="pr-3 d-inline">{{weight}} </div>
+                <div class="pr-3 d-inline">
+                  <input (change)="editQuestionAlternativeWeight(question.id,alternative.id,i,$event.target.value)" style="width: 70px;" type="text" placeholder="{{weight}}">
+                </div>
                 <button type="button" class="btn btn-white p0">
                   <i class="icon ion-md-create"></i>
                 </button>
@@ -89,6 +107,11 @@
   
   </div>
   
+  <!-- 
+    
+    HEALTH TESTS 
+  
+  -->
   <div class="data-container">
     <div class="item-container">
       Helsetester
@@ -132,12 +155,14 @@
             </div>
           </div>
   
-          <div class="data-container" *ngFor="let weight of alternative.weights; index as i;" [ngClass]="alternative.expanded ? 'expanded' : 'closed'">
+          <div class="data-container" *ngFor="let weight of alternative.weights; index as j;" [ngClass]="alternative.expanded ? 'expanded' : 'closed'">
           
             <div class="item-container item-level-3">
-                <div>{{data.categories[i]}}</div>
+                <div>{{data.categories[j]}}</div>
                 <div>
-                  <div class="pr-3 d-inline">{{weight}} </div>
+                  <div class="pr-3 d-inline">
+                      <input (change)="editTestAlternativeWeight(test.id,alternative.id,j,$event.target.value)" style="width: 70px;" type="text" placeholder="{{weight}}">
+                  </div>
                   <button type="button" class="btn btn-white p0">
                     <i class="icon ion-md-create"></i>
                   </button>
@@ -151,6 +176,11 @@
   
   </div>
   
+  <!-- 
+    
+    ACTIONS 
+  
+  -->
   <div class="data-container">
 
     <div class="item-container">
@@ -180,6 +210,29 @@
           </button>
         </div>
 
+      </div>
+
+      <div class="data-container" *ngFor="let subaction of action.subactions" [ngClass]="action.expanded ? 'expanded' : 'closed'">
+          <div class="item-container item-level-1">
+        
+              {{subaction.name}}
+              <div class="buttons-container">
+                <button type="button" class="btn btn-white p0">
+                  <i class="icon ion-md-add"></i>
+                </button>
+                <button type="button" class="btn btn-white p0">
+                  <i class="icon ion-md-create"></i>
+                </button>
+                <button type="button" class="btn btn-white p0">
+                  <i class="icon ion-md-close"></i>
+                </button>
+                <button type="button" class="btn btn-white p0" (click)="subaction.expanded=!subaction.expanded">
+                  <i class="icon ion-md-menu"></i>
+                </button>
+              </div>
+      
+            </div>
+        
       </div>
 
     </div>
