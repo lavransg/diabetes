@@ -1,14 +1,22 @@
 <div class="page">
-  
   <div class="data-container">
     <div class="item-container">
       Kategorier
-      <button (click)="kategorier=!kategorier">expand</button>
+      <button type="button" class="btn btn-white p0" (click)="kategorier=!kategorier">
+        <i class="icon ion-md-menu"></i>
+      </button>
     </div>
     <div class="data-container" *ngFor="let item of data.categories" [ngClass]="kategorier ? 'expanded' : 'closed'">
       <div class="item-container item-level-1">
         {{item}}
+        <button type="button" class="btn btn-white p0">
+          <i class="icon ion-md-create"></i>
+        </button>
+        <button type="button" class="btn btn-white p0">
+          <i class="icon ion-md-close"></i>
+        </button>
       </div>
+      
     </div>
   
   </div>
@@ -17,28 +25,64 @@
 
     <div class="item-container">
       Spørsmål
-      <button (click)="data.questions.expanded=!data.questions.expanded">expand</button>
+      <button type="button" class="btn btn-white p0" (click)="data.questions.expanded=!data.questions.expanded">
+        <i class="icon ion-md-menu"></i>
+      </button>
     </div>
 
     <div class="data-container" *ngFor="let question of data.questions" [ngClass]="data.questions.expanded ? 'expanded' : 'closed'">
       
       <div class="item-container item-level-1">
         {{question.question}}
-        <button (click)="question.expanded=!question.expanded">expand</button>
+        <div class="buttons-container">
+          <button type="button" class="btn btn-white p0">
+            <i class="icon ion-md-add"></i>
+          </button>
+          <button type="button" class="btn btn-white p0">
+            <i class="icon ion-md-create"></i>
+          </button>
+          <button type="button" class="btn btn-white p0">
+            <i class="icon ion-md-close"></i>
+          </button>
+          <button type="button" class="btn btn-white p0" (click)="question.expanded=!question.expanded">
+            <i class="icon ion-md-menu"></i>
+          </button>
+        </div>
       </div>
 
       <div class="data-container" *ngFor="let alternative of question.alternatives" [ngClass]="question.expanded ? 'expanded' : 'closed'">
         
         <div class="item-container item-level-2">
           {{alternative.text}}
-          <button (click)="alternative.expanded=!alternative.expanded">expand</button>
+          <div class="buttons-container">
+            <button type="button" class="btn btn-white p0">
+              <i class="icon ion-md-add"></i>
+            </button>
+            <button type="button" class="btn btn-white p0">
+              <i class="icon ion-md-create"></i>
+            </button>
+            <button type="button" class="btn btn-white p0">
+              <i class="icon ion-md-close"></i>
+            </button>
+            <button type="button" class="btn btn-white p0" (click)="alternative.expanded=!alternative.expanded">
+              <i class="icon ion-md-menu"></i>
+            </button>
+          </div>
         </div>
 
         <div class="data-container" *ngFor="let weight of alternative.weights; index as i;" [ngClass]="alternative.expanded ? 'expanded' : 'closed'">
         
-          <div class="item-container item-level-2">
+          <div class="item-container item-level-3">
               <div>{{data.categories[i]}}</div>
-              <div>{{weight}}</div>
+              <div>
+                <div class="pr-3 d-inline">{{weight}} </div>
+                <button type="button" class="btn btn-white p0">
+                  <i class="icon ion-md-create"></i>
+                </button>
+                <button type="button" class="btn btn-white p0">
+                  <i class="icon ion-md-close"></i>
+                </button>
+              </div>
           </div>
           
         </div>
@@ -51,21 +95,102 @@
   <div class="data-container">
     <div class="item-container">
       Helsetester
-      <button (click)="helsetester=!helsetester">expand</button>
+      <button type="button" class="btn btn-white p0" (click)="helsetester=!helsetester">
+        <i class="icon ion-md-menu"></i>
+      </button>
     </div>
-    <div class="data-container" *ngFor="let item of data.tests" [ngClass]="helsetester ? 'expanded' : 'closed'">
-      <div class="item-container item-level-1">{{item.test}}</div>
+    <div class="data-container" *ngFor="let test of data.tests" [ngClass]="helsetester ? 'expanded' : 'closed'">
+      <div class="item-container item-level-1">
+          {{test.test}}
+          <div class="buttons-container">
+            <button type="button" class="btn btn-white p0">
+              <i class="icon ion-md-add"></i>
+            </button>
+            <button type="button" class="btn btn-white p0">
+              <i class="icon ion-md-create"></i>
+            </button>
+            <button type="button" class="btn btn-white p0">
+              <i class="icon ion-md-close"></i>
+            </button>
+            <button type="button" class="btn btn-white p0" (click)="test.expanded=!test.expanded">
+              <i class="icon ion-md-menu"></i>
+            </button>
+          </div>
+        </div>
+  
+        <div class="data-container" *ngFor="let alternative of test.alternatives" [ngClass]="test.expanded ? 'expanded' : 'closed'">
+          
+          <div class="item-container item-level-2">
+            {{alternative.text}}
+            <div class="buttons-container">
+              <button type="button" class="btn btn-white p0">
+                <i class="icon ion-md-add"></i>
+              </button>
+              <button type="button" class="btn btn-white p0">
+                <i class="icon ion-md-create"></i>
+              </button>
+              <button type="button" class="btn btn-white p0">
+                <i class="icon ion-md-close"></i>
+              </button>
+              <button type="button" class="btn btn-white p0" (click)="alternative.expanded=!alternative.expanded">
+                <i class="icon ion-md-menu"></i>
+              </button>
+            </div>
+          </div>
+  
+          <div class="data-container" *ngFor="let weight of alternative.weights; index as i;" [ngClass]="alternative.expanded ? 'expanded' : 'closed'">
+          
+            <div class="item-container item-level-3">
+                <div>{{data.categories[i]}}</div>
+                <div>
+                  <div class="pr-3 d-inline">{{weight}} </div>
+                  <button type="button" class="btn btn-white p0">
+                    <i class="icon ion-md-create"></i>
+                  </button>
+                  <button type="button" class="btn btn-white p0">
+                    <i class="icon ion-md-close"></i>
+                  </button>
+                </div>
+            </div>
+            
+          </div>
+        </div>
+    
     </div>
   
   </div>
   
   <div class="data-container">
+
     <div class="item-container">
       Tiltak
-      <button (click)="tiltak=!tiltak">expand</button>
+      <button type="button" class="btn btn-white p0" (click)="tiltak=!tiltak">
+        <i class="icon ion-md-menu"></i>
+      </button>
     </div>
-    <div class="data-container" *ngFor="let item of data.actions" [ngClass]="tiltak ? 'expanded' : 'closed'">
-      <div class="item-container item-level-1">{{item.name}}</div>
+
+    <div class="data-container" *ngFor="let action of data.actions" [ngClass]="tiltak ? 'expanded' : 'closed'">
+      
+      <div class="item-container item-level-1">
+        
+        {{action.name}}
+        <div class="buttons-container">
+          <button type="button" class="btn btn-white p0">
+            <i class="icon ion-md-add"></i>
+          </button>
+          <button type="button" class="btn btn-white p0">
+            <i class="icon ion-md-create"></i>
+          </button>
+          <button type="button" class="btn btn-white p0">
+            <i class="icon ion-md-close"></i>
+          </button>
+          <button type="button" class="btn btn-white p0" (click)="action.expanded=!action.expanded">
+            <i class="icon ion-md-menu"></i>
+          </button>
+        </div>
+
+      </div>
+
     </div>
   
   </div>

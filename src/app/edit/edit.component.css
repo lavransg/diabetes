@@ -7,7 +7,7 @@
 }
 
 .item-container{
-    width: 600px;
+    width: 700px;
     min-height: 40px;
     padding: 5px 10px;
     font-size: 1.5rem;
@@ -19,6 +19,10 @@
     border-radius: 10px;
 }
 
+.buttons-container{
+    min-width: 150px;
+}
+
 .item-level-1{
     background-color: rgb(74, 198, 240);
     font-size: 1.3rem;
@@ -26,6 +30,10 @@
 
 .item-level-2{
     background-color: rgb(124, 207, 235);
+}
+
+.item-level-3{
+    background-color: rgb(170, 222, 240);
 }
 
 .expanded{
