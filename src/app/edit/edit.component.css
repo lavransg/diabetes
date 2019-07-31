@@ -27,3 +27,11 @@
 .item-level-2{
     background-color: rgb(124, 207, 235);
 }
+
+.expanded{
+    display: block;
+}
+
+.closed{
+    display: none;
+}

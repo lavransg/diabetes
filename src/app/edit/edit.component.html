@@ -3,33 +3,68 @@
   <div class="data-container">
     <div class="item-container">
       Kategorier
-      <button> expand </button>
+      <button (click)="kategorier=!kategorier">expand</button>
     </div>
-    <div class="data-container" *ngFor="let item of data.categories">
-      <div class="item-container item-level-1">{{item}}</div>
-    </div>
-  
-  </div>
-  
-  <div class="data-container">
-    <div class="item-container">Spørsmål</div>
-    <div class="data-container" *ngFor="let item of data.questions">
-      <div class="item-container item-level-1">{{item.question}}</div>
+    <div class="data-container" *ngFor="let item of data.categories" [ngClass]="kategorier ? 'expanded' : 'closed'">
+      <div class="item-container item-level-1">
+        {{item}}
+      </div>
     </div>
   
   </div>
   
   <div class="data-container">
-    <div class="item-container">Helsetester</div>
-    <div class="data-container" *ngFor="let item of data.tests">
+
+    <div class="item-container">
+      Spørsmål
+      <button (click)="data.questions.expanded=!data.questions.expanded">expand</button>
+    </div>
+
+    <div class="data-container" *ngFor="let question of data.questions" [ngClass]="data.questions.expanded ? 'expanded' : 'closed'">
+      
+      <div class="item-container item-level-1">
+        {{question.question}}
+        <button (click)="question.expanded=!question.expanded">expand</button>
+      </div>
+
+      <div class="data-container" *ngFor="let alternative of question.alternatives" [ngClass]="question.expanded ? 'expanded' : 'closed'">
+        
+        <div class="item-container item-level-2">
+          {{alternative.text}}
+          <button (click)="alternative.expanded=!alternative.expanded">expand</button>
+        </div>
+
+        <div class="data-container" *ngFor="let weight of alternative.weights; index as i;" [ngClass]="alternative.expanded ? 'expanded' : 'closed'">
+        
+          <div class="item-container item-level-2">
+              <div>{{data.categories[i]}}</div>
+              <div>{{weight}}</div>
+          </div>
+          
+        </div>
+      </div>
+
+    </div>
+  
+  </div>
+  
+  <div class="data-container">
+    <div class="item-container">
+      Helsetester
+      <button (click)="helsetester=!helsetester">expand</button>
+    </div>
+    <div class="data-container" *ngFor="let item of data.tests" [ngClass]="helsetester ? 'expanded' : 'closed'">
       <div class="item-container item-level-1">{{item.test}}</div>
     </div>
   
   </div>
   
   <div class="data-container">
-    <div class="item-container">Tiltak</div>
-    <div class="data-container" *ngFor="let item of data.actions">
+    <div class="item-container">
+      Tiltak
+      <button (click)="tiltak=!tiltak">expand</button>
+    </div>
+    <div class="data-container" *ngFor="let item of data.actions" [ngClass]="tiltak ? 'expanded' : 'closed'">
       <div class="item-container item-level-1">{{item.name}}</div>
     </div>
   
