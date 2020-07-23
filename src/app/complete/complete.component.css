@@ -1,3 +1,8 @@
+.password-container{
+    display: grid;
+    justify-items: center;
+}
+
 .results-container{
     margin-top: 40px;
 }

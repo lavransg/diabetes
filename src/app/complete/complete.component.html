@@ -128,62 +128,87 @@
     </div>
   </div> <!-- End of edit health-values modal -->
 
-<!-- Container for results -->
-<div class="results-container text-center" *ngIf="!this.resultsService.result"><br><br><h3>Ingen resultater, fullfør eller last opp en test først</h3></div>
 
-<div class="results-container">
-    <div class="container-fluid" *ngIf="this.resultsService.result">
-        
-        <div class="row">
-            <div class="col col-category" *ngFor="let item of this.resultsService.categories; index as i;">
+<!-- No results warning -->
+<div class="results-container text-center" *ngIf="!this.resultsService.result">
+    <br><br><h3>Ingen resultater, fullfør eller last opp en test først</h3>
+</div>
 
-                <div class="bar-container">
-                    <div class="bar-health" [ngClass]="{
-                        'color-light-1': this.colors[i] == 1, 
-                        'color-light-2': this.colors[i] == 2, 
-                        'color-light-3': this.colors[i] == 3, 
-                        'color-light-4': this.colors[i] == 4,
-                        'tallest-bar-health':this.resultsService.highestCategory === i}"></div>
-                    <div class="bar" [ngClass]="{ 
-                        'color-1': this.colors[i] == 1, 
-                        'color-2': this.colors[i] == 2, 
-                        'color-3': this.colors[i] == 3, 
-                        'color-4': this.colors[i] == 4,
-                        'tallest-bar':this.resultsService.highestCategory === i}"></div>
+<div class="password-container text-center" *ngIf="this.resultsService.result && !this.passwordCorrect">
+    <label for="password-input">Passord</label>
+    <input
+        class="form-control justify-self-center w-auto" 
+        autocapitalize="none" 
+        [value]="resultsPasswordInput" 
+        (input)="resultsPasswordInput=$event.target.value" 
+        id="password-input"
+    >
+    <br>
+    <button (click)="checkPassword()" class="btn btn-outline-secondary mr-1 mb-1">
+        <span>Vis resultater</span>
+    </button>
+</div>
+
+<!-- only show results and actions if password is correct -->
+<!-- (have to use hidden and not *ngIf, since the conditional styling of bar height and so on needs elements to exist) -->
+<div [hidden]="!this.passwordCorrect">
+
+    <!-- Container for results -->
+    <div class="results-container">
+        <div class="container-fluid" *ngIf="this.resultsService.result">
+            
+            <div class="row">
+                <div class="col col-category" *ngFor="let item of this.resultsService.categories; index as i;">
+
+                    <div class="bar-container">
+                        <div class="bar-health" [ngClass]="{
+                            'color-light-1': this.colors[i] == 1, 
+                            'color-light-2': this.colors[i] == 2, 
+                            'color-light-3': this.colors[i] == 3, 
+                            'color-light-4': this.colors[i] == 4,
+                            'tallest-bar-health':this.resultsService.highestCategory === i}"></div>
+                        <div class="bar" [ngClass]="{ 
+                            'color-1': this.colors[i] == 1, 
+                            'color-2': this.colors[i] == 2, 
+                            'color-3': this.colors[i] == 3, 
+                            'color-4': this.colors[i] == 4,
+                            'tallest-bar':this.resultsService.highestCategory === i}"></div>
+                    </div>
+                    <div class="category-info d-flex flex-column justify-content-between">
+                        <div><h4>{{this.resultsService.totalResult[i]}}</h4></div>
+                        <div><b>{{item}}</b></div>
+                    </div>
+
                 </div>
-                <div class="category-info d-flex flex-column justify-content-between">
-                    <div><h4>{{this.resultsService.totalResult[i]}}</h4></div>
-                    <div><b>{{item}}</b></div>
-                </div>
-
             </div>
-        </div>
-    
-    </div>
-</div> <!-- End of Container for results -->
-
-<br>
-<div class="actions-container">
-    <div class="container-fluid" *ngIf="this.resultsService.result && this.questionService.actions">
         
-        <div class="row">
-            <div class="col action-category-container d-flex flex-column" *ngFor="let action of this.questionService.actions">
-
-                <div class="d-flex justify-content-between action">
-                    <div><h5>{{action.name}}</h5></div>
-                    <div>{{action.value}}</div>
-                </div>
-
-                <div class="d-flex justify-content-between subaction" *ngFor="let subaction of action.subactions">
-                    <div>{{subaction.name}}</div>
-                    <div>{{subaction.value}}</div>
-                </div>
-
-            </div>
         </div>
-    
-    </div>
+    </div> <!-- End of Container for results -->
 
+    <br>
+    <!-- Container for actions -->
+    <div class="actions-container">
+        <div class="container-fluid" *ngIf="this.resultsService.result && this.questionService.actions">
+            
+            <div class="row">
+                <div class="col action-category-container d-flex flex-column" *ngFor="let action of this.questionService.actions">
+
+                    <div class="d-flex justify-content-between action">
+                        <div><h5>{{action.name}}</h5></div>
+                        <div>{{action.value}}</div>
+                    </div>
+
+                    <div class="d-flex justify-content-between subaction" *ngFor="let subaction of action.subactions">
+                        <div>{{subaction.name}}</div>
+                        <div>{{subaction.value}}</div>
+                    </div>
+
+                </div>
+            </div>
+        
+        </div>
+    </div><!-- End of Container for actions-->
 
 </div>
+
 <br><br><br><br>

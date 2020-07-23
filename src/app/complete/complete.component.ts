@@ -15,6 +15,10 @@ export class CompleteComponent implements AfterViewInit {
   colors: number[] = this.questionService.colors;
   actions: any[];
 
+  resultsPassword: string = "123"
+  resultsPasswordInput: string = ""
+  passwordCorrect = false
+
   constructor(
     public resultsService: ResultsService,
     public questionService: QuestionService
@@ -25,12 +29,21 @@ export class CompleteComponent implements AfterViewInit {
   }
 
   ngAfterViewInit() {
+    this.passwordCorrect = false
+
     if (this.resultsService.result) {
       this.calculateBarHeights();
       if (this.resultsService.completedHealthAnswers) {
         this.selectedHealthAlternatives = this.resultsService.completedHealthAnswers;
       }
     }
+  }
+
+  checkPassword(){
+    if (this.resultsPasswordInput == this.resultsPassword){
+      this.passwordCorrect = true
+    }
+    this.resultsPasswordInput = ""
   }
 
   saveFiles() {

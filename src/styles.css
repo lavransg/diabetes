@@ -1,3 +1,16 @@
 /* You can add global styles to this file, and also import other style files */
 
 *{font-family: 'Varela Round', sans-serif;}
+
+
+@media screen and (min-width: 600px) {
+    .content-margin{
+        margin: 15vh 0;
+    }
+}
+  
+@media screen and (max-width: 599px) {
+    .content-margin{
+        margin: 10px 0;
+    }
+}
