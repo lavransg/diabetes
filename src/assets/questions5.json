@@ -27,6 +27,13 @@
     ],
     "colors": [4,4,1,1,1,1,2,2,2,3,3],
     "questions": [
+        {"id": 0.5, 
+            "question": "skjul alle andre spørsmål",
+            "alternatives": [
+                {"id": 1, "text": "ja", "skip": ["1-34"],  "weights": [0,0,0,0,0,0,0,0,0,0,0]}, 
+                {"id": 2, "text": "nei",    "weights": [0,0,0,0,0,0,0,0,0,0,0]}
+            ]
+        },
         {"id": 1, "group": "Diagnose", 
             "question": "Hvor lenge har du hatt diabetes?",
             "alternatives": [
