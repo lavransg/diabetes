@@ -33,7 +33,7 @@ export class QuestionsComponent implements OnInit {
       }
     }
     this.nextQuestion = this.questionService.getNextQuestion();
-    // in case the last question should be skipped, and nextquestion therefore returns nothing, end the survey
+    // in case the last question should be skipped, and getnextquestion() therefore returns undefined, end the survey
     if (this.nextQuestion == undefined){
       this.endSurvey()
     }

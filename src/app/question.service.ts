@@ -44,6 +44,7 @@ export class QuestionService {
   }
 
   endSurvey() {
+    this.skip = new Array(this.questions.length).fill(false)
     this.questionIndex = 0;
   }
 
@@ -51,9 +52,8 @@ export class QuestionService {
   skipQuestions(skips: any[]){
 
     // if the first entry in the skips array is a range ('x-y')
-    if (skips[0] && typeof skips[0] === 'string' || skips[0] instanceof String && skips[0].includes("-")){
+    if (skips[0] && (typeof skips[0] === 'string' || skips[0] instanceof String) && skips[0].includes("-")){
       let startStop = skips[0].split("-")
-      console.log("startStop", startStop)
       startStop[0] = Number(startStop[0])
       startStop[1] = Number(startStop[1])
 

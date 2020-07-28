@@ -8,7 +8,11 @@
         "Hvert spørsmål kan tillhøre en gruppe (avsnitt) - denne gruppen blir vist over spørsmålet når det stilles",
         "",
         "For alternativ med brukerinput, må alternativet ha en 'type': 'input' og en 'unit': 'enheten til inputverdien'",
-        "Alternativer som har brukerinput vil foreløpig ikke telle mot vekting av klasser og er kun for rapportens del"
+        "Alternativer som har brukerinput vil foreløpig ikke telle mot vekting av klasser og er kun for rapportens del",
+        "",
+        "For å hoppe over spesifikke spørsmål ved et valgt svaralternativ kan man bruke 'skip': ",
+        " 'skip': [1,2,2.1,3,...] eller 'skip': ['1-5'] "
+
 
     ],
     "categories": [
@@ -27,10 +31,26 @@
     ],
     "colors": [4,4,1,1,1,1,2,2,2,3,3],
     "questions": [
-        {"id": 0.5, 
-            "question": "skjul alle andre spørsmål",
+        {"id": 0.1, 
+            "question": "test",
             "alternatives": [
-                {"id": 1, "text": "ja", "skip": ["1-34"],  "weights": [0,0,0,0,0,0,0,0,0,0,0]}, 
+                {"id": 1, "text": "ja",  "weights": [0,0,0,0,0,0,0,0,0,0,0]}, 
+                {"id": 2, "text": "nei",    "weights": [0,0,0,0,0,0,0,0,0,0,0]}
+            ]
+        },
+        {"id": 0.5, 
+            "question": "skjul andre spørsmål (for testing)",
+            "alternatives": [
+                {"id": 1, "text": "ja", "skip": ["1-35"],  "weights": [0,0,0,0,0,0,0,0,0,0,100], "conditionalWeights": [
+                    {
+                        "conditions": ["0.1,1"], 
+                        "weights": [100,100,100,100,0,0,0,0,0,0,0]
+                    },
+                    {
+                        "conditions": ["0.1,1"], 
+                        "weights": [-50,-50,100,100,0,0,0,0,0,0,0]
+                    }
+                ]}, 
                 {"id": 2, "text": "nei",    "weights": [0,0,0,0,0,0,0,0,0,0,0]}
             ]
         },

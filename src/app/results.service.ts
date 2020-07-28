@@ -20,21 +20,90 @@ export class ResultsService {
 
   // calculates the result weights of the survey answers
   getResults(answers: object[]) {
+
     const result = new Array(this.categories.length).fill(0);
+
     for (const answer of answers) {
+
       const question = this.questionService.questions.find(element => element.id === answer["questionID"]);
       if (question){
+
         for (const alternative of question.alternatives) {
-          if (alternative.id === answer["alternativeID"] && alternative.weights) {
+
+          let conditionalTriggered = false
+          let replaceWeightTriggered = false
+
+          // ------------------------------------------------------------
+          // handle the conditional weights for the selected alternatives
+          if (alternative.id === answer["alternativeID"] && "weights" in alternative && "conditionalWeights" in alternative) {
+
+            let conditionalWeightSum = new Array(this.categories.length).fill(0);
+
+            for (let conditional of alternative.conditionalWeights) {
+
+              // if the conditional has the flag "replaceWeights" set to true, add the weights and stop checking other conditionals
+              // (this means you should arrange conditionals with replaceWeight so the most important one is at the top (in questions json))
+              if ( "replaceWeights" in conditional && conditional.replaceWeights === true && this.checkConditions(conditional.conditions)) {
+                for (const [index, weight] of conditional.weights.entries()) {
+                  result[index] += Math.min(weight,100);
+                }
+                conditionalTriggered = true
+                replaceWeightTriggered = true
+                break
+              }
+
+              // add the conditional weights to the sum of conditional weights if the conditional is true
+              else if (this.checkConditions(conditional.conditions)){
+                for (const [index, weight] of conditional.weights.entries()) {
+                  conditionalWeightSum[index] += weight;
+                }
+                conditionalTriggered = true
+              }
+
+            }
+
+            // add the sum of conditional weights to the result (if no "replaceWeight" condition was triggered)
+            if (conditionalTriggered && !replaceWeightTriggered){
+              let tempResult = alternative.weights
+              for (const [index, weight] of conditionalWeightSum.entries()) {
+                tempResult[index] += weight;
+              }
+              for (const [index, weight] of tempResult.entries()) {
+                result[index] += Math.max(0,Math.min(weight,100)); // weight, but minimum 0 and maximum 100
+              }
+            }
+
+          }
+
+          // ------------------------------------------------------------
+          // if no conditionals for this question has been triggered, add the standard weights for the selected alternative
+          if (!conditionalTriggered && alternative.id === answer["alternativeID"] && "weights" in alternative) {
             for (const [index, weight] of alternative.weights.entries()) {
               result[index] += Math.min(weight,100);
             }
           }
+
         }
       }
     }
     this.result = result;
     this.calculateTotalResult();
+  }
+
+  checkConditions(conditions: string[]){
+    let result = false
+    for (let condition of conditions){
+      let splitContition = condition.replace(" ","").split(",")
+      let questionID = splitContition[0]
+      let alternativeID = splitContition[1]
+      const answer = this.completedAnswers.find(element => {
+        return element.questionID == questionID && element.alternativeID == alternativeID
+      });
+      if (answer){
+        result = true
+      }
+    }
+    return result
   }
 
   // calculates the result weights of the health-values
