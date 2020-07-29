@@ -31,6 +31,20 @@
     ],
     "colors": [4,4,1,1,1,1,2,2,2,3,3],
     "questions": [
+        {"id": 0.01, "group": "Diagnose", 
+            "question": "Hvor høy er du?",
+            "alternatives": [
+                {"id": 1, "type": "input", "unit": "cm", "text": "",   "weights": [0,0,0,0,0,0,0,0,0,0,0]},
+                {"id": 2, "text": "Vet ikke",   "weights": [0,0,0,0,0,0,0,0,0,0,0]}
+            ]
+        },
+        {"id": 0.02, "group": "Diagnose", 
+            "question": "Hvor mye veier du?",
+            "alternatives": [
+                {"id": 1, "type": "input", "unit": "kg", "text": "",   "weights": [0,0,0,0,0,0,0,0,0,0,0]},
+                {"id": 2, "text": "Vet ikke",   "weights": [0,0,0,0,0,0,0,0,0,0,0]}
+            ]
+        },
         {"id": 0.1, 
             "question": "test",
             "alternatives": [
@@ -47,8 +61,12 @@
                         "weights": [100,100,100,100,0,0,0,0,0,0,0]
                     },
                     {
-                        "conditions": ["0.1,1"], 
-                        "weights": [-50,-50,100,100,0,0,0,0,0,0,0]
+                        "conditions": ["bmi:0.01,1,0.02,1,18,25"], 
+                        "weights": [0,0,0,0,0,0,22,22,0,0,0]
+                    },
+                    {
+                        "conditions": ["vekt:0.02,1,50,100"], 
+                        "weights": [0,0,0,0,0,0,33,33,0,0,0]
                     }
                 ]}, 
                 {"id": 2, "text": "nei",    "weights": [0,0,0,0,0,0,0,0,0,0,0]}

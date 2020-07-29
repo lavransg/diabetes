@@ -92,7 +92,15 @@ export class ResultsService {
 
   checkConditions(conditions: string[]){
     let result = false
+    console.log("conditions:",conditions)
     for (let condition of conditions){
+
+      // the condition is of a special kind (like checking the values of other number-input question(s), e.g bmi)
+      if (condition.includes(":")){
+        let splitContition = condition.replace(" ","").split(":").join(",").split(",")
+        let parameters = splitContition.slice(1)
+        return this.checkSpecialCondition(splitContition[0], parameters)
+      }
       let splitContition = condition.replace(" ","").split(",")
       let questionID = splitContition[0]
       let alternativeID = splitContition[1]
@@ -104,6 +112,38 @@ export class ResultsService {
       }
     }
     return result
+  }
+
+  // expects the following parameters for each case:
+  // vekt: [weight-question-id,weight-alternative-id,lower-weight,upper-weight]
+  // bmi: [weight-question-id,weight-alternative-id,height-question-id,height-alternative-id,lower-bmi,upper-bmi]
+  // ...
+  checkSpecialCondition(conditionType,parameters: any[]){
+
+    let answer = this.completedAnswers.find(element => {
+      return element.questionID == parameters[0] && element.alternativeID == parameters[1]
+    });
+    console.log("checkSpecialCondition called", conditionType, parameters, answer)
+
+    switch (conditionType){
+
+      case "bmi":
+
+        const heightAnswer = answer
+        const weightAnswer = this.completedAnswers.find(element => {
+          return element.questionID == parameters[2] && element.alternativeID == parameters[3]
+        });
+        if (heightAnswer && weightAnswer && "value" in weightAnswer && "value" in heightAnswer) {
+          let bmi = Math.round(Number(weightAnswer.value) / ((Number(heightAnswer.value)/100) * (Number(heightAnswer.value)/100))*10)/10
+          console.log("BMI:", bmi, weightAnswer.value, heightAnswer.value)
+          return bmi >= parameters[4] && bmi <= parameters[5]
+        }
+        else { return false }
+
+      default: // takes care of all simple value range lookups like for "vekt", "blodtrykk" etc.
+        return answer && "value" in answer && Number(answer.value) >= Number(parameters[2]) && Number(answer.value) <= Number(parameters[3])
+
+    }
   }
 
   // calculates the result weights of the health-values
