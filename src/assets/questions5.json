@@ -40,8 +40,8 @@
         "VEKT: [vekt:vektspørsmål-id,vektinput-alternativ-id,nedre-grense,øvre-grense]",
         "",
         "TIPS: det er en standard sjekk når navnet på funskjonen er ukjent, som sjekker nedre og øvre grense på et gitt inputspørsmål (akkurat som vekt og blodtrykk over)",
-        "Dette kan man derfor bruke om man vil sjekke inputverdier som ikke har definerte funksjoner:",
-        "eks: [hvasomhelst:3,1,50,60] sjekker om spørsmål 3 har input-verdier mellom 50 og 60, hva enn verdiene måtte representere"
+        "Dette kan man derfor bruke om man vil sjekke inputverdier som ikke har definerte funksjonsnavn som 'bmi','blodtrykk' osv. :",
+        "eks: ['hvasomhelst:3,1,50,60'] sjekker om spørsmål 3 har input-verdier mellom 50 og 60, hva enn verdiene måtte representere"
     ],
     "__eksempelspørsmål":[
         {"id": 1, "group": "Diagnose", 
@@ -72,6 +72,10 @@
                     {
                         "conditions": ["1,1"],
                         "weights": [100,100,-100,-100,0,0,0,0,0,0,0]
+                    },
+                    {
+                        "conditions": ["1,2","2,2"],
+                        "weights": [0,0,-100,-100,0,0,0,0,0,0,0]
                     },
                     {
                         "conditions": ["bmi:1,1,2,1,18,25"], 

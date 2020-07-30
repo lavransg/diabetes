@@ -8,15 +8,15 @@ x) save healthvalues to the test json file
 x) ability to upload healthValues choises from local test json file
 x) make final results be on the scale 0-100?
 ) the calculation of results seem to use several loops in several functions, might need a refactor
-) make a larger informational website for the test to be a part of
-) make some of the input elements, modals and other html elements into template components
+-) make a larger informational website for the test to be a part of
+?) make some of the input elements, modals and other html elements into template components
 x) make certain bars for certain categories different colors (attribute in questions-json)
 ) add inherent weights - weights irrespective of selected results - to the questions json file
 ) handle negative weights
 ) Add info-window on hover for actions - containing which categories are used to weight and how much. (later also which specific questions)
-) instead of making the scoring based the max possible score, base it on a "threshold" maximum - i.e if you reach X points you get 100/100
+x) instead of making the scoring based the max possible score, base it on a "threshold" maximum - i.e if you reach X points you get 100/100
 ) make radar chart for health values that has numeric values
-) Add "dependentWeights" to some alternatives containing conditional question answers and their respective weights.
+x) Add "dependentWeights" to some alternatives containing conditional question answers and their respective weights.
     eg. "depenentWeights":{[
             {dependencies: [{question: 1, answer: 1},{question: 4, answer: 2}], weights: [0,0,...,0]},
             {dependencies: [{question: 3, answer: 4},{question: 14, answer: 1}], weights: [0,0,...,0]},
