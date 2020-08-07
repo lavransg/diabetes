@@ -134,8 +134,15 @@
     <br><br><h3>Ingen resultater, fullfør eller last opp en test først</h3>
 </div>
 
+<div class="results-container text-center px-2" *ngIf="this.resultsService.result && !this.passwordCorrect">
+    <br><br><h3>Takk! Testen er fullført, men ikke lagret</h3>
+    <br><br><h3>For å lagre, klikk på lagre-ikonet oppe til venstre,</h3>
+    <br><h3>skriv inn en ID og lagre test-fil</h3>
+    <br><br>
+</div>
+
 <div class="password-container text-center" *ngIf="this.resultsService.result && !this.passwordCorrect">
-    <label for="password-input">Passord</label>
+    <label for="password-input">Skriv inn passord for å vise resultater (for helsepersonell)</label>
     <input
         class="form-control justify-self-center w-auto" 
         autocapitalize="none" 
